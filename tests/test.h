@@ -14,6 +14,10 @@ public:
     static void testRepo();
     static void testController();
     static void test();
+    static void testAddToWatchList();
+    static void testGetWatchList();
+    static void testDeleteFromWatchList();
+    static void testLikeTutorial();
 };
 
 

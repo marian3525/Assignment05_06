@@ -77,7 +77,7 @@ int CLI::getMinutes(string s) {
      s.copy(aux, endPosition, 0);  //copy endPosition chars starting from 0
      aux[endPosition]=0;
      sscanf(aux, "%d", &minutes);
-     delete aux;
+     delete[] aux;
      return minutes;
 }
 
@@ -96,7 +96,7 @@ int CLI::getSeconds(string s) {
     s.copy(aux, endPosition-startPosition, startPosition);
     aux[endPosition-startPosition] = 0;
     sscanf(aux, "%d", &minutes);
-    delete aux;
+    delete[] aux;
     return minutes;
 }
 
@@ -114,12 +114,14 @@ void CLI::showResults(Tutorial **results, int n) {
      if(n>0) {
          do {
              cout<<results[index]->toString();
+             cout<<"Did you enjoy this tutorial? (yes/no or done to exit the submenu)"<<endl;
              cin>>response;
-             if(response == "like") {
+
+             if(response == "yes") {
                 this->controller->likeTutorial(results[index]->getTitle());
                  cout<<"Liked. Add to watchlist?"<<endl;
                  cin>>response;
-                 if(response == "add")
+                 if(response == "yes" or response=="add")
                      //add the tutorial to the watch list if not added already
 
                      if(this->controller->addToWatchList(results[index]->getTitle())==0) {
@@ -129,6 +131,9 @@ void CLI::showResults(Tutorial **results, int n) {
                          cout<<"The current tutorial was already added to your watchlist"<<endl;
                      }
              }
+             if(response == "no") {
+                 cout<<"Too bad. Maybe the next one will be more interesting"<<endl;
+             }
              if(response == "next") {
                  index++;
              }
@@ -136,6 +141,7 @@ void CLI::showResults(Tutorial **results, int n) {
                  break;
              }
              if(index == n) {
+                 cout<<"Starting from the beginning of the list:"<<endl;
                  index = 0;
              }
          }while(true);
@@ -180,7 +186,7 @@ void CLI::start() {
         }
         if(adminMode) {
             //admin features
-            if(strcmp(command, "add") == 0) {
+            if(strcmp(command, "add") == 0) { //no leaks
                 //add a tutorial
                 //add <title> <presenter> <duration: xmys> <likes> <link>
                 string title, presenter, link;
@@ -192,12 +198,12 @@ void CLI::start() {
                 link = params[4];
                 this->controller->addTutorial(title, presenter, duration, likes, link);
             }
-            if(strcmp(command, "remove") ==0) {
+            if(strcmp(command, "remove") ==0) {  //no leaks
                 //remove <tutorial_title>
                 string title = params[0];
                 this->controller->removeTutorial(title);
             }
-            if(strcmp(command, "update") == 0) {
+            if(strcmp(command, "update") == 0) { //no leaks
                 string title, presenter, link;
                 int duration, likes;
                 title = string(params[0]);
@@ -207,13 +213,14 @@ void CLI::start() {
                 link = params[4];
                 this->controller->updateTutorial(title, presenter, duration, likes, link);
             }
-            if(strcmp(command, "print") == 0) {
+            if(strcmp(command, "print") == 0) { //no leaks
                 string* output;
                 int n;
                 output = this->controller->getAllPrintable(n);
                 for(int i=0; i<n; i++) {
                     cout<<output[i]<<endl;
                 }
+                delete[] output;
             }
         }
         else {
@@ -242,27 +249,28 @@ void CLI::start() {
             if(strcmp(command, "remove") == 0) {
                 this->controller->deleteFromWatchlist(params[0]);
             }
-            if(strcmp(command, "print")==0) {
+            if(strcmp(command, "print")==0) { //no leaks
                 cout<<"Watch list:"<<endl;
                 int n = 0;
                 Tutorial** tutorials = this->controller->getWatchList(n);
                 if(n==0) {
                     cout<<"Your watch list is empty!"<<endl;
+                    delete[] tutorials;
                 }
                 else {
                     for (int i = 0; i < n; i++) {
                         cout << tutorials[i]->toString() << endl;
                     }
+                    delete[] tutorials;
                 }
             }
         }
+        for(int i=0; i<paramNumber; i++) {
+            free(params[i]);
+        }
+        free(params);
+        free(command);
     }
-
-    for(int i=0; i<paramNumber; i++) {
-        free(params[i]);
-    }
-    free(params);
-    free(command);
 }
 
 CLI::~CLI() {

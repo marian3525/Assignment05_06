@@ -15,6 +15,7 @@ void Repository::remove(string nameToDelete) {
     for(int i=0; i<this->elems->getSize(); i++) {
         if((*elems)[i].getTitle()==nameToDelete) {
             this->elems->remove(&(*elems)[i]);
+            break;
         }
     }
 }
@@ -27,6 +28,7 @@ void Repository::update(string nameToUpdate, string presenter, int duration, int
             (*elems)[i].setDuration(duration);
             (*elems)[i].setLikes(likes);
             (*elems)[i].setLink(link);
+            break;
         }
     }
 }

@@ -19,7 +19,7 @@ void test() {
 }
 
 int main() {
-    //test();
-    run();
+    test();
+    //run();
     return 3;
 }

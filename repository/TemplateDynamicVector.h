@@ -60,6 +60,10 @@ T &TemplateDynamicVector<T>::operator[](int pos) {
 
 template<typename T>
 void TemplateDynamicVector<T>::add(T *e) {
+    for(int i=0; i<size; i++) {
+        if(elems[i]->getTitle() == e->getTitle())
+            return;
+    }
     if(this->size == this->capacity) {
         this->resize(2);
     }
@@ -72,6 +76,10 @@ void TemplateDynamicVector<T>::remove(T *e) {
     for(int i=0; i<this->size; i++) {
         if(this->elems[i] == e) {
             for(int j=i; j<this->size-1; j++) {
+                if(toDestroy and j==i) {
+                    //will only delete when it is an instance of the main repo
+                    delete elems[j];
+                }
                 this->elems[j] = this->elems[j+1];
             }
             this->size--;

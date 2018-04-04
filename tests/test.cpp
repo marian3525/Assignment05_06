@@ -78,7 +78,6 @@ void Test::testDynamicVector() {
     assert(vt->getSize() == 0);
 
     delete vt; //doesn't crash on destruction here
-    delete tv;
     delete t1v;
     delete t2v;
 }
@@ -115,11 +114,30 @@ void  Test::testRepo() {
 }
 
 void testAdd() {
+    Repository* repository = new Repository();
+    Controller* controller = new Controller(repository);
 
+    assert(repository->getSize() == 6);
+    controller->addTutorial("title1","presenter1", 20, 13, "link1");
+    assert(repository->getSize()==7);
+    assert((*repository)[6].getTitle() == string("title1"));
+    assert(controller->addTutorial("","presenter1", 20, 13, "link1") == 1);
+    delete controller;
+    delete repository;
 }
 
 void testRemove() {
+    Repository* repository = new Repository();
+    Controller* controller = new Controller(repository);
 
+    assert(repository->getSize() == 6);
+    controller->addTutorial("title1","presenter1", 20, 13, "link1");
+    assert(repository->getSize()==7);
+    controller->removeTutorial("title1");
+    assert(repository->getSize() == 6);
+
+    assert(controller->removeTutorial("") == 1);
+    assert(repository->getSize() == 6);
 }
 
 void testGetPrintable() {
@@ -182,15 +200,126 @@ void testFilterByPresenter() {
     }
 }
 
+void Test::testLikeTutorial() {
+    Repository* repo = new Repository();
+    Controller* controller = new Controller(repo);
+    int n;
+    Tutorial** t;
+
+    controller->addToWatchList("OOP");
+    t = controller->getWatchList(n);
+    assert(n==1);
+    assert(t[0]->getTitle() == "OOP");
+    assert(t[0]->getDuration() == 7000);
+
+    controller->addToWatchList("OS");
+    delete[] t;
+    t = controller->getWatchList(n);
+    assert(n==2);
+    assert(t[0]->getTitle() == "OOP");
+    assert(t[1]->getTitle() == "OS");
+
+    delete[] t;
+    delete controller;
+    delete repo;
+}
+
+void Test::testDeleteFromWatchList() {
+    Repository* repo = new Repository();
+    Controller* controller = new Controller(repo);
+    int n;
+    Tutorial** t;
+
+    controller->addToWatchList("OOP");
+    t = controller->getWatchList(n);
+    assert(n==1);
+    assert(t[0]->getTitle() == "OOP");
+    assert(t[0]->getDuration() == 7000);
+
+    controller->addToWatchList("OS");
+    delete[] t;
+    t = controller->getWatchList(n);
+    assert(n==2);
+    assert(t[0]->getTitle() == "OOP");
+    assert(t[1]->getTitle() == "OS");
+
+    controller->deleteFromWatchlist("OOP");
+    t = controller->getWatchList(n);
+    assert(n==1);
+    assert(t[0]->getTitle() == "OS");
+    delete[] t;
+
+    controller->deleteFromWatchlist("OS");
+    t = controller->getWatchList(n);
+    assert(n==0);
+
+    delete[] t;
+    delete controller;
+    delete repo;
+}
+
+void Test::testGetWatchList() {
+    Repository* repo = new Repository();
+    Controller* controller = new Controller(repo);
+    int n;
+    Tutorial** t;
+
+    controller->addToWatchList("OOP");
+    t = controller->getWatchList(n);
+    assert(n==1);
+    assert(t[0]->getTitle() == "OOP");
+    assert(t[0]->getDuration() == 7000);
+
+    controller->addToWatchList("OS");
+    delete[] t;
+    t = controller->getWatchList(n);
+    assert(n==2);
+    assert(t[0]->getTitle() == "OOP");
+    assert(t[1]->getTitle() == "OS");
+
+    controller->deleteFromWatchlist("OOP");
+    t = controller->getWatchList(n);
+    assert(n==1);
+    assert(t[0]->getTitle() == "OS");
+    delete[] t;
+}
+
+void Test::testAddToWatchList() {
+    Repository* repo = new Repository();
+    Controller* controller = new Controller(repo);
+    int n;
+    Tutorial** t;
+
+    controller->addToWatchList("OOP");
+    t = controller->getWatchList(n);
+    assert(n==1);
+    assert(t[0]->getTitle() == "OOP");
+    assert(t[0]->getDuration() == 7000);
+
+    controller->addToWatchList("OS");
+    delete[] t;
+    t = controller->getWatchList(n);
+    assert(n==2);
+    assert(t[0]->getTitle() == "OOP");
+    assert(t[1]->getTitle() == "OS");
+    delete[] t;
+    delete controller;
+    delete repo;
+}
+
 void Test::testController() {
     //admin functions
     testAdd();
     testRemove();
     testUpdate();
-    //testGetPrintable();
+    testGetPrintable();
 
     //user functions
     testFilterByPresenter();
+    testAddToWatchList();
+    testGetWatchList();
+    testDeleteFromWatchList();
+    testLikeTutorial();
 }
 
 void Test::test() {
@@ -200,3 +329,4 @@ void Test::test() {
     testRepo();
     testController();
 }
+

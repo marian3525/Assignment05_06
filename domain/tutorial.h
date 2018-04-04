@@ -36,12 +36,12 @@ public:
     ~Tutorial();
 
     bool operator==(const Tutorial& tutorial);
-
-    string getTitle();
-    string getPresenter();
-    int getDuration();
-    int getLikes();
-    string getLink();
+    void operator=(const Tutorial& tutorial);
+    string getTitle()const;
+    string getPresenter()const;
+    int getDuration()const;
+    int getLikes()const;
+    string getLink()const;
 
 };
 

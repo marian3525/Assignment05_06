@@ -145,9 +145,8 @@ int Controller::addToWatchList(string name) {
 }
 
 Tutorial** Controller::getWatchList(int &n) {
-    Tutorial** result;
-
     n = this->watchList->getSize();
+    Tutorial** result = new Tutorial*[n];
 
     for(int i=0; i<n; i++) {
         result[i] = &(*this->watchList)[i];
@@ -158,10 +157,9 @@ Tutorial** Controller::getWatchList(int &n) {
 void Controller::deleteFromWatchlist(string name) {
     for(int i=0; i<this->watchList->getSize(); i++) {
         if (name == (*watchList)[i].getTitle()) {
-            for (int j = i; j < this->watchList->getSize(); j++) {
-                this->watchList[j] = this->watchList[j + 1];
+            for (int j = i; j < watchList->getSize(); j++) {
+                watchList->remove(name);
             }
-            this->watchList->decSize();
             return;
         }
     }

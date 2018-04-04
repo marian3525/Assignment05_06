@@ -36,23 +36,23 @@ bool Tutorial::operator==(const Tutorial &tutorial) {
     return false;
 }
 
-string Tutorial::getLink() {
+string Tutorial::getLink()const {
     return this->link;
 }
 
-int Tutorial::getLikes() {
+int Tutorial::getLikes()const {
     return this->likes;
 }
 
-int Tutorial::getDuration() {
+int Tutorial::getDuration()const {
     return this->duration;
 }
 
-string Tutorial::getPresenter() {
+string Tutorial::getPresenter()const {
     return this->presenter;
 }
 
-string Tutorial::getTitle() {
+string Tutorial::getTitle()const {
     return this->title;
 }
 
@@ -100,4 +100,13 @@ string Tutorial::toString() {
 void Tutorial::incLikes() {
     this->likes++;
 
+}
+
+void Tutorial::operator=(const Tutorial &tutorial) {
+
+    title = tutorial.getTitle();
+    presenter = tutorial.getPresenter();
+    duration = tutorial.getDuration();
+    likes = tutorial.getLikes();
+    link = tutorial.getLink();
 }
