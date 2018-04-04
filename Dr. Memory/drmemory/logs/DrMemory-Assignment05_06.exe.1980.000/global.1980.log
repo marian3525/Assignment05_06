@@ -1,0 +1,299 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3657547:21:08.360 == 19:21:08.360 04/02/2018
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+new thread #0 id=9904
+
+module load event: "Assignment05_06.exe" 0x00400000-0x0046c000 modid: 1 D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe
+
+module load event: "dynamorio.dll" 0x5cc50000-0x5cdad000 modid: 2 D:\CS\OOP\Assignment05-06\Dr. Memory\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "libgcc_s_dw2-1.dll" 0x6eb40000-0x6ec1d000 modid: 3 D:\CS\IDEs\MinGW\bin\libgcc_s_dw2-1.dll
+
+module load event: "libstdc++-6.dll" 0x6fe40000-0x6ffb4000 modid: 4 D:\CS\IDEs\MinGW\bin\libstdc++-6.dll
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 5 D:\CS\OOP\Assignment05-06\Dr. Memory\bin\release\drmemorylib.dll
+
+module load event: "KERNELBASE.dll" 0x74530000-0x74707000 modid: 6 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "msvcrt.dll" 0x75d30000-0x75ded000 modid: 7 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "KERNEL32.dll" 0x76a80000-0x76b50000 modid: 8 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "ntdll.dll" 0x77430000-0x775bd000 modid: 9 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+WARNING: unable to load symbols for D:\CS\IDEs\MinGW\bin\libstdc++-6.dll
+
+NEW THREAD: main thread 9904
+
+
+Error #1: UNADDRESSABLE ACCESS of freed memory: reading 0x03790ed8-0x03790edc 4 byte(s)
+# 0 libstdc++-6.dll!?               (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>) modid:4
+# 1 libstdc++-6.dll!?               (0x6fe70040 <libstdc++-6.dll+0x30040>) modid:4
+# 2 libstdc++-6.dll!?               (0x6fed5787 <libstdc++-6.dll+0x95787>) modid:4
+# 3 libstdc++-6.dll!?               (0x6fed93e7 <libstdc++-6.dll+0x993e7>) modid:4
+# 4 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:28] (0x00402265 <Assignment05_06.exe+0x2265>) modid:1
+# 5 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+# 6 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+# 7 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+# 8 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:00:00.375 in thread 9904
+Note: prev lower malloc:  0x03790e30-0x03790e70
+Note: 0x03790ed8-0x03790edc overlaps memory 0x03790ec0-0x03790f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+Note: # 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27] (0x00402254 <Assignment05_06.exe+0x2254>) modid:1
+Note: # 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+Note: # 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+Note: # 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+Note: # 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: instruction: mov    (%eax) -> %eax
+	error end
+
+Error #2: INVALID HEAP ARGUMENT to free 0x03790ed8
+# 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+# 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:28] (0x00402275 <Assignment05_06.exe+0x2275>) modid:1
+# 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+# 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+# 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+# 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:00:00.375 in thread 9904
+Note: prev lower malloc:  0x03790e30-0x03790e70
+Note: 0x03790ed8-0x03790ed8 overlaps memory 0x03790ec0-0x03790f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+Note: # 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27] (0x00402254 <Assignment05_06.exe+0x2254>) modid:1
+Note: # 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+Note: # 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+Note: # 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+Note: # 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+	error end
+
+Error #3: UNADDRESSABLE ACCESS of freed memory: reading 0x03790ef8-0x03790efc 4 byte(s)
+# 0 libstdc++-6.dll!?               (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>) modid:4
+# 1 libstdc++-6.dll!?               (0x6fe70040 <libstdc++-6.dll+0x30040>) modid:4
+# 2 libstdc++-6.dll!?               (0x6fed5787 <libstdc++-6.dll+0x95787>) modid:4
+# 3 libstdc++-6.dll!?               (0x6fed93e7 <libstdc++-6.dll+0x993e7>) modid:4
+# 4 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:29] (0x00402286 <Assignment05_06.exe+0x2286>) modid:1
+# 5 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+# 6 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+# 7 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+# 8 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:00:00.375 in thread 9904
+Note: prev lower malloc:  0x03790e30-0x03790e70
+Note: 0x03790ef8-0x03790efc overlaps memory 0x03790ec0-0x03790f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+Note: # 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27] (0x00402254 <Assignment05_06.exe+0x2254>) modid:1
+Note: # 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+Note: # 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+Note: # 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+Note: # 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: instruction: mov    (%eax) -> %eax
+	error end
+
+Error #4: INVALID HEAP ARGUMENT to free 0x03790ef8
+# 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+# 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:29] (0x00402296 <Assignment05_06.exe+0x2296>) modid:1
+# 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+# 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+# 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+# 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:00:00.375 in thread 9904
+Note: prev lower malloc:  0x03790e30-0x03790e70
+Note: 0x03790ef8-0x03790ef8 overlaps memory 0x03790ec0-0x03790f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+Note: # 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27] (0x00402254 <Assignment05_06.exe+0x2254>) modid:1
+Note: # 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+Note: # 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+Note: # 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+Note: # 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+	error end
+
+Error #5: UNADDRESSABLE ACCESS of freed memory: reading 0x03790ef8-0x03790efc 4 byte(s)
+# 0 libstdc++-6.dll!?               (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>) modid:4
+# 1 libstdc++-6.dll!?               (0x6fe70040 <libstdc++-6.dll+0x30040>) modid:4
+# 2 libstdc++-6.dll!?               (0x6fed5787 <libstdc++-6.dll+0x95787>) modid:4
+# 3 libstdc++-6.dll!?               (0x6fed93e7 <libstdc++-6.dll+0x993e7>) modid:4
+# 4 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26] (0x004022a3 <Assignment05_06.exe+0x22a3>) modid:1
+# 5 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+# 6 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+# 7 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+# 8 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:00:00.375 in thread 9904
+Note: prev lower malloc:  0x03790e30-0x03790e70
+Note: 0x03790ef8-0x03790efc overlaps memory 0x03790ec0-0x03790f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+Note: # 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27] (0x00402254 <Assignment05_06.exe+0x2254>) modid:1
+Note: # 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+Note: # 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+Note: # 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+Note: # 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: instruction: mov    (%eax) -> %eax
+	error end
+
+Error #6: UNADDRESSABLE ACCESS of freed memory: reading 0x03790ed8-0x03790edc 4 byte(s)
+# 0 libstdc++-6.dll!?               (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>) modid:4
+# 1 libstdc++-6.dll!?               (0x6fe70040 <libstdc++-6.dll+0x30040>) modid:4
+# 2 libstdc++-6.dll!?               (0x6fed5787 <libstdc++-6.dll+0x95787>) modid:4
+# 3 libstdc++-6.dll!?               (0x6fed93e7 <libstdc++-6.dll+0x993e7>) modid:4
+# 4 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26] (0x004022b0 <Assignment05_06.exe+0x22b0>) modid:1
+# 5 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+# 6 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+# 7 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+# 8 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:00:00.375 in thread 9904
+Note: prev lower malloc:  0x03790e30-0x03790e70
+Note: 0x03790ed8-0x03790edc overlaps memory 0x03790ec0-0x03790f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+Note: # 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27] (0x00402254 <Assignment05_06.exe+0x2254>) modid:1
+Note: # 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+Note: # 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+Note: # 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+Note: # 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: instruction: mov    (%eax) -> %eax
+	error end
+
+Error #7: UNADDRESSABLE ACCESS of freed memory: reading 0x03790ec0-0x03790ec4 4 byte(s)
+# 0 libstdc++-6.dll!?               (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>) modid:4
+# 1 libstdc++-6.dll!?               (0x6fe70040 <libstdc++-6.dll+0x30040>) modid:4
+# 2 libstdc++-6.dll!?               (0x6fed5787 <libstdc++-6.dll+0x95787>) modid:4
+# 3 libstdc++-6.dll!?               (0x6fed93e7 <libstdc++-6.dll+0x993e7>) modid:4
+# 4 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26] (0x004022ba <Assignment05_06.exe+0x22ba>) modid:1
+# 5 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+# 6 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+# 7 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+# 8 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:00:00.375 in thread 9904
+Note: prev lower malloc:  0x03790e30-0x03790e70
+Note: 0x03790ec0-0x03790ec4 overlaps memory 0x03790ec0-0x03790f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+Note: # 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27] (0x00402254 <Assignment05_06.exe+0x2254>) modid:1
+Note: # 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+Note: # 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+Note: # 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+Note: # 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: instruction: mov    (%eax) -> %eax
+	error end
+
+Error #8: INVALID HEAP ARGUMENT to free 0x03790ec0
+# 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+# 1 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402926 <Assignment05_06.exe+0x2926>) modid:1
+# 2 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+# 3 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+# 4 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:00:00.375 in thread 9904
+Note: prev lower malloc:  0x03790e30-0x03790e70
+Note: memory was previously freed here:
+Note: # 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+Note: # 1 Tutorial::~Tutorial [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27] (0x00402254 <Assignment05_06.exe+0x2254>) modid:1
+Note: # 2 Test::testDomain    [D:/CS/OOP/Assignment05-06/tests/test.cpp:22] (0x00402916 <Assignment05_06.exe+0x2916>) modid:1
+Note: # 3 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:107] (0x0040428d <Assignment05_06.exe+0x428d>) modid:1
+Note: # 4 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+Note: # 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+	error end
+WARNING: unable to load symbols for C:\WINDOWS\System32\KERNELBASE.dll
+
+Potential Error #1: HANDLE LEAK: KERNEL handle 0x00000118 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x746229c9 <KERNELBASE.dll+0xf29c9>) modid:6
+# 2 KERNELBASE.dll!IsValidLocale  (0x745fefe7 <KERNELBASE.dll+0xcefe7>) modid:6
+# 3 KERNELBASE.dll!IsValidLocale  (0x745fee3c <KERNELBASE.dll+0xcee3c>) modid:6
+# 4 msvcrt.dll!__get_qualified_locale (0x75d8e9bb <msvcrt.dll+0x5e9bb>) modid:7
+# 5 msvcrt.dll!_expandlocale (0x75d854f9 <msvcrt.dll+0x554f9>) modid:7
+# 6 msvcrt.dll!_setlocale_set_cat (0x75d85c03 <msvcrt.dll+0x55c03>) modid:7
+# 7 msvcrt.dll!_setlocale_nolock (0x75d85939 <msvcrt.dll+0x55939>) modid:7
+# 8 msvcrt.dll!setlocale  (0x75d86055 <msvcrt.dll+0x56055>) modid:7
+# 9 __mingw_dirname     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x004060d1 <Assignment05_06.exe+0x60d1>) modid:1
+#10 .text               [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x00405704 <Assignment05_06.exe+0x5704>) modid:1
+#11 __mingw_glob        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x00405f82 <Assignment05_06.exe+0x5f82>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x004046c6 <Assignment05_06.exe+0x46c6>) modid:1
+#13 .text               [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5086] (0x00401202 <Assignment05_06.exe+0x1202>) modid:1
+#14 mainCRTStartup      [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5086] (0x004012f5 <Assignment05_06.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a77 <ntdll.dll+0x64a77>) modid:9
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a47 <ntdll.dll+0x64a47>) modid:9
+Note: @0:00:00.484 in thread 9904
+	error end
+
+Potential Error #2: HANDLE LEAK: KERNEL handle 0x00000124 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x746229c9 <KERNELBASE.dll+0xf29c9>) modid:6
+# 2 KERNELBASE.dll!IsValidLocale  (0x745ff037 <KERNELBASE.dll+0xcf037>) modid:6
+# 3 KERNELBASE.dll!IsValidLocale  (0x745fee33 <KERNELBASE.dll+0xcee33>) modid:6
+# 4 msvcrt.dll!__get_qualified_locale (0x75d8e9bb <msvcrt.dll+0x5e9bb>) modid:7
+# 5 msvcrt.dll!_expandlocale (0x75d854f9 <msvcrt.dll+0x554f9>) modid:7
+# 6 msvcrt.dll!_setlocale_set_cat (0x75d85c03 <msvcrt.dll+0x55c03>) modid:7
+# 7 msvcrt.dll!_setlocale_nolock (0x75d85939 <msvcrt.dll+0x55939>) modid:7
+# 8 msvcrt.dll!setlocale  (0x75d86055 <msvcrt.dll+0x56055>) modid:7
+# 9 __mingw_dirname     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x004060d1 <Assignment05_06.exe+0x60d1>) modid:1
+#10 .text               [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x00405704 <Assignment05_06.exe+0x5704>) modid:1
+#11 __mingw_glob        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x00405f82 <Assignment05_06.exe+0x5f82>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x004046c6 <Assignment05_06.exe+0x46c6>) modid:1
+#13 .text               [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5086] (0x00401202 <Assignment05_06.exe+0x1202>) modid:1
+#14 mainCRTStartup      [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5086] (0x004012f5 <Assignment05_06.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a77 <ntdll.dll+0x64a77>) modid:9
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a47 <ntdll.dll+0x64a47>) modid:9
+Note: @0:00:00.484 in thread 9904
+	error end
+
+Potential Error #3: HANDLE LEAK: KERNEL handle 0x00000130 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x746229c9 <KERNELBASE.dll+0xf29c9>) modid:6
+# 2 KERNELBASE.dll!IsValidLocale  (0x745ff087 <KERNELBASE.dll+0xcf087>) modid:6
+# 3 KERNELBASE.dll!IsValidLocale  (0x745fee2a <KERNELBASE.dll+0xcee2a>) modid:6
+# 4 msvcrt.dll!__get_qualified_locale (0x75d8e9bb <msvcrt.dll+0x5e9bb>) modid:7
+# 5 msvcrt.dll!_expandlocale (0x75d854f9 <msvcrt.dll+0x554f9>) modid:7
+# 6 msvcrt.dll!_setlocale_set_cat (0x75d85c03 <msvcrt.dll+0x55c03>) modid:7
+# 7 msvcrt.dll!_setlocale_nolock (0x75d85939 <msvcrt.dll+0x55939>) modid:7
+# 8 msvcrt.dll!setlocale  (0x75d86055 <msvcrt.dll+0x56055>) modid:7
+# 9 __mingw_dirname     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x004060d1 <Assignment05_06.exe+0x60d1>) modid:1
+#10 .text               [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x00405704 <Assignment05_06.exe+0x5704>) modid:1
+#11 __mingw_glob        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x00405f82 <Assignment05_06.exe+0x5f82>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment05-06/repository/repository.cpp:39] (0x004046c6 <Assignment05_06.exe+0x46c6>) modid:1
+#13 .text               [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5086] (0x00401202 <Assignment05_06.exe+0x1202>) modid:1
+#14 mainCRTStartup      [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5086] (0x004012f5 <Assignment05_06.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a77 <ntdll.dll+0x64a77>) modid:9
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a47 <ntdll.dll+0x64a47>) modid:9
+Note: @0:00:00.484 in thread 9904
+	error end
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+	     1x: default i#1324 mingw runtime
+
+ERRORS FOUND:
+      5 unique,     5 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      3 unique,     3 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.1980.000\potential_errors.txt)
+     99 ignored assumed-innocuous system leak(s)
+      5 unique,     5 total,    354 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.1980.000\results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+      3 unique,     3 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.1980.000\potential_errors.txt
+Exiting @0:00:00.500 in thread 9904
+LOG END

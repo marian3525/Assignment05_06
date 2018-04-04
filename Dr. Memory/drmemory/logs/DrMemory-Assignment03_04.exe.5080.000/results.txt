@@ -1,0 +1,44 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 5080: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT to free 0x04851300
+# 0 replace_free                        [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyUndoController               [D:/CS/OOP/Assignment03-04/controller/undoController.c:122]
+# 2 quit                                [D:/CS/OOP/Assignment03-04/controller/controller.c:146]
+# 3 start                               [D:/CS/OOP/Assignment03-04/ui/cli.c:276]
+# 4 main                                [D:/CS/OOP/Assignment03-04/main.c:5]
+Note: @0:00:12.757 in thread 7652
+Note: next higher malloc: 0x04851358-0x0485138a
+Note: prev lower malloc:  0x04851150-0x048512e0
+Note: memory was previously freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:46]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:107]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:5]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      1 unique,     1 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.5080.000\potential_errors.txt)
+      2 potential leak(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.5080.000\potential_errors.txt)
+      9 unique,     9 total,   6260 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.5080.000\results.txt

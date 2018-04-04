@@ -1,0 +1,26 @@
+# File for suppressing errors found in pid 6692: "Assignment05_06.exe"
+
+# Suppression for Error #1
+LEAK
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_operator_new_array
+Assignment05_06.exe!Repository::getAll
+Assignment05_06.exe!_ZN10Controller15getAllPrintableB5cxx11Ev
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+LEAK
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x20f50>
+<Assignment05_06.exe+0x1cbe>
+<Assignment05_06.exe+0x1f48>
+<Assignment05_06.exe+0x4ba0>
+<Assignment05_06.exe+0x4d1d>
+<Assignment05_06.exe+0x4d3f>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+

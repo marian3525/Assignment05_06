@@ -1,0 +1,169 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 10288: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT to free 0x0040706b
+# 0 replace_free                    [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyCountry                  [D:/CS/OOP/Assignment03-04/domain/country.c:32]
+# 2 deleteByName                    [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:39]
+# 3 deleteCountry                   [D:/CS/OOP/Assignment03-04/controller/controller.c:33]
+# 4 testDeleteCountry               [D:/CS/OOP/Assignment03-04/test/tester.c:58]
+# 5 testController                  [D:/CS/OOP/Assignment03-04/test/tester.c:79]
+# 6 test                            [D:/CS/OOP/Assignment03-04/test/tester.c:106]
+# 7 main                            [D:/CS/OOP/Assignment03-04/main.c:5]
+Note: @0:00:00.816 in thread 4296
+
+Error #2: INVALID HEAP ARGUMENT to free 0x00407064
+# 0 replace_free                    [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyCountry                  [D:/CS/OOP/Assignment03-04/domain/country.c:33]
+# 2 deleteByName                    [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:39]
+# 3 deleteCountry                   [D:/CS/OOP/Assignment03-04/controller/controller.c:33]
+# 4 testDeleteCountry               [D:/CS/OOP/Assignment03-04/test/tester.c:58]
+# 5 testController                  [D:/CS/OOP/Assignment03-04/test/tester.c:79]
+# 6 test                            [D:/CS/OOP/Assignment03-04/test/tester.c:106]
+# 7 main                            [D:/CS/OOP/Assignment03-04/main.c:5]
+Note: @0:00:00.823 in thread 4296
+
+Error #3: INVALID HEAP ARGUMENT to free 0x0040706b
+# 0 replace_free                    [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyCountry                  [D:/CS/OOP/Assignment03-04/domain/country.c:32]
+# 2 deleteByName                    [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:39]
+# 3 deleteCountry                   [D:/CS/OOP/Assignment03-04/controller/controller.c:33]
+# 4 testDeleteCountry               [D:/CS/OOP/Assignment03-04/test/tester.c:58]
+# 5 testRepo                        [D:/CS/OOP/Assignment03-04/test/tester.c:85]
+# 6 test                            [D:/CS/OOP/Assignment03-04/test/tester.c:107]
+# 7 main                            [D:/CS/OOP/Assignment03-04/main.c:5]
+Note: @0:00:00.833 in thread 4296
+
+Error #4: INVALID HEAP ARGUMENT to free 0x00407064
+# 0 replace_free                    [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyCountry                  [D:/CS/OOP/Assignment03-04/domain/country.c:33]
+# 2 deleteByName                    [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:39]
+# 3 deleteCountry                   [D:/CS/OOP/Assignment03-04/controller/controller.c:33]
+# 4 testDeleteCountry               [D:/CS/OOP/Assignment03-04/test/tester.c:58]
+# 5 testRepo                        [D:/CS/OOP/Assignment03-04/test/tester.c:85]
+# 6 test                            [D:/CS/OOP/Assignment03-04/test/tester.c:107]
+# 7 main                            [D:/CS/OOP/Assignment03-04/main.c:5]
+Note: @0:00:00.834 in thread 4296
+
+Error #5: INVALID HEAP ARGUMENT to free 0x0040738e
+# 0 replace_free                            [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 validateFilterByContinent               [D:/CS/OOP/Assignment03-04/validator/validator.c:50]
+# 2 testValidator                           [D:/CS/OOP/Assignment03-04/test/tester.c:99]
+# 3 test                                    [D:/CS/OOP/Assignment03-04/test/tester.c:108]
+# 4 main                                    [D:/CS/OOP/Assignment03-04/main.c:5]
+Note: @0:00:00.839 in thread 4296
+
+Error #6: LEAK 11 direct bytes 0x047b0ed0-0x047b0edb + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 getCommand                   [D:/CS/OOP/Assignment03-04/ui/cli.c:28]
+# 3 testGetCommand               [D:/CS/OOP/Assignment03-04/test/tester.c:10]
+# 4 testParser                   [D:/CS/OOP/Assignment03-04/test/tester.c:31]
+# 5 test                         [D:/CS/OOP/Assignment03-04/test/tester.c:105]
+# 6 main                         [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #7: LEAK 7 direct bytes 0x047b0f00-0x047b0f07 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 getCommand                   [D:/CS/OOP/Assignment03-04/ui/cli.c:28]
+# 3 testGetCommand               [D:/CS/OOP/Assignment03-04/test/tester.c:12]
+# 4 testParser                   [D:/CS/OOP/Assignment03-04/test/tester.c:31]
+# 5 test                         [D:/CS/OOP/Assignment03-04/test/tester.c:105]
+# 6 main                         [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #8: LEAK 40 direct bytes 0x047b0f80-0x047b0fa8 + 21 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 getParams                    [D:/CS/OOP/Assignment03-04/ui/cli.c:43]
+# 2 testGetParams                [D:/CS/OOP/Assignment03-04/test/tester.c:22]
+# 3 testParser                   [D:/CS/OOP/Assignment03-04/test/tester.c:32]
+# 4 test                         [D:/CS/OOP/Assignment03-04/test/tester.c:105]
+# 5 main                         [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #9: LEAK 4 direct bytes 0x047b37f0-0x047b37f4 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 testAddCountry               [D:/CS/OOP/Assignment03-04/test/tester.c:43]
+# 2 testController               [D:/CS/OOP/Assignment03-04/test/tester.c:78]
+# 3 test                         [D:/CS/OOP/Assignment03-04/test/tester.c:106]
+# 4 main                         [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #10: LEAK 12 direct bytes 0x047b5f58-0x047b5f64 + 200 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 createRepo                   [D:/CS/OOP/Assignment03-04/repository/repository.c:11]
+# 2 initController               [D:/CS/OOP/Assignment03-04/controller/controller.c:178]
+# 3 testFilter                   [D:/CS/OOP/Assignment03-04/test/tester.c:64]
+# 4 testController               [D:/CS/OOP/Assignment03-04/test/tester.c:80]
+# 5 test                         [D:/CS/OOP/Assignment03-04/test/tester.c:106]
+# 6 main                         [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #11: LEAK 400 direct bytes 0x047b61d8-0x047b6368 + 5000 indirect bytes
+# 0 replace_malloc                   [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 initUndoController               [D:/CS/OOP/Assignment03-04/controller/undoController.c:20]
+# 2 testFilter                       [D:/CS/OOP/Assignment03-04/test/tester.c:65]
+# 3 testController                   [D:/CS/OOP/Assignment03-04/test/tester.c:80]
+# 4 test                             [D:/CS/OOP/Assignment03-04/test/tester.c:106]
+# 5 main                             [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #12: LEAK 50 direct bytes 0x047b85e8-0x047b861a + 0 indirect bytes
+# 0 replace_malloc                   [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 initUndoController               [D:/CS/OOP/Assignment03-04/controller/undoController.c:25]
+# 2 testFilter                       [D:/CS/OOP/Assignment03-04/test/tester.c:65]
+# 3 testController                   [D:/CS/OOP/Assignment03-04/test/tester.c:80]
+# 4 test                             [D:/CS/OOP/Assignment03-04/test/tester.c:106]
+# 5 main                             [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #13: LEAK 50 direct bytes 0x047b8640-0x047b8672 + 0 indirect bytes
+# 0 replace_malloc                   [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 initUndoController               [D:/CS/OOP/Assignment03-04/controller/undoController.c:27]
+# 2 testFilter                       [D:/CS/OOP/Assignment03-04/test/tester.c:65]
+# 3 testController                   [D:/CS/OOP/Assignment03-04/test/tester.c:80]
+# 4 test                             [D:/CS/OOP/Assignment03-04/test/tester.c:106]
+# 5 main                             [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #14: LEAK 4 direct bytes 0x047b8698-0x047b869c + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 testFilter                   [D:/CS/OOP/Assignment03-04/test/tester.c:70]
+# 2 testController               [D:/CS/OOP/Assignment03-04/test/tester.c:80]
+# 3 test                         [D:/CS/OOP/Assignment03-04/test/tester.c:106]
+# 4 main                         [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #15: LEAK 400 direct bytes 0x047b86c0-0x047b8850 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 filterByName                 [D:/CS/OOP/Assignment03-04/controller/controller.c:55]
+# 2 testFilter                   [D:/CS/OOP/Assignment03-04/test/tester.c:71]
+# 3 testController               [D:/CS/OOP/Assignment03-04/test/tester.c:80]
+# 4 test                         [D:/CS/OOP/Assignment03-04/test/tester.c:106]
+# 5 main                         [D:/CS/OOP/Assignment03-04/main.c:5]
+
+Error #16: LEAK 4 direct bytes 0x047bafe0-0x047bafe4 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 testAddCountry               [D:/CS/OOP/Assignment03-04/test/tester.c:43]
+# 2 testRepo                     [D:/CS/OOP/Assignment03-04/test/tester.c:84]
+# 3 test                         [D:/CS/OOP/Assignment03-04/test/tester.c:107]
+# 4 main                         [D:/CS/OOP/Assignment03-04/main.c:5]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      5 unique,     5 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+     11 unique,    11 total,   6203 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.10288.000\potential_errors.txt)
+      2 potential leak(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.10288.000\potential_errors.txt)
+      8 unique,     8 total,   2164 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.10288.000\results.txt

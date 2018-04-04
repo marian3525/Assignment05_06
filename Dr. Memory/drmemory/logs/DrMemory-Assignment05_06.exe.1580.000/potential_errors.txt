@@ -1,0 +1,78 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory errors that are likely to be false positives, for pid 1580: "Assignment05_06.exe"
+These errors matched the blacklist 'C:\WINDOWS*.d??' for 4 frames.
+Run with -lib_blacklist_frames 0 to treat these as regular errors.
+If these are all false positives and your focus is unaddressable errors, consider running with -light to skip all uninitialized reads and leaks for higher performance.
+
+Potential Error #1: HANDLE LEAK: KERNEL handle 0x00000120 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x746229c9 <KERNELBASE.dll+0xf29c9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x326    (0x745ff087 <KERNELBASE.dll+0xcf087>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xc9     (0x745fee2a <KERNELBASE.dll+0xcee2a>)
+# 4 msvcrt.dll!__get_qualified_locale
+# 5 msvcrt.dll!_expandlocale
+# 6 msvcrt.dll!_setlocale_set_cat
+# 7 msvcrt.dll!_setlocale_nolock
+# 8 msvcrt.dll!setlocale 
+# 9 __mingw_dirname                                 [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#10 .text                                           [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#11 __mingw_glob                                    [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#12 _setargv                                        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#13 .text                                           [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+#14 mainCRTStartup                                  [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x77494a77 <ntdll.dll+0x64a77>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x77494a47 <ntdll.dll+0x64a47>)
+Note: @0:00:00.829 in thread 3248
+
+Potential Error #2: HANDLE LEAK: KERNEL handle 0x00000124 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x746229c9 <KERNELBASE.dll+0xf29c9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x2d6    (0x745ff037 <KERNELBASE.dll+0xcf037>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xd2     (0x745fee33 <KERNELBASE.dll+0xcee33>)
+# 4 msvcrt.dll!__get_qualified_locale
+# 5 msvcrt.dll!_expandlocale
+# 6 msvcrt.dll!_setlocale_set_cat
+# 7 msvcrt.dll!_setlocale_nolock
+# 8 msvcrt.dll!setlocale 
+# 9 __mingw_dirname                                 [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#10 .text                                           [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#11 __mingw_glob                                    [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#12 _setargv                                        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#13 .text                                           [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+#14 mainCRTStartup                                  [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x77494a77 <ntdll.dll+0x64a77>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x77494a47 <ntdll.dll+0x64a47>)
+Note: @0:00:00.829 in thread 3248
+
+Potential Error #3: HANDLE LEAK: KERNEL handle 0x00000148 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x746229c9 <KERNELBASE.dll+0xf29c9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x286    (0x745fefe7 <KERNELBASE.dll+0xcefe7>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xdb     (0x745fee3c <KERNELBASE.dll+0xcee3c>)
+# 4 msvcrt.dll!__get_qualified_locale
+# 5 msvcrt.dll!_expandlocale
+# 6 msvcrt.dll!_setlocale_set_cat
+# 7 msvcrt.dll!_setlocale_nolock
+# 8 msvcrt.dll!setlocale 
+# 9 __mingw_dirname                                 [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#10 .text                                           [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#11 __mingw_glob                                    [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#12 _setargv                                        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48]
+#13 .text                                           [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+#14 mainCRTStartup                                  [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x77494a77 <ntdll.dll+0x64a77>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x77494a47 <ntdll.dll+0x64a47>)
+Note: @0:00:00.829 in thread 3248
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+      3 unique,     3 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.1580.000\potential_errors.txt

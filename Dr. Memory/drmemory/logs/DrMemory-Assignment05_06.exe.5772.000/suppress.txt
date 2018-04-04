@@ -1,0 +1,172 @@
+# File for suppressing errors found in pid 5772: "Assignment05_06.exe"
+
+# Suppression for Error #1
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!DynamicVector::~DynamicVector
+Assignment05_06.exe!Repository::~Repository
+Assignment05_06.exe!Controller::~Controller
+Assignment05_06.exe!CLI::~CLI
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x30040>
+<libstdc++-6.dll+0x95787>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x4aa2>
+<Assignment05_06.exe+0x168c>
+<Assignment05_06.exe+0x1db2>
+<Assignment05_06.exe+0x2cc1>
+<Assignment05_06.exe+0x483c>
+<Assignment05_06.exe+0x14f8>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #2
+UNADDRESSABLE ACCESS
+name=Error #2 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!DynamicVector::~DynamicVector
+Assignment05_06.exe!Repository::~Repository
+Assignment05_06.exe!Controller::~Controller
+Assignment05_06.exe!CLI::~CLI
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #2:
+UNADDRESSABLE ACCESS
+name=Error #2 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x30040>
+<libstdc++-6.dll+0x95787>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x4aaf>
+<Assignment05_06.exe+0x168c>
+<Assignment05_06.exe+0x1db2>
+<Assignment05_06.exe+0x2cc1>
+<Assignment05_06.exe+0x483c>
+<Assignment05_06.exe+0x14f8>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #3
+UNADDRESSABLE ACCESS
+name=Error #3 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!DynamicVector::~DynamicVector
+Assignment05_06.exe!Repository::~Repository
+Assignment05_06.exe!Controller::~Controller
+Assignment05_06.exe!CLI::~CLI
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #3:
+UNADDRESSABLE ACCESS
+name=Error #3 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x30040>
+<libstdc++-6.dll+0x95787>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x4ab9>
+<Assignment05_06.exe+0x168c>
+<Assignment05_06.exe+0x1db2>
+<Assignment05_06.exe+0x2cc1>
+<Assignment05_06.exe+0x483c>
+<Assignment05_06.exe+0x14f8>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #4
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_nothrow
+Assignment05_06.exe!DynamicVector::~DynamicVector
+Assignment05_06.exe!Repository::~Repository
+Assignment05_06.exe!Controller::~Controller
+Assignment05_06.exe!CLI::~CLI
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #4:
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+<drmemorylib.dll+0x210f0>
+<Assignment05_06.exe+0x169c>
+<Assignment05_06.exe+0x1db2>
+<Assignment05_06.exe+0x2cc1>
+<Assignment05_06.exe+0x483c>
+<Assignment05_06.exe+0x14f8>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #5
+LEAK
+name=Error #5 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+msvcrt.dll!_strdup
+Assignment05_06.exe!getCommand
+Assignment05_06.exe!CLI::start
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #5:
+LEAK
+name=Error #5 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<msvcrt.dll+0x856a9>
+<Assignment05_06.exe+0x340e>
+<Assignment05_06.exe+0x39a5>
+<Assignment05_06.exe+0x14cc>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #6
+LEAK
+name=Error #6 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment05_06.exe!getParams
+Assignment05_06.exe!CLI::start
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #6:
+LEAK
+name=Error #6 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment05_06.exe+0x3479>
+<Assignment05_06.exe+0x39bd>
+<Assignment05_06.exe+0x14cc>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #7
+LEAK
+name=Error #7 (update to meaningful name)
+drmemorylib.dll!replace_operator_new_array
+Assignment05_06.exe!Repository::getAll
+Assignment05_06.exe!Controller::filterByPresenter
+Assignment05_06.exe!_fu5___ZSt4cout
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #7:
+LEAK
+name=Error #7 (update to meaningful name)
+<drmemorylib.dll+0x20f50>
+<Assignment05_06.exe+0x1cb6>
+<Assignment05_06.exe+0x2fd5>
+<Assignment05_06.exe+0x42d8>
+<Assignment05_06.exe+0x14cc>
+<Assignment05_06.exe+0x1584>
+

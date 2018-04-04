@@ -1,0 +1,4 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 8972: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt

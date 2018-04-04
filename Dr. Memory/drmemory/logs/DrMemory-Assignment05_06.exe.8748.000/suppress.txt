@@ -1,0 +1,40 @@
+# File for suppressing errors found in pid 8748: "Assignment05_06.exe"
+
+# Suppression for Error #1
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_nothrow
+Assignment05_06.exe!DynamicVector::~DynamicVector
+Assignment05_06.exe!Repository::Repository
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x210f0>
+<Assignment05_06.exe+0x1658>
+<Assignment05_06.exe+0x1993>
+<Assignment05_06.exe+0x147d>
+<Assignment05_06.exe+0x1566>
+
+# Suppression for Error #2
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_nothrow
+Assignment05_06.exe!DynamicVector::~DynamicVector
+Assignment05_06.exe!Repository::Repository
+Assignment05_06.exe!Controller::Controller
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #2:
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+<drmemorylib.dll+0x210f0>
+<Assignment05_06.exe+0x1658>
+<Assignment05_06.exe+0x1993>
+<Assignment05_06.exe+0x1e7c>
+<Assignment05_06.exe+0x149b>
+<Assignment05_06.exe+0x1566>
+

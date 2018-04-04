@@ -1,0 +1,78 @@
+# File for suppressing errors found in pid 9756: "Assignment05_06.exe"
+
+# Suppression for Error #1
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_array
+Assignment05_06.exe!_fu0___ZSt4cout
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x211e0>
+<Assignment05_06.exe+0x387f>
+<Assignment05_06.exe+0x14cc>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #2
+LEAK
+name=Error #2 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+msvcrt.dll!_strdup
+Assignment05_06.exe!.text
+Assignment05_06.exe!__mingw_glob
+Assignment05_06.exe!_setargv
+Assignment05_06.exe!.text
+Assignment05_06.exe!mainCRTStartup
+ntdll.dll!RtlGetAppContainerNamedObjectPath
+ntdll.dll!RtlGetAppContainerNamedObjectPath
+
+## Mod+offs-style suppression for Error #2:
+LEAK
+name=Error #2 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<msvcrt.dll+0x856a9>
+<Assignment05_06.exe+0x7b55>
+<Assignment05_06.exe+0x7e72>
+<Assignment05_06.exe+0x6536>
+<Assignment05_06.exe+0x1202>
+<Assignment05_06.exe+0x12f5>
+<ntdll.dll+0x64a77>
+<ntdll.dll+0x64a47>
+
+# Suppression for Error #3
+LEAK
+name=Error #3 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #3:
+LEAK
+name=Error #3 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x14ad>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #4
+LEAK
+name=Error #4 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+msvcrt.dll!_strdup
+Assignment05_06.exe!getCommand
+Assignment05_06.exe!CLI::start
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #4:
+LEAK
+name=Error #4 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<msvcrt.dll+0x856a9>
+<Assignment05_06.exe+0x2e4a>
+<Assignment05_06.exe+0x3125>
+<Assignment05_06.exe+0x14cc>
+<Assignment05_06.exe+0x1547>
+

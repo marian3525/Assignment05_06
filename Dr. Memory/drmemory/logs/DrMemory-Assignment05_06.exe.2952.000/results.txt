@@ -1,0 +1,267 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 2952: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS of freed memory: reading 0x036d82c4-0x036d82c8 4 byte(s)
+# 0 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:22]
+# 1 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 2 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+# 3 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+# 4 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+# 5 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.061 in thread 10252
+Note: next higher malloc: 0x036d8338-0x036d8360
+Note: prev lower malloc:  0x036d81c8-0x036d82a0
+Note: 0x036d82c4-0x036d82c8 overlaps memory 0x036d82c0-0x036d82cc that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 2 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+Note: # 3 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+Note: # 4 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: instruction: mov    0x04(%eax) -> %eax
+
+Error #2: UNADDRESSABLE ACCESS of freed memory: reading 0x036d82c0-0x036d82c4 4 byte(s)
+# 0 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+# 1 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 2 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+# 3 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+# 4 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+# 5 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.077 in thread 10252
+Note: next higher malloc: 0x036d8338-0x036d8360
+Note: prev lower malloc:  0x036d81c8-0x036d82a0
+Note: 0x036d82c0-0x036d82c4 overlaps memory 0x036d82c0-0x036d82cc that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 2 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+Note: # 3 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+Note: # 4 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #3: UNADDRESSABLE ACCESS of freed memory: reading 0x036d8428-0x036d842c 4 byte(s)
+# 0 libstdc++-6.dll!?                          +0x0      (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>)
+# 1 libstdc++-6.dll!?                          +0x0      (0x6fe70040 <libstdc++-6.dll+0x30040>)
+# 2 libstdc++-6.dll!?                          +0x0      (0x6fed5787 <libstdc++-6.dll+0x95787>)
+# 3 libstdc++-6.dll!?                          +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 4 Tutorial::~Tutorial                         [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26]
+# 5 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+# 6 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 7 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+# 8 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+# 9 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+#10 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.077 in thread 10252
+Note: next higher malloc: 0x036d8780-0x036d8784
+Note: prev lower malloc:  0x036d83c8-0x036d83cc
+Note: 0x036d8428-0x036d842c overlaps memory 0x036d83f0-0x036d8440 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 DynamicVector::~DynamicVector                 [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+Note: # 2 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 3 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+Note: # 4 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+Note: # 5 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #4: UNADDRESSABLE ACCESS of freed memory: reading 0x036d8408-0x036d840c 4 byte(s)
+# 0 libstdc++-6.dll!?                          +0x0      (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>)
+# 1 libstdc++-6.dll!?                          +0x0      (0x6fe70040 <libstdc++-6.dll+0x30040>)
+# 2 libstdc++-6.dll!?                          +0x0      (0x6fed5787 <libstdc++-6.dll+0x95787>)
+# 3 libstdc++-6.dll!?                          +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 4 Tutorial::~Tutorial                         [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26]
+# 5 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+# 6 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 7 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+# 8 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+# 9 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+#10 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.077 in thread 10252
+Note: next higher malloc: 0x036d8780-0x036d8784
+Note: prev lower malloc:  0x036d83c8-0x036d83cc
+Note: 0x036d8408-0x036d840c overlaps memory 0x036d83f0-0x036d8440 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 DynamicVector::~DynamicVector                 [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+Note: # 2 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 3 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+Note: # 4 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+Note: # 5 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #5: UNADDRESSABLE ACCESS of freed memory: reading 0x036d83f0-0x036d83f4 4 byte(s)
+# 0 libstdc++-6.dll!?                          +0x0      (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>)
+# 1 libstdc++-6.dll!?                          +0x0      (0x6fe70040 <libstdc++-6.dll+0x30040>)
+# 2 libstdc++-6.dll!?                          +0x0      (0x6fed5787 <libstdc++-6.dll+0x95787>)
+# 3 libstdc++-6.dll!?                          +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 4 Tutorial::~Tutorial                         [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26]
+# 5 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+# 6 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 7 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+# 8 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+# 9 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+#10 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.077 in thread 10252
+Note: next higher malloc: 0x036d8780-0x036d8784
+Note: prev lower malloc:  0x036d83c8-0x036d83cc
+Note: 0x036d83f0-0x036d83f4 overlaps memory 0x036d83f0-0x036d8440 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 DynamicVector::~DynamicVector                 [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+Note: # 2 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 3 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+Note: # 4 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+Note: # 5 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #6: INVALID HEAP ARGUMENT to free 0x036d83f0
+# 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+# 1 DynamicVector::~DynamicVector                 [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+# 2 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 3 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+# 4 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+# 5 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+# 6 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.077 in thread 10252
+Note: next higher malloc: 0x036d8780-0x036d8784
+Note: prev lower malloc:  0x036d83c8-0x036d83cc
+Note: memory was previously freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 DynamicVector::~DynamicVector                 [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+Note: # 2 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 3 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+Note: # 4 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+Note: # 5 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+
+Error #7: UNADDRESSABLE ACCESS of freed memory: reading 0x036d84b8-0x036d84bc 4 byte(s)
+# 0 libstdc++-6.dll!?                          +0x0      (0x6fed5791 <libstdc++-6.dll+0x95791>)
+# 1 libstdc++-6.dll!?                          +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 2 Tutorial::~Tutorial                         [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26]
+# 3 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+# 4 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 5 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+# 6 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+# 7 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+# 8 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.077 in thread 10252
+Note: next higher malloc: 0x036d8780-0x036d8784
+Note: prev lower malloc:  0x036d83c8-0x036d83cc
+Note: 0x036d84b8-0x036d84bc overlaps memory 0x036d8498-0x036d84e8 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 DynamicVector::~DynamicVector                 [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+Note: # 2 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 3 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+Note: # 4 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+Note: # 5 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: instruction: mov    0x08(%eax) -> %edx
+
+Error #8: UNADDRESSABLE ACCESS of freed memory: reading 0x036d84b0-0x036d84b4 4 byte(s)
+# 0 libstdc++-6.dll!?                          +0x0      (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>)
+# 1 libstdc++-6.dll!?                          +0x0      (0x6fed5737 <libstdc++-6.dll+0x95737>)
+# 2 libstdc++-6.dll!?                          +0x0      (0x6fed57a1 <libstdc++-6.dll+0x957a1>)
+# 3 libstdc++-6.dll!?                          +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 4 Tutorial::~Tutorial                         [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26]
+# 5 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+# 6 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 7 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+# 8 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+# 9 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+#10 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.092 in thread 10252
+Note: next higher malloc: 0x036d8780-0x036d8784
+Note: prev lower malloc:  0x036d83c8-0x036d83cc
+Note: 0x036d84b0-0x036d84b4 overlaps memory 0x036d8498-0x036d84e8 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 DynamicVector::~DynamicVector                 [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+Note: # 2 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 3 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+Note: # 4 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+Note: # 5 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #9: INVALID HEAP ARGUMENT to free 0x036d8508
+# 0 replace_free                                [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 libstdc++-6.dll!?                          +0x0      (0x6fe59f84 <libstdc++-6.dll+0x19f84>)
+# 2 libstdc++-6.dll!?                          +0x0      (0x6fec884f <libstdc++-6.dll+0x8884f>)
+# 3 libstdc++-6.dll!?                          +0x0      (0x6fed5753 <libstdc++-6.dll+0x95753>)
+# 4 libstdc++-6.dll!?                          +0x0      (0x6fed57a1 <libstdc++-6.dll+0x957a1>)
+# 5 libstdc++-6.dll!?                          +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 6 Tutorial::~Tutorial                         [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26]
+# 7 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:23]
+# 8 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 9 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+#10 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+#11 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+#12 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.092 in thread 10252
+Note: next higher malloc: 0x036d8780-0x036d8784
+Note: prev lower malloc:  0x036d83c8-0x036d83cc
+Note: memory was previously freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 libstdc++-6.dll!?         +0x0      (0x6fe59f84 <libstdc++-6.dll+0x19f84>)
+Note: # 2 libstdc++-6.dll!?         +0x0      (0x6fec884f <libstdc++-6.dll+0x8884f>)
+Note: # 3 libstdc++-6.dll!?         +0x0      (0x6fed5753 <libstdc++-6.dll+0x95753>)
+Note: # 4 libstdc++-6.dll!?         +0x0      (0x6fed57a1 <libstdc++-6.dll+0x957a1>)
+Note: # 5 libstdc++-6.dll!?         +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+
+Error #10: INVALID HEAP ARGUMENT to free 0x036d82c0
+# 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+# 1 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+# 2 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+# 3 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+# 4 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.092 in thread 10252
+Note: next higher malloc: 0x036d8338-0x036d8360
+Note: prev lower malloc:  0x036d81c8-0x036d82a0
+Note: memory was previously freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 2 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:54]
+Note: # 3 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:188]
+Note: # 4 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #11: LEAK 40 direct bytes 0x036d8338-0x036d8360 + 0 indirect bytes
+# 0 replace_operator_new_array                 [d:\drmemory_package\common\alloc_replace.c:2928]
+# 1 DynamicVector::DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7]
+# 2 Repository::Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+# 3 run                                        [D:/CS/OOP/Assignment05-06/main.cpp:7]
+# 4 main                                       [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #12: LEAK 40 direct bytes 0x036d8380-0x036d83a8 + 0 indirect bytes
+# 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+# 1 DynamicVector::operator=                 [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:37]
+# 2 Repository::Repository                   [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+# 3 run                                      [D:/CS/OOP/Assignment05-06/main.cpp:7]
+# 4 main                                     [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      7
+	Error #   2:      6
+	Error #   3:      6
+	Error #   4:      6
+	Error #   5:      6
+	Error #   6:      6
+	Error #   7:      2
+	Error #   8:      2
+	Error #   9:      2
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      7 unique,    35 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      3 unique,     9 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      2 unique,     2 total,     80 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.2952.000\potential_errors.txt)
+      6 unique,     6 total,   4450 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.2952.000\results.txt

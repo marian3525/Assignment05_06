@@ -1,0 +1,94 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 10464: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT to free 0x00407064
+# 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyRepo                [D:/CS/OOP/Assignment03-04/repository/repository.c:30]
+# 2 quit                       [D:/CS/OOP/Assignment03-04/controller/controller.c:136]
+# 3 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:276]
+# 4 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:30.536 in thread 7576
+
+Error #2: INVALID HEAP ARGUMENT to free 0x0040706b
+# 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyRepo                [D:/CS/OOP/Assignment03-04/repository/repository.c:31]
+# 2 quit                       [D:/CS/OOP/Assignment03-04/controller/controller.c:136]
+# 3 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:276]
+# 4 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:30.538 in thread 7576
+
+Error #3: INVALID HEAP ARGUMENT to free 0x031b1358
+# 0 replace_free                        [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyUndoController               [D:/CS/OOP/Assignment03-04/controller/undoController.c:112]
+# 2 quit                                [D:/CS/OOP/Assignment03-04/controller/controller.c:137]
+# 3 start                               [D:/CS/OOP/Assignment03-04/ui/cli.c:276]
+# 4 main                                [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:30.539 in thread 7576
+Note: next higher malloc: 0x031b13b0-0x031b13e2
+Note: prev lower malloc:  0x031b1150-0x031b12e0
+Note: memory was previously freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:46]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:107]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+
+Error #4: INVALID HEAP ARGUMENT to free 0x031b3560
+# 0 replace_free                        [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyUndoController               [D:/CS/OOP/Assignment03-04/controller/undoController.c:115]
+# 2 quit                                [D:/CS/OOP/Assignment03-04/controller/controller.c:137]
+# 3 start                               [D:/CS/OOP/Assignment03-04/ui/cli.c:276]
+# 4 main                                [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:30.540 in thread 7576
+Note: next higher malloc: 0x031b3610-0x031b4610
+Note: memory was previously freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:46]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:107]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+
+Error #5: INVALID HEAP ARGUMENT to free 0x031b5158
+# 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:322]
+# 2 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:30.541 in thread 7576
+Note: memory was previously freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:317]
+Note: # 2 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+
+Error #6: INVALID HEAP ARGUMENT to free 0x031b5180
+# 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:325]
+# 2 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:30.541 in thread 7576
+Note: memory was previously freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:320]
+Note: # 2 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:     10
+	Error #   2:     10
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      6 unique,    24 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.10464.000\potential_errors.txt)
+      6 unique,     6 total,   4456 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.10464.000\results.txt

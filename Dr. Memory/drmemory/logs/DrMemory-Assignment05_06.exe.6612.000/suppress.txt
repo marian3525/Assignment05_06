@@ -1,0 +1,42 @@
+# File for suppressing errors found in pid 6612: "Assignment05_06.exe"
+
+# Suppression for Error #1
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+msvcrt.dll!vscan_fn
+msvcrt.dll!sscanf
+Assignment05_06.exe!CLI::getMinutes
+Assignment05_06.exe!CLI::start
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+<msvcrt.dll+0x74dbb>
+<msvcrt.dll+0x74d9b>
+<Assignment05_06.exe+0x226a>
+<Assignment05_06.exe+0x24db>
+<Assignment05_06.exe+0x14cc>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #2
+UNADDRESSABLE ACCESS
+name=Error #2 (update to meaningful name)
+msvcrt.dll!vscan_fn
+msvcrt.dll!sscanf
+Assignment05_06.exe!CLI::getSeconds
+Assignment05_06.exe!CLI::start
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #2:
+UNADDRESSABLE ACCESS
+name=Error #2 (update to meaningful name)
+<msvcrt.dll+0x74dbb>
+<msvcrt.dll+0x74d9b>
+<Assignment05_06.exe+0x2315>
+<Assignment05_06.exe+0x251d>
+<Assignment05_06.exe+0x14cc>
+<Assignment05_06.exe+0x1547>
+

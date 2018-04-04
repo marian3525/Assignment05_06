@@ -1,0 +1,153 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3657443:14:29.376 == 11:14:29.376 03/29/2018
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+new thread #0 id=1416
+
+module load event: "Assignment03_04.exe" 0x00400000-0x00418000 modid: 1 D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe
+
+module load event: "dynamorio.dll" 0x694f0000-0x6964d000 modid: 2 D:\CS\OOP\Assignment03-04\Dr. Memory\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 3 D:\CS\OOP\Assignment03-04\Dr. Memory\bin\release\drmemorylib.dll
+
+module load event: "KERNEL32.dll" 0x73b50000-0x73c20000 modid: 4 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "msvcrt.dll" 0x763b0000-0x7646d000 modid: 5 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "KERNELBASE.dll" 0x76500000-0x766d7000 modid: 6 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "ntdll.dll" 0x76f70000-0x770fd000 modid: 7 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+
+NEW THREAD: main thread 1416
+
+
+Error #1: INVALID HEAP ARGUMENT to free 0x00407064
+# 0 replace_free    [d:\drmemory_package\common\alloc_replace.c:2706] (0x73820900 <drmemorylib.dll+0x20900>) modid:3
+# 1 destroyVector       [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:62] (0x0040361c <Assignment03_04.exe+0x361c>) modid:1
+# 2 destroyRepo         [D:/CS/OOP/Assignment03-04/repository/repository.c:41] (0x00401a7c <Assignment03_04.exe+0x1a7c>) modid:1
+# 3 quit                [D:/CS/OOP/Assignment03-04/controller/controller.c:145] (0x0040182b <Assignment03_04.exe+0x182b>) modid:1
+# 4 start               [D:/CS/OOP/Assignment03-04/ui/cli.c:266] (0x00402ae2 <Assignment03_04.exe+0x2ae2>) modid:1
+# 5 main                [D:/CS/OOP/Assignment03-04/main.c:4] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+Note: @0:00:02.200 in thread 1416
+	error end
+
+Error #2: INVALID HEAP ARGUMENT to free 0x0040706b
+# 0 replace_free    [d:\drmemory_package\common\alloc_replace.c:2706] (0x73820900 <drmemorylib.dll+0x20900>) modid:3
+# 1 destroyVector       [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:64] (0x00403636 <Assignment03_04.exe+0x3636>) modid:1
+# 2 destroyRepo         [D:/CS/OOP/Assignment03-04/repository/repository.c:41] (0x00401a7c <Assignment03_04.exe+0x1a7c>) modid:1
+# 3 quit                [D:/CS/OOP/Assignment03-04/controller/controller.c:145] (0x0040182b <Assignment03_04.exe+0x182b>) modid:1
+# 4 start               [D:/CS/OOP/Assignment03-04/ui/cli.c:266] (0x00402ae2 <Assignment03_04.exe+0x2ae2>) modid:1
+# 5 main                [D:/CS/OOP/Assignment03-04/main.c:4] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+Note: @0:00:02.200 in thread 1416
+	error end
+WARNING: unable to load symbols for C:\WINDOWS\System32\KERNELBASE.dll
+
+Potential Error #1: HANDLE LEAK: KERNEL handle 0x00000110 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x765f29c9 <KERNELBASE.dll+0xf29c9>) modid:6
+# 2 KERNELBASE.dll!IsValidLocale  (0x765cefe7 <KERNELBASE.dll+0xcefe7>) modid:6
+# 3 KERNELBASE.dll!IsValidLocale  (0x765cee3c <KERNELBASE.dll+0xcee3c>) modid:6
+# 4 msvcrt.dll!__get_qualified_locale (0x7640e9bb <msvcrt.dll+0x5e9bb>) modid:5
+# 5 msvcrt.dll!_expandlocale (0x764054f9 <msvcrt.dll+0x554f9>) modid:5
+# 6 msvcrt.dll!_setlocale_set_cat (0x76405c03 <msvcrt.dll+0x55c03>) modid:5
+# 7 msvcrt.dll!_setlocale_nolock (0x76405939 <msvcrt.dll+0x55939>) modid:5
+# 8 msvcrt.dll!setlocale  (0x76406055 <msvcrt.dll+0x56055>) modid:5
+# 9 __mingw_dirname     [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x004053b1 <Assignment03_04.exe+0x53b1>) modid:1
+#10 .text               [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x004049e4 <Assignment03_04.exe+0x49e4>) modid:1
+#11 __mingw_glob        [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x00405262 <Assignment03_04.exe+0x5262>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:72] (0x004039b6 <Assignment03_04.exe+0x39b6>) modid:1
+#13 .text               (0x00401202 <Assignment03_04.exe+0x1202>) modid:1
+#14 mainCRTStartup      (0x004012f5 <Assignment03_04.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x76fd4a77 <ntdll.dll+0x64a77>) modid:7
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x76fd4a47 <ntdll.dll+0x64a47>) modid:7
+Note: @0:00:02.280 in thread 1416
+	error end
+
+Potential Error #2: HANDLE LEAK: KERNEL handle 0x00000114 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x765f29c9 <KERNELBASE.dll+0xf29c9>) modid:6
+# 2 KERNELBASE.dll!IsValidLocale  (0x765cf037 <KERNELBASE.dll+0xcf037>) modid:6
+# 3 KERNELBASE.dll!IsValidLocale  (0x765cee33 <KERNELBASE.dll+0xcee33>) modid:6
+# 4 msvcrt.dll!__get_qualified_locale (0x7640e9bb <msvcrt.dll+0x5e9bb>) modid:5
+# 5 msvcrt.dll!_expandlocale (0x764054f9 <msvcrt.dll+0x554f9>) modid:5
+# 6 msvcrt.dll!_setlocale_set_cat (0x76405c03 <msvcrt.dll+0x55c03>) modid:5
+# 7 msvcrt.dll!_setlocale_nolock (0x76405939 <msvcrt.dll+0x55939>) modid:5
+# 8 msvcrt.dll!setlocale  (0x76406055 <msvcrt.dll+0x56055>) modid:5
+# 9 __mingw_dirname     [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x004053b1 <Assignment03_04.exe+0x53b1>) modid:1
+#10 .text               [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x004049e4 <Assignment03_04.exe+0x49e4>) modid:1
+#11 __mingw_glob        [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x00405262 <Assignment03_04.exe+0x5262>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:72] (0x004039b6 <Assignment03_04.exe+0x39b6>) modid:1
+#13 .text               (0x00401202 <Assignment03_04.exe+0x1202>) modid:1
+#14 mainCRTStartup      (0x004012f5 <Assignment03_04.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x76fd4a77 <ntdll.dll+0x64a77>) modid:7
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x76fd4a47 <ntdll.dll+0x64a47>) modid:7
+Note: @0:00:02.280 in thread 1416
+	error end
+
+Potential Error #3: HANDLE LEAK: KERNEL handle 0x00000118 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x765f29c9 <KERNELBASE.dll+0xf29c9>) modid:6
+# 2 KERNELBASE.dll!IsValidLocale  (0x765cf087 <KERNELBASE.dll+0xcf087>) modid:6
+# 3 KERNELBASE.dll!IsValidLocale  (0x765cee2a <KERNELBASE.dll+0xcee2a>) modid:6
+# 4 msvcrt.dll!__get_qualified_locale (0x7640e9bb <msvcrt.dll+0x5e9bb>) modid:5
+# 5 msvcrt.dll!_expandlocale (0x764054f9 <msvcrt.dll+0x554f9>) modid:5
+# 6 msvcrt.dll!_setlocale_set_cat (0x76405c03 <msvcrt.dll+0x55c03>) modid:5
+# 7 msvcrt.dll!_setlocale_nolock (0x76405939 <msvcrt.dll+0x55939>) modid:5
+# 8 msvcrt.dll!setlocale  (0x76406055 <msvcrt.dll+0x56055>) modid:5
+# 9 __mingw_dirname     [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x004053b1 <Assignment03_04.exe+0x53b1>) modid:1
+#10 .text               [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x004049e4 <Assignment03_04.exe+0x49e4>) modid:1
+#11 __mingw_glob        [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x00405262 <Assignment03_04.exe+0x5262>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:72] (0x004039b6 <Assignment03_04.exe+0x39b6>) modid:1
+#13 .text               (0x00401202 <Assignment03_04.exe+0x1202>) modid:1
+#14 mainCRTStartup      (0x004012f5 <Assignment03_04.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x76fd4a77 <ntdll.dll+0x64a77>) modid:7
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x76fd4a47 <ntdll.dll+0x64a47>) modid:7
+Note: @0:00:02.280 in thread 1416
+	error end
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:     10
+	Error #   2:     10
+
+SUPPRESSIONS USED:
+	     1x: default i#1324 mingw runtime
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      2 unique,    20 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.7824.000\potential_errors.txt)
+     73 ignored assumed-innocuous system leak(s)
+      6 unique,     6 total,   4456 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.7824.000\results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+      3 unique,     3 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.7824.000\potential_errors.txt
+Exiting @0:00:02.280 in thread 1416
+LOG END

@@ -1,0 +1,136 @@
+# File for suppressing errors found in pid 5952: "Assignment05_06.exe"
+
+# Suppression for Error #1
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_array
+Assignment05_06.exe!DynamicVector::operator=
+Assignment05_06.exe!Repository::Repository
+Assignment05_06.exe!testRepo
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x211e0>
+<Assignment05_06.exe+0x1676>
+<Assignment05_06.exe+0x194e>
+<Assignment05_06.exe+0x2ae4>
+<Assignment05_06.exe+0x2f10>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #2
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_array
+Assignment05_06.exe!DynamicVector::~DynamicVector
+Assignment05_06.exe!Repository::Repository
+Assignment05_06.exe!testRepo
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #2:
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+<drmemorylib.dll+0x211e0>
+<Assignment05_06.exe+0x162f>
+<Assignment05_06.exe+0x195b>
+<Assignment05_06.exe+0x2ae4>
+<Assignment05_06.exe+0x2f10>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #3
+LEAK
+name=Error #3 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Test::testDynamicVector
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #3:
+LEAK
+name=Error #3 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x27b8>
+<Assignment05_06.exe+0x2f0b>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #4
+LEAK
+name=Error #4 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Test::testDynamicVector
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #4:
+LEAK
+name=Error #4 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x27da>
+<Assignment05_06.exe+0x2f0b>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #5
+LEAK
+name=Error #5 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Test::testDynamicVector
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #5:
+LEAK
+name=Error #5 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x28da>
+<Assignment05_06.exe+0x2f0b>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #6
+LEAK
+name=Error #6 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!testRepo
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #6:
+LEAK
+name=Error #6 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x2adb>
+<Assignment05_06.exe+0x2f10>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #7
+LEAK
+name=Error #7 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!testRepo
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #7:
+LEAK
+name=Error #7 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x2b5f>
+<Assignment05_06.exe+0x2f10>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+

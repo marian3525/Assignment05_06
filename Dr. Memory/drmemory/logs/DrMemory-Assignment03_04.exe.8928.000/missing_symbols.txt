@@ -1,0 +1,5 @@
+C:\WINDOWS\SYSTEM32\ntdll.dll
+C:\WINDOWS\SYSTEM32\AcLayers.DLL
+C:\WINDOWS\System32\SHELL32.dll
+C:\WINDOWS\System32\windows.storage.dll
+C:\WINDOWS\System32\KERNELBASE.dll

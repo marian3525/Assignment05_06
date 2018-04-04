@@ -1,0 +1,67 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3657594:48:01.711 == 18:48:01.711 04/04/2018
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+new thread #0 id=10496
+
+module load event: "Assignment05_06.exe" 0x00400000-0x00480000 modid: 1 D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe
+
+module load event: "dynamorio.dll" 0x5c6e0000-0x5c83d000 modid: 2 D:\CS\OOP\Assignment05-06\Dr. Memory\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "libgcc_s_dw2-1.dll" 0x6eb40000-0x6ec1d000 modid: 3 D:\CS\IDEs\MinGW\bin\libgcc_s_dw2-1.dll
+
+module load event: "libstdc++-6.dll" 0x6fe40000-0x6ffb4000 modid: 4 D:\CS\IDEs\MinGW\bin\libstdc++-6.dll
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 5 D:\CS\OOP\Assignment05-06\Dr. Memory\bin\release\drmemorylib.dll
+
+module load event: "KERNELBASE.dll" 0x74530000-0x74707000 modid: 6 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "msvcrt.dll" 0x75d30000-0x75ded000 modid: 7 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "KERNEL32.dll" 0x76a80000-0x76b50000 modid: 8 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "ntdll.dll" 0x77430000-0x775bd000 modid: 9 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+
+NEW THREAD: main thread 10496
+
+
+Error #1: INVALID HEAP ARGUMENT: allocated with operator new[], freed with operator delete
+# 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+# 1 DynamicVector::~DynamicVector [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:20] (0x00401658 <Assignment05_06.exe+0x1658>) modid:1
+# 2 Repository::Repository [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6] (0x00401993 <Assignment05_06.exe+0x1993>) modid:1
+# 3 run                 [D:/CS/OOP/Assignment05-06/main.cpp:7] (0x0040147d <Assignment05_06.exe+0x147d>) modid:1
+# 4 main                [D:/CS/OOP/Assignment05-06/main.cpp:20] (0x00401566 <Assignment05_06.exe+0x1566>) modid:1
+Note: @0:00:00.516 in thread 10496
+Note: memory was allocated here:
+Note: # 0 replace_operator_new_array [d:\drmemory_package\common\alloc_replace.c:2928] (0x73820f50 <drmemorylib.dll+0x20f50>) modid:5
+Note: # 1 DynamicVector::DynamicVector [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7] (0x004015ab <Assignment05_06.exe+0x15ab>) modid:1
+Note: # 2 Repository::Repository [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6] (0x00401973 <Assignment05_06.exe+0x1973>) modid:1
+Note: # 3 run                 [D:/CS/OOP/Assignment05-06/main.cpp:7] (0x0040147d <Assignment05_06.exe+0x147d>) modid:1
+Note: # 4 main                [D:/CS/OOP/Assignment05-06/main.cpp:20] (0x00401566 <Assignment05_06.exe+0x1566>) modid:1
+	error end
+
+Error #2: INVALID HEAP ARGUMENT: allocated with operator new[], freed with operator delete
+# 0 replace_operator_delete_nothrow [d:\drmemory_package\common\alloc_replace.c:2974] (0x738210f0 <drmemorylib.dll+0x210f0>) modid:5
+# 1 DynamicVector::~DynamicVector [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:20] (0x00401658 <Assignment05_06.exe+0x1658>) modid:1
+# 2 Repository::Repository [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6] (0x00401993 <Assignment05_06.exe+0x1993>) modid:1
+# 3 Controller::Controller [D:/CS/OOP/Assignment05-06/controller/controller.cpp:6] (0x00401e7c <Assignment05_06.exe+0x1e7c>) modid:1
+# 4 run                 [D:/CS/OOP/Assignment05-06/main.cpp:8] (0x0040149b <Assignment05_06.exe+0x149b>) modid:1
+# 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:20] (0x00401566 <Assignment05_06.exe+0x1566>) modid:1
+Note: @0:00:00.531 in thread 10496
+Note: memory was allocated here:
+Note: # 0 replace_operator_new_array [d:\drmemory_package\common\alloc_replace.c:2928] (0x73820f50 <drmemorylib.dll+0x20f50>) modid:5
+Note: # 1 DynamicVector::DynamicVector [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7] (0x004015ab <Assignment05_06.exe+0x15ab>) modid:1
+Note: # 2 Repository::Repository [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6] (0x00401973 <Assignment05_06.exe+0x1973>) modid:1
+Note: # 3 Controller::Controller [D:/CS/OOP/Assignment05-06/controller/controller.cpp:6] (0x00401e7c <Assignment05_06.exe+0x1e7c>) modid:1
+Note: # 4 run                 [D:/CS/OOP/Assignment05-06/main.cpp:8] (0x0040149b <Assignment05_06.exe+0x149b>) modid:1
+Note: # 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:20] (0x00401566 <Assignment05_06.exe+0x1566>) modid:1
+	error end
+new thread #1 id=4792

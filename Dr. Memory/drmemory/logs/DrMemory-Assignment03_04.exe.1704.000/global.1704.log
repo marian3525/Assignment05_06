@@ -1,0 +1,28 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3657280:02:06.481 == 16:02:06.481 03/22/2018
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+new thread #0 id=9772
+
+module load event: "Assignment03_04.exe" 0x00400000-0x00417000 modid: 1 D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe
+
+module load event: "dynamorio.dll" 0x649c0000-0x64b1d000 modid: 2 D:\CS\OOP\Assignment03-04\Dr. Memory\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 3 D:\CS\OOP\Assignment03-04\Dr. Memory\bin\release\drmemorylib.dll
+
+module load event: "msvcrt.dll" 0x74040000-0x740fd000 modid: 4 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "KERNEL32.dll" 0x74330000-0x74400000 modid: 5 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "KERNELBASE.dll" 0x74a80000-0x74c57000 modid: 6 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "ntdll.dll" 0x773a0000-0x7752d000 modid: 7 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+WARNING: unable to load symbols for C:\WINDOWS\System32\msvcrt.dll

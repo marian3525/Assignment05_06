@@ -1,0 +1,16 @@
+# File for suppressing errors found in pid 1148: "Assignment03_04.exe"
+
+# Suppression for Error #1
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #1:
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x2b8d>
+<Assignment03_04.exe+0x1470>
+

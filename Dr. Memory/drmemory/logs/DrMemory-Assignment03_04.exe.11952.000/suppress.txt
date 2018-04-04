@@ -1,0 +1,336 @@
+# File for suppressing errors found in pid 11952: "Assignment03_04.exe"
+
+# Suppression for Error #1
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyCountry
+Assignment03_04.exe!deleteByName
+Assignment03_04.exe!deleteCountry
+Assignment03_04.exe!testDeleteCountry
+Assignment03_04.exe!testController
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #1:
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x19ea>
+<Assignment03_04.exe+0x35fb>
+<Assignment03_04.exe+0x14d9>
+<Assignment03_04.exe+0x1f40>
+<Assignment03_04.exe+0x207b>
+<Assignment03_04.exe+0x2299>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #2
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyCountry
+Assignment03_04.exe!deleteByName
+Assignment03_04.exe!deleteCountry
+Assignment03_04.exe!testDeleteCountry
+Assignment03_04.exe!testController
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #2:
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x19f8>
+<Assignment03_04.exe+0x35fb>
+<Assignment03_04.exe+0x14d9>
+<Assignment03_04.exe+0x1f40>
+<Assignment03_04.exe+0x207b>
+<Assignment03_04.exe+0x2299>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #3
+INVALID HEAP ARGUMENT
+name=Error #3 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyCountry
+Assignment03_04.exe!deleteByName
+Assignment03_04.exe!deleteCountry
+Assignment03_04.exe!testDeleteCountry
+Assignment03_04.exe!testRepo
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #3:
+INVALID HEAP ARGUMENT
+name=Error #3 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x19ea>
+<Assignment03_04.exe+0x35fb>
+<Assignment03_04.exe+0x14d9>
+<Assignment03_04.exe+0x1f40>
+<Assignment03_04.exe+0x2093>
+<Assignment03_04.exe+0x229e>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #4
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyCountry
+Assignment03_04.exe!deleteByName
+Assignment03_04.exe!deleteCountry
+Assignment03_04.exe!testDeleteCountry
+Assignment03_04.exe!testRepo
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #4:
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x19f8>
+<Assignment03_04.exe+0x35fb>
+<Assignment03_04.exe+0x14d9>
+<Assignment03_04.exe+0x1f40>
+<Assignment03_04.exe+0x2093>
+<Assignment03_04.exe+0x229e>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #5
+INVALID HEAP ARGUMENT
+name=Error #5 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!validateFilterByContinent
+Assignment03_04.exe!testValidator
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #5:
+INVALID HEAP ARGUMENT
+name=Error #5 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x2e32>
+<Assignment03_04.exe+0x2265>
+<Assignment03_04.exe+0x22a3>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #6
+LEAK
+name=Error #6 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+msvcrt.dll!_strdup
+Assignment03_04.exe!getCommand
+Assignment03_04.exe!testGetCommand
+Assignment03_04.exe!testParser
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #6:
+LEAK
+name=Error #6 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<msvcrt.dll+0x856a9>
+<Assignment03_04.exe+0x232a>
+<Assignment03_04.exe+0x1be2>
+<Assignment03_04.exe+0x1d95>
+<Assignment03_04.exe+0x2294>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #7
+LEAK
+name=Error #7 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+msvcrt.dll!_strdup
+Assignment03_04.exe!getCommand
+Assignment03_04.exe!testGetCommand
+Assignment03_04.exe!testParser
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #7:
+LEAK
+name=Error #7 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<msvcrt.dll+0x856a9>
+<Assignment03_04.exe+0x232a>
+<Assignment03_04.exe+0x1c24>
+<Assignment03_04.exe+0x1d95>
+<Assignment03_04.exe+0x2294>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #8
+LEAK
+name=Error #8 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment03_04.exe!getParams
+Assignment03_04.exe!testGetParams
+Assignment03_04.exe!testParser
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #8:
+LEAK
+name=Error #8 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment03_04.exe+0x2390>
+<Assignment03_04.exe+0x1cbb>
+<Assignment03_04.exe+0x1d9a>
+<Assignment03_04.exe+0x2294>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #9
+LEAK
+name=Error #9 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment03_04.exe!testAddCountry
+Assignment03_04.exe!testController
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #9:
+LEAK
+name=Error #9 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment03_04.exe+0x1e29>
+<Assignment03_04.exe+0x2076>
+<Assignment03_04.exe+0x2299>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #10
+LEAK
+name=Error #10 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment03_04.exe!createRepo
+Assignment03_04.exe!initController
+Assignment03_04.exe!testFilter
+Assignment03_04.exe!testController
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #10:
+LEAK
+name=Error #10 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment03_04.exe+0x1a2e>
+<Assignment03_04.exe+0x1982>
+<Assignment03_04.exe+0x1f79>
+<Assignment03_04.exe+0x2080>
+<Assignment03_04.exe+0x2299>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #11
+LEAK
+name=Error #11 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment03_04.exe!initUndoController
+Assignment03_04.exe!testFilter
+Assignment03_04.exe!testController
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #11:
+LEAK
+name=Error #11 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment03_04.exe+0x2e63>
+<Assignment03_04.exe+0x1f7e>
+<Assignment03_04.exe+0x2080>
+<Assignment03_04.exe+0x2299>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #12
+LEAK
+name=Error #12 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment03_04.exe!initUndoController
+Assignment03_04.exe!testFilter
+Assignment03_04.exe!testController
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #12:
+LEAK
+name=Error #12 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment03_04.exe+0x2ea3>
+<Assignment03_04.exe+0x1f7e>
+<Assignment03_04.exe+0x2080>
+<Assignment03_04.exe+0x2299>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #13
+LEAK
+name=Error #13 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment03_04.exe!initUndoController
+Assignment03_04.exe!testFilter
+Assignment03_04.exe!testController
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #13:
+LEAK
+name=Error #13 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment03_04.exe+0x2eb4>
+<Assignment03_04.exe+0x1f7e>
+<Assignment03_04.exe+0x2080>
+<Assignment03_04.exe+0x2299>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #14
+LEAK
+name=Error #14 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment03_04.exe!testFilter
+Assignment03_04.exe!testController
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #14:
+LEAK
+name=Error #14 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment03_04.exe+0x1fb8>
+<Assignment03_04.exe+0x2080>
+<Assignment03_04.exe+0x2299>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #15
+LEAK
+name=Error #15 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment03_04.exe!filterByName
+Assignment03_04.exe!testFilter
+Assignment03_04.exe!testController
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #15:
+LEAK
+name=Error #15 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment03_04.exe+0x1519>
+<Assignment03_04.exe+0x1fce>
+<Assignment03_04.exe+0x2080>
+<Assignment03_04.exe+0x2299>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #16
+LEAK
+name=Error #16 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+Assignment03_04.exe!testAddCountry
+Assignment03_04.exe!testRepo
+Assignment03_04.exe!test
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #16:
+LEAK
+name=Error #16 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<Assignment03_04.exe+0x1e29>
+<Assignment03_04.exe+0x208e>
+<Assignment03_04.exe+0x229e>
+<Assignment03_04.exe+0x1470>
+

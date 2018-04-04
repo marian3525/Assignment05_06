@@ -1,0 +1,56 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 3740: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x03722372-0x03722373 1 byte(s)
+# 0 msvcrt.dll!vscan_fn  
+# 1 msvcrt.dll!sscanf    
+# 2 CLI::getMinutes               [D:/CS/OOP/Assignment05-06/ui/cli.cpp:77]
+# 3 CLI::start                    [D:/CS/OOP/Assignment05-06/ui/cli.cpp:131]
+# 4 run                           [D:/CS/OOP/Assignment05-06/main.cpp:10]
+# 5 main                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:01:03.770 in thread 7880
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x03722370-0x03722372
+Note: instruction: mov    (%ecx) -> %al
+
+Error #2: INVALID HEAP ARGUMENT: allocated with operator new[], freed with operator delete
+# 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+# 1 CLI::getMinutes                               [D:/CS/OOP/Assignment05-06/ui/cli.cpp:78]
+# 2 CLI::start                                    [D:/CS/OOP/Assignment05-06/ui/cli.cpp:131]
+# 3 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:10]
+# 4 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:01:03.801 in thread 7880
+Note: memory was allocated here:
+Note: # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+Note: # 1 CLI::getMinutes                          [D:/CS/OOP/Assignment05-06/ui/cli.cpp:74]
+Note: # 2 CLI::start                               [D:/CS/OOP/Assignment05-06/ui/cli.cpp:131]
+Note: # 3 run                                      [D:/CS/OOP/Assignment05-06/main.cpp:10]
+Note: # 4 main                                     [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #3: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x0372239a-0x0372239b 1 byte(s)
+# 0 msvcrt.dll!vscan_fn  
+# 1 msvcrt.dll!sscanf    
+# 2 CLI::getSeconds               [D:/CS/OOP/Assignment05-06/ui/cli.cpp:95]
+# 3 CLI::start                    [D:/CS/OOP/Assignment05-06/ui/cli.cpp:131]
+# 4 run                           [D:/CS/OOP/Assignment05-06/main.cpp:10]
+# 5 main                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:01:03.801 in thread 7880
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x03722398-0x0372239a
+Note: instruction: mov    (%ecx) -> %al
+
+Error #4: INVALID HEAP ARGUMENT: allocated with operator new[], freed with operator delete
+# 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+# 1 CLI::getSeconds                               [D:/CS/OOP/Assignment05-06/ui/cli.cpp:96]
+# 2 CLI::start                                    [D:/CS/OOP/Assignment05-06/ui/cli.cpp:131]
+# 3 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:10]
+# 4 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:01:03.801 in thread 7880
+Note: memory was allocated here:
+Note: # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+Note: # 1 CLI::getSeconds                          [D:/CS/OOP/Assignment05-06/ui/cli.cpp:92]
+Note: # 2 CLI::start                               [D:/CS/OOP/Assignment05-06/ui/cli.cpp:131]
+Note: # 3 run                                      [D:/CS/OOP/Assignment05-06/main.cpp:10]
+Note: # 4 main                                     [D:/CS/OOP/Assignment05-06/main.cpp:18]

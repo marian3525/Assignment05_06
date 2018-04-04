@@ -1,0 +1,2 @@
+# File for suppressing errors found in pid 9636: "Assignment03_04.exe"
+

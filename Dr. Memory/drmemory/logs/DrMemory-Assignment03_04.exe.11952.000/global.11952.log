@@ -1,0 +1,386 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3657438:53:16.121 == 06:53:16.121 03/29/2018
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+new thread #0 id=10500
+
+module load event: "Assignment03_04.exe" 0x00400000-0x00418000 modid: 1 D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe
+
+module load event: "dynamorio.dll" 0x59b90000-0x59ced000 modid: 2 D:\CS\OOP\Assignment03-04\Dr. Memory\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "AcLayers.dll" 0x59cf0000-0x59f71000 modid: 3 C:\WINDOWS\SYSTEM32\AcLayers.DLL
+
+module load event: "sfc_os.dll" 0x5f8e0000-0x5f8f1000 modid: 4 C:\WINDOWS\SYSTEM32\sfc_os.DLL
+
+module load event: "apphelp.dll" 0x5fdd0000-0x5fe6a000 modid: 5 C:\WINDOWS\SYSTEM32\apphelp.dll
+
+module load event: "MPR.dll" 0x62120000-0x62137000 modid: 6 C:\WINDOWS\SYSTEM32\MPR.dll
+
+module load event: "WINSPOOL.DRV" 0x62bc0000-0x62c2c000 modid: 7 C:\WINDOWS\SYSTEM32\WINSPOOL.DRV
+
+module load event: "sfc.dll" 0x66680000-0x66683000 modid: 8 C:\WINDOWS\SYSTEM32\sfc.dll
+
+module load event: "bcrypt.dll" 0x71810000-0x71829000 modid: 9 C:\WINDOWS\SYSTEM32\bcrypt.dll
+
+module load event: "IPHLPAPI.DLL" 0x72d30000-0x72d60000 modid: 10 C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 11 D:\CS\OOP\Assignment03-04\Dr. Memory\bin\release\drmemorylib.dll
+
+module load event: "CRYPTBASE.dll" 0x73d90000-0x73d9a000 modid: 12 C:\WINDOWS\System32\CRYPTBASE.dll
+
+module load event: "SspiCli.dll" 0x73da0000-0x73dc0000 modid: 13 C:\WINDOWS\System32\SspiCli.dll
+
+module load event: "OLEAUT32.dll" 0x73e20000-0x73eb3000 modid: 14 C:\WINDOWS\System32\OLEAUT32.dll
+
+module load event: "SHELL32.dll" 0x73ec0000-0x751f3000 modid: 15 C:\WINDOWS\System32\SHELL32.dll
+
+module load event: "gdi32full.dll" 0x75200000-0x7535e000 modid: 16 C:\WINDOWS\System32\gdi32full.dll
+
+module load event: "USER32.dll" 0x75360000-0x754d5000 modid: 17 C:\WINDOWS\System32\USER32.dll
+WARNING: error finding UserConnectToServer syscall #
+module load event: "GDI32.dll" 0x755e0000-0x75602000 modid: 18 C:\WINDOWS\System32\GDI32.dll
+
+module load event: "ucrtbase.dll" 0x75610000-0x75727000 modid: 19 C:\WINDOWS\System32\ucrtbase.dll
+
+module load event: "KERNEL32.dll" 0x75730000-0x75800000 modid: 20 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "msvcrt.dll" 0x75800000-0x758bd000 modid: 21 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "SHCORE.dll" 0x75950000-0x759d8000 modid: 22 C:\WINDOWS\System32\shcore.dll
+
+module load event: "IMM32.dll" 0x75b30000-0x75b55000 modid: 23 C:\WINDOWS\System32\IMM32.DLL
+
+module load event: "msvcp_win.dll" 0x75b60000-0x75bdc000 modid: 24 C:\WINDOWS\System32\msvcp_win.dll
+
+module load event: "Windows.Storage.dll" 0x75be0000-0x761a6000 modid: 25 C:\WINDOWS\System32\windows.storage.dll
+
+module load event: "SETUPAPI.dll" 0x76240000-0x76666000 modid: 26 C:\WINDOWS\System32\SETUPAPI.dll
+
+module load event: "profapi.dll" 0x76800000-0x76814000 modid: 27 C:\WINDOWS\System32\profapi.dll
+
+module load event: "SECHOST.dll" 0x76820000-0x76863000 modid: 28 C:\WINDOWS\System32\sechost.dll
+
+module load event: "RPCRT4.dll" 0x76a40000-0x76afe000 modid: 29 C:\WINDOWS\System32\RPCRT4.dll
+
+module load event: "win32u.dll" 0x76b10000-0x76b26000 modid: 30 C:\WINDOWS\System32\win32u.dll
+
+module load event: "SHLWAPI.dll" 0x76b30000-0x76b75000 modid: 31 C:\WINDOWS\System32\shlwapi.dll
+
+module load event: "ADVAPI32.dll" 0x76d50000-0x76dc8000 modid: 32 C:\WINDOWS\System32\advapi32.dll
+
+module load event: "POWRPROF.dll" 0x76dd0000-0x76e15000 modid: 33 C:\WINDOWS\System32\powrprof.dll
+
+module load event: "CFGMGR32.dll" 0x76e20000-0x76e58000 modid: 34 C:\WINDOWS\System32\cfgmgr32.dll
+
+module load event: "combase.dll" 0x76e60000-0x770a6000 modid: 35 C:\WINDOWS\System32\combase.dll
+
+module load event: "bcryptPrimitives.dll" 0x770b0000-0x77107000 modid: 36 C:\WINDOWS\System32\bcryptPrimitives.dll
+
+module load event: "AppCore.dll" 0x77140000-0x7714e000 modid: 37 C:\WINDOWS\System32\kernel.appcore.dll
+
+module load event: "KERNELBASE.dll" 0x771a0000-0x77377000 modid: 38 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "ntdll.dll" 0x77380000-0x7750d000 modid: 39 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+
+NEW THREAD: main thread 10500
+
+
+Error #1: INVALID HEAP ARGUMENT to free 0x0040706b
+# 0 replace_free    [d:\drmemory_package\common\alloc_replace.c:2706] (0x73820900 <drmemorylib.dll+0x20900>) modid:11
+# 1 destroyCountry      [D:/CS/OOP/Assignment03-04/domain/country.c:32] (0x004019ea <Assignment03_04.exe+0x19ea>) modid:1
+# 2 deleteByName        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:39] (0x004035fb <Assignment03_04.exe+0x35fb>) modid:1
+# 3 deleteCountry       [D:/CS/OOP/Assignment03-04/controller/controller.c:33] (0x004014d9 <Assignment03_04.exe+0x14d9>) modid:1
+# 4 testDeleteCountry   [D:/CS/OOP/Assignment03-04/test/tester.c:58] (0x00401f40 <Assignment03_04.exe+0x1f40>) modid:1
+# 5 testController      [D:/CS/OOP/Assignment03-04/test/tester.c:79] (0x0040207b <Assignment03_04.exe+0x207b>) modid:1
+# 6 test                [D:/CS/OOP/Assignment03-04/test/tester.c:106] (0x00402299 <Assignment03_04.exe+0x2299>) modid:1
+# 7 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+Note: @0:00:00.798 in thread 10500
+	error end
+
+Error #2: INVALID HEAP ARGUMENT to free 0x00407064
+# 0 replace_free    [d:\drmemory_package\common\alloc_replace.c:2706] (0x73820900 <drmemorylib.dll+0x20900>) modid:11
+# 1 destroyCountry      [D:/CS/OOP/Assignment03-04/domain/country.c:33] (0x004019f8 <Assignment03_04.exe+0x19f8>) modid:1
+# 2 deleteByName        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:39] (0x004035fb <Assignment03_04.exe+0x35fb>) modid:1
+# 3 deleteCountry       [D:/CS/OOP/Assignment03-04/controller/controller.c:33] (0x004014d9 <Assignment03_04.exe+0x14d9>) modid:1
+# 4 testDeleteCountry   [D:/CS/OOP/Assignment03-04/test/tester.c:58] (0x00401f40 <Assignment03_04.exe+0x1f40>) modid:1
+# 5 testController      [D:/CS/OOP/Assignment03-04/test/tester.c:79] (0x0040207b <Assignment03_04.exe+0x207b>) modid:1
+# 6 test                [D:/CS/OOP/Assignment03-04/test/tester.c:106] (0x00402299 <Assignment03_04.exe+0x2299>) modid:1
+# 7 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+Note: @0:00:00.799 in thread 10500
+	error end
+
+Error #3: INVALID HEAP ARGUMENT to free 0x0040706b
+# 0 replace_free    [d:\drmemory_package\common\alloc_replace.c:2706] (0x73820900 <drmemorylib.dll+0x20900>) modid:11
+# 1 destroyCountry      [D:/CS/OOP/Assignment03-04/domain/country.c:32] (0x004019ea <Assignment03_04.exe+0x19ea>) modid:1
+# 2 deleteByName        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:39] (0x004035fb <Assignment03_04.exe+0x35fb>) modid:1
+# 3 deleteCountry       [D:/CS/OOP/Assignment03-04/controller/controller.c:33] (0x004014d9 <Assignment03_04.exe+0x14d9>) modid:1
+# 4 testDeleteCountry   [D:/CS/OOP/Assignment03-04/test/tester.c:58] (0x00401f40 <Assignment03_04.exe+0x1f40>) modid:1
+# 5 testRepo            [D:/CS/OOP/Assignment03-04/test/tester.c:85] (0x00402093 <Assignment03_04.exe+0x2093>) modid:1
+# 6 test                [D:/CS/OOP/Assignment03-04/test/tester.c:107] (0x0040229e <Assignment03_04.exe+0x229e>) modid:1
+# 7 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+Note: @0:00:00.811 in thread 10500
+	error end
+
+Error #4: INVALID HEAP ARGUMENT to free 0x00407064
+# 0 replace_free    [d:\drmemory_package\common\alloc_replace.c:2706] (0x73820900 <drmemorylib.dll+0x20900>) modid:11
+# 1 destroyCountry      [D:/CS/OOP/Assignment03-04/domain/country.c:33] (0x004019f8 <Assignment03_04.exe+0x19f8>) modid:1
+# 2 deleteByName        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:39] (0x004035fb <Assignment03_04.exe+0x35fb>) modid:1
+# 3 deleteCountry       [D:/CS/OOP/Assignment03-04/controller/controller.c:33] (0x004014d9 <Assignment03_04.exe+0x14d9>) modid:1
+# 4 testDeleteCountry   [D:/CS/OOP/Assignment03-04/test/tester.c:58] (0x00401f40 <Assignment03_04.exe+0x1f40>) modid:1
+# 5 testRepo            [D:/CS/OOP/Assignment03-04/test/tester.c:85] (0x00402093 <Assignment03_04.exe+0x2093>) modid:1
+# 6 test                [D:/CS/OOP/Assignment03-04/test/tester.c:107] (0x0040229e <Assignment03_04.exe+0x229e>) modid:1
+# 7 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+Note: @0:00:00.812 in thread 10500
+	error end
+
+Error #5: INVALID HEAP ARGUMENT to free 0x0040738e
+# 0 replace_free    [d:\drmemory_package\common\alloc_replace.c:2706] (0x73820900 <drmemorylib.dll+0x20900>) modid:11
+# 1 validateFilterByContinent [D:/CS/OOP/Assignment03-04/validator/validator.c:50] (0x00402e32 <Assignment03_04.exe+0x2e32>) modid:1
+# 2 testValidator       [D:/CS/OOP/Assignment03-04/test/tester.c:99] (0x00402265 <Assignment03_04.exe+0x2265>) modid:1
+# 3 test                [D:/CS/OOP/Assignment03-04/test/tester.c:108] (0x004022a3 <Assignment03_04.exe+0x22a3>) modid:1
+# 4 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+Note: @0:00:00.815 in thread 10500
+	error end
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\AcLayers.DLL
+WARNING: unable to load symbols for C:\WINDOWS\System32\SHELL32.dll
+
+Potential Error #1: LEAK 64 direct bytes 0x04381b20-0x04381b60 + 0 indirect bytes
+# 0 replace_RtlAllocateHeap [d:\drmemory_package\common\alloc_replace.c:3770] (0x7381ec00 <drmemorylib.dll+0x1ec00>) modid:11
+# 1 AcLayers.dll!?            (0x59d12b8f <AcLayers.dll+0x22b8f>) modid:3
+# 2 SHELL32.dll!Shell_NotifyIconW (0x73f827b0 <SHELL32.dll+0xc27b0>) modid:15
+# 3 SHELL32.dll!Shell_NotifyIconW (0x73f80f0b <SHELL32.dll+0xc0f0b>) modid:15
+# 4 SHELL32.dll!Shell_NotifyIconW (0x73f823af <SHELL32.dll+0xc23af>) modid:15
+# 5 SHELL32.dll!Shell_NotifyIconW (0x73f81e29 <SHELL32.dll+0xc1e29>) modid:15
+# 6 SHELL32.dll!Shell_NotifyIconW (0x73f81c9d <SHELL32.dll+0xc1c9d>) modid:15
+# 7 SHELL32.dll!ExtractIconExW (0x73f5a9f1 <SHELL32.dll+0x9a9f1>) modid:15
+# 8 SHELL32.dll!RegenerateUserEnvironment (0x73fc8062 <SHELL32.dll+0x108062>) modid:15
+# 9 SHELL32.dll!RegenerateUserEnvironment (0x73fc83e6 <SHELL32.dll+0x1083e6>) modid:15
+#10 ntdll.dll!WinSqmAddToStream (0x773ee746 <ntdll.dll+0x6e746>) modid:39
+#11 ntdll.dll!RtlDeactivateActivationContextUnsafeFast (0x773bcbef <ntdll.dll+0x3cbef>) modid:39
+	error end
+WARNING: unable to load symbols for C:\WINDOWS\System32\windows.storage.dll
+
+Potential Error #2: LEAK 64 direct bytes 0x04381b80-0x04381bc0 + 0 indirect bytes
+# 0 replace_RtlAllocateHeap [d:\drmemory_package\common\alloc_replace.c:3770] (0x7381ec00 <drmemorylib.dll+0x1ec00>) modid:11
+# 1 AcLayers.dll!?            (0x59d12b8f <AcLayers.dll+0x22b8f>) modid:3
+# 2 Windows.Storage.dll!SHKnownFolderFromCSIDL (0x75d44616 <Windows.Storage.dll+0x164616>) modid:25
+# 3 Windows.Storage.dll!SHKnownFolderFromCSIDL (0x75d446d9 <Windows.Storage.dll+0x1646d9>) modid:25
+# 4 Windows.Storage.dll!SHKnownFolderFromCSIDL (0x75d4641f <Windows.Storage.dll+0x16641f>) modid:25
+# 5 Windows.Storage.dll!SHKnownFolderFromCSIDL (0x75d4543b <Windows.Storage.dll+0x16543b>) modid:25
+# 6 Windows.Storage.dll!SHKnownFolderFromCSIDL (0x75d45dc0 <Windows.Storage.dll+0x165dc0>) modid:25
+# 7 Windows.Storage.dll!SHKnownFolderFromCSIDL (0x75d4574d <Windows.Storage.dll+0x16574d>) modid:25
+# 8 Windows.Storage.dll!SHKnownFolderFromCSIDL (0x75d4558f <Windows.Storage.dll+0x16558f>) modid:25
+# 9 Windows.Storage.dll!STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandleAndSecondaryStreamName (0x75dc3df2 <Windows.Storage.dll+0x1e3df2>) modid:25
+#10 Windows.Storage.dll!STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandleAndSecondaryStreamName (0x75dc4176 <Windows.Storage.dll+0x1e4176>) modid:25
+#11 ntdll.dll!WinSqmAddToStream (0x773ee746 <ntdll.dll+0x6e746>) modid:39
+	error end
+
+Error #6: LEAK 11 direct bytes 0x04780ed0-0x04780edb + 0 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 msvcrt.dll!_strdup    (0x758856a9 <msvcrt.dll+0x856a9>) modid:21
+# 2 getCommand          [D:/CS/OOP/Assignment03-04/ui/cli.c:28] (0x0040232a <Assignment03_04.exe+0x232a>) modid:1
+# 3 testGetCommand      [D:/CS/OOP/Assignment03-04/test/tester.c:10] (0x00401be2 <Assignment03_04.exe+0x1be2>) modid:1
+# 4 testParser          [D:/CS/OOP/Assignment03-04/test/tester.c:31] (0x00401d95 <Assignment03_04.exe+0x1d95>) modid:1
+# 5 test                [D:/CS/OOP/Assignment03-04/test/tester.c:105] (0x00402294 <Assignment03_04.exe+0x2294>) modid:1
+# 6 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #7: LEAK 7 direct bytes 0x04780f00-0x04780f07 + 0 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 msvcrt.dll!_strdup    (0x758856a9 <msvcrt.dll+0x856a9>) modid:21
+# 2 getCommand          [D:/CS/OOP/Assignment03-04/ui/cli.c:28] (0x0040232a <Assignment03_04.exe+0x232a>) modid:1
+# 3 testGetCommand      [D:/CS/OOP/Assignment03-04/test/tester.c:12] (0x00401c24 <Assignment03_04.exe+0x1c24>) modid:1
+# 4 testParser          [D:/CS/OOP/Assignment03-04/test/tester.c:31] (0x00401d95 <Assignment03_04.exe+0x1d95>) modid:1
+# 5 test                [D:/CS/OOP/Assignment03-04/test/tester.c:105] (0x00402294 <Assignment03_04.exe+0x2294>) modid:1
+# 6 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #8: LEAK 40 direct bytes 0x04780f80-0x04780fa8 + 21 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 getParams           [D:/CS/OOP/Assignment03-04/ui/cli.c:43] (0x00402390 <Assignment03_04.exe+0x2390>) modid:1
+# 2 testGetParams       [D:/CS/OOP/Assignment03-04/test/tester.c:22] (0x00401cbb <Assignment03_04.exe+0x1cbb>) modid:1
+# 3 testParser          [D:/CS/OOP/Assignment03-04/test/tester.c:32] (0x00401d9a <Assignment03_04.exe+0x1d9a>) modid:1
+# 4 test                [D:/CS/OOP/Assignment03-04/test/tester.c:105] (0x00402294 <Assignment03_04.exe+0x2294>) modid:1
+# 5 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #9: LEAK 4 direct bytes 0x047837f0-0x047837f4 + 0 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 testAddCountry      [D:/CS/OOP/Assignment03-04/test/tester.c:43] (0x00401e29 <Assignment03_04.exe+0x1e29>) modid:1
+# 2 testController      [D:/CS/OOP/Assignment03-04/test/tester.c:78] (0x00402076 <Assignment03_04.exe+0x2076>) modid:1
+# 3 test                [D:/CS/OOP/Assignment03-04/test/tester.c:106] (0x00402299 <Assignment03_04.exe+0x2299>) modid:1
+# 4 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #10: LEAK 12 direct bytes 0x04785f58-0x04785f64 + 200 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 createRepo          [D:/CS/OOP/Assignment03-04/repository/repository.c:11] (0x00401a2e <Assignment03_04.exe+0x1a2e>) modid:1
+# 2 initController      [D:/CS/OOP/Assignment03-04/controller/controller.c:178] (0x00401982 <Assignment03_04.exe+0x1982>) modid:1
+# 3 testFilter          [D:/CS/OOP/Assignment03-04/test/tester.c:64] (0x00401f79 <Assignment03_04.exe+0x1f79>) modid:1
+# 4 testController      [D:/CS/OOP/Assignment03-04/test/tester.c:80] (0x00402080 <Assignment03_04.exe+0x2080>) modid:1
+# 5 test                [D:/CS/OOP/Assignment03-04/test/tester.c:106] (0x00402299 <Assignment03_04.exe+0x2299>) modid:1
+# 6 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #11: LEAK 400 direct bytes 0x047861d8-0x04786368 + 5000 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 initUndoController  [D:/CS/OOP/Assignment03-04/controller/undoController.c:20] (0x00402e63 <Assignment03_04.exe+0x2e63>) modid:1
+# 2 testFilter          [D:/CS/OOP/Assignment03-04/test/tester.c:65] (0x00401f7e <Assignment03_04.exe+0x1f7e>) modid:1
+# 3 testController      [D:/CS/OOP/Assignment03-04/test/tester.c:80] (0x00402080 <Assignment03_04.exe+0x2080>) modid:1
+# 4 test                [D:/CS/OOP/Assignment03-04/test/tester.c:106] (0x00402299 <Assignment03_04.exe+0x2299>) modid:1
+# 5 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #12: LEAK 50 direct bytes 0x047885e8-0x0478861a + 0 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 initUndoController  [D:/CS/OOP/Assignment03-04/controller/undoController.c:25] (0x00402ea3 <Assignment03_04.exe+0x2ea3>) modid:1
+# 2 testFilter          [D:/CS/OOP/Assignment03-04/test/tester.c:65] (0x00401f7e <Assignment03_04.exe+0x1f7e>) modid:1
+# 3 testController      [D:/CS/OOP/Assignment03-04/test/tester.c:80] (0x00402080 <Assignment03_04.exe+0x2080>) modid:1
+# 4 test                [D:/CS/OOP/Assignment03-04/test/tester.c:106] (0x00402299 <Assignment03_04.exe+0x2299>) modid:1
+# 5 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #13: LEAK 50 direct bytes 0x04788640-0x04788672 + 0 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 initUndoController  [D:/CS/OOP/Assignment03-04/controller/undoController.c:27] (0x00402eb4 <Assignment03_04.exe+0x2eb4>) modid:1
+# 2 testFilter          [D:/CS/OOP/Assignment03-04/test/tester.c:65] (0x00401f7e <Assignment03_04.exe+0x1f7e>) modid:1
+# 3 testController      [D:/CS/OOP/Assignment03-04/test/tester.c:80] (0x00402080 <Assignment03_04.exe+0x2080>) modid:1
+# 4 test                [D:/CS/OOP/Assignment03-04/test/tester.c:106] (0x00402299 <Assignment03_04.exe+0x2299>) modid:1
+# 5 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #14: LEAK 4 direct bytes 0x04788698-0x0478869c + 0 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 testFilter          [D:/CS/OOP/Assignment03-04/test/tester.c:70] (0x00401fb8 <Assignment03_04.exe+0x1fb8>) modid:1
+# 2 testController      [D:/CS/OOP/Assignment03-04/test/tester.c:80] (0x00402080 <Assignment03_04.exe+0x2080>) modid:1
+# 3 test                [D:/CS/OOP/Assignment03-04/test/tester.c:106] (0x00402299 <Assignment03_04.exe+0x2299>) modid:1
+# 4 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #15: LEAK 400 direct bytes 0x047886c0-0x04788850 + 0 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 filterByName        [D:/CS/OOP/Assignment03-04/controller/controller.c:55] (0x00401519 <Assignment03_04.exe+0x1519>) modid:1
+# 2 testFilter          [D:/CS/OOP/Assignment03-04/test/tester.c:71] (0x00401fce <Assignment03_04.exe+0x1fce>) modid:1
+# 3 testController      [D:/CS/OOP/Assignment03-04/test/tester.c:80] (0x00402080 <Assignment03_04.exe+0x2080>) modid:1
+# 4 test                [D:/CS/OOP/Assignment03-04/test/tester.c:106] (0x00402299 <Assignment03_04.exe+0x2299>) modid:1
+# 5 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+
+Error #16: LEAK 4 direct bytes 0x0478afe0-0x0478afe4 + 0 indirect bytes
+# 0 replace_malloc  [d:\drmemory_package\common\alloc_replace.c:2576] (0x73820300 <drmemorylib.dll+0x20300>) modid:11
+# 1 testAddCountry      [D:/CS/OOP/Assignment03-04/test/tester.c:43] (0x00401e29 <Assignment03_04.exe+0x1e29>) modid:1
+# 2 testRepo            [D:/CS/OOP/Assignment03-04/test/tester.c:84] (0x0040208e <Assignment03_04.exe+0x208e>) modid:1
+# 3 test                [D:/CS/OOP/Assignment03-04/test/tester.c:107] (0x0040229e <Assignment03_04.exe+0x229e>) modid:1
+# 4 main                [D:/CS/OOP/Assignment03-04/main.c:5] (0x00401470 <Assignment03_04.exe+0x1470>) modid:1
+	error end
+WARNING: unable to load symbols for C:\WINDOWS\System32\KERNELBASE.dll
+
+Potential Error #3: HANDLE LEAK: KERNEL handle 0x00000290 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x772929c9 <KERNELBASE.dll+0xf29c9>) modid:38
+# 2 KERNELBASE.dll!IsValidLocale  (0x7726f087 <KERNELBASE.dll+0xcf087>) modid:38
+# 3 KERNELBASE.dll!IsValidLocale  (0x7726ee2a <KERNELBASE.dll+0xcee2a>) modid:38
+# 4 msvcrt.dll!__get_qualified_locale (0x7585e9bb <msvcrt.dll+0x5e9bb>) modid:21
+# 5 msvcrt.dll!_expandlocale (0x758554f9 <msvcrt.dll+0x554f9>) modid:21
+# 6 msvcrt.dll!_setlocale_set_cat (0x75855c03 <msvcrt.dll+0x55c03>) modid:21
+# 7 msvcrt.dll!_setlocale_nolock (0x75855939 <msvcrt.dll+0x55939>) modid:21
+# 8 msvcrt.dll!setlocale  (0x75856055 <msvcrt.dll+0x56055>) modid:21
+# 9 __mingw_dirname     [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x00405411 <Assignment03_04.exe+0x5411>) modid:1
+#10 .text               [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x00404a44 <Assignment03_04.exe+0x4a44>) modid:1
+#11 __mingw_glob        [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x004052c2 <Assignment03_04.exe+0x52c2>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:73] (0x00403a16 <Assignment03_04.exe+0x3a16>) modid:1
+#13 .text               (0x00401202 <Assignment03_04.exe+0x1202>) modid:1
+#14 mainCRTStartup      (0x004012f5 <Assignment03_04.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x773e4a77 <ntdll.dll+0x64a77>) modid:39
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x773e4a47 <ntdll.dll+0x64a47>) modid:39
+Note: @0:00:01.730 in thread 10500
+	error end
+
+Potential Error #4: HANDLE LEAK: KERNEL handle 0x000002c0 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x772929c9 <KERNELBASE.dll+0xf29c9>) modid:38
+# 2 KERNELBASE.dll!IsValidLocale  (0x7726efe7 <KERNELBASE.dll+0xcefe7>) modid:38
+# 3 KERNELBASE.dll!IsValidLocale  (0x7726ee3c <KERNELBASE.dll+0xcee3c>) modid:38
+# 4 msvcrt.dll!__get_qualified_locale (0x7585e9bb <msvcrt.dll+0x5e9bb>) modid:21
+# 5 msvcrt.dll!_expandlocale (0x758554f9 <msvcrt.dll+0x554f9>) modid:21
+# 6 msvcrt.dll!_setlocale_set_cat (0x75855c03 <msvcrt.dll+0x55c03>) modid:21
+# 7 msvcrt.dll!_setlocale_nolock (0x75855939 <msvcrt.dll+0x55939>) modid:21
+# 8 msvcrt.dll!setlocale  (0x75856055 <msvcrt.dll+0x56055>) modid:21
+# 9 __mingw_dirname     [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x00405411 <Assignment03_04.exe+0x5411>) modid:1
+#10 .text               [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x00404a44 <Assignment03_04.exe+0x4a44>) modid:1
+#11 __mingw_glob        [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x004052c2 <Assignment03_04.exe+0x52c2>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:73] (0x00403a16 <Assignment03_04.exe+0x3a16>) modid:1
+#13 .text               (0x00401202 <Assignment03_04.exe+0x1202>) modid:1
+#14 mainCRTStartup      (0x004012f5 <Assignment03_04.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x773e4a77 <ntdll.dll+0x64a77>) modid:39
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x773e4a47 <ntdll.dll+0x64a47>) modid:39
+Note: @0:00:01.732 in thread 10500
+	error end
+
+Potential Error #5: HANDLE LEAK: KERNEL handle 0x000002c4 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x772929c9 <KERNELBASE.dll+0xf29c9>) modid:38
+# 2 KERNELBASE.dll!IsValidLocale  (0x7726f037 <KERNELBASE.dll+0xcf037>) modid:38
+# 3 KERNELBASE.dll!IsValidLocale  (0x7726ee33 <KERNELBASE.dll+0xcee33>) modid:38
+# 4 msvcrt.dll!__get_qualified_locale (0x7585e9bb <msvcrt.dll+0x5e9bb>) modid:21
+# 5 msvcrt.dll!_expandlocale (0x758554f9 <msvcrt.dll+0x554f9>) modid:21
+# 6 msvcrt.dll!_setlocale_set_cat (0x75855c03 <msvcrt.dll+0x55c03>) modid:21
+# 7 msvcrt.dll!_setlocale_nolock (0x75855939 <msvcrt.dll+0x55939>) modid:21
+# 8 msvcrt.dll!setlocale  (0x75856055 <msvcrt.dll+0x56055>) modid:21
+# 9 __mingw_dirname     [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x00405411 <Assignment03_04.exe+0x5411>) modid:1
+#10 .text               [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x00404a44 <Assignment03_04.exe+0x4a44>) modid:1
+#11 __mingw_glob        [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184] (0x004052c2 <Assignment03_04.exe+0x52c2>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:73] (0x00403a16 <Assignment03_04.exe+0x3a16>) modid:1
+#13 .text               (0x00401202 <Assignment03_04.exe+0x1202>) modid:1
+#14 mainCRTStartup      (0x004012f5 <Assignment03_04.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x773e4a77 <ntdll.dll+0x64a77>) modid:39
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x773e4a47 <ntdll.dll+0x64a47>) modid:39
+Note: @0:00:01.733 in thread 10500
+	error end
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+	     1x: default i#1324 mingw runtime
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      5 unique,     5 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+     11 unique,    11 total,   6203 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.11952.000\potential_errors.txt)
+      2 potential leak(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.11952.000\potential_errors.txt)
+    561 ignored assumed-innocuous system leak(s)
+      8 unique,     8 total,   2164 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.11952.000\results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+      3 unique,     3 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      2 unique,     2 total,    128 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.11952.000\potential_errors.txt
+Exiting @0:00:01.739 in thread 10500
+LOG END

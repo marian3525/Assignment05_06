@@ -1,0 +1,78 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory errors that are likely to be false positives, for pid 9256: "Assignment03_04.exe"
+These errors matched the blacklist 'C:\Windows*.d??' for 4 frames.
+Run with -lib_blacklist_frames 0 to treat these as regular errors.
+If these are all false positives and your focus is unaddressable errors, consider running with -light to skip all uninitialized reads and leaks for higher performance.
+
+Potential Error #1: HANDLE LEAK: KERNEL handle 0x00000124 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x75bb0fd9 <KERNELBASE.dll+0xf0fd9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x2d6    (0x75b835d7 <KERNELBASE.dll+0xc35d7>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xd2     (0x75b833d3 <KERNELBASE.dll+0xc33d3>)
+# 4 msvcrt.dll!strerror_s                          +0x266e   (0x764fe9ff <msvcrt.dll+0x5e9ff>)
+# 5 msvcrt.dll!create_locale                       +0x258    (0x764f5549 <msvcrt.dll+0x55549>)
+# 6 msvcrt.dll!get_current_locale                  +0x542    (0x764f5c53 <msvcrt.dll+0x55c53>)
+# 7 msvcrt.dll!get_current_locale                  +0x278    (0x764f5989 <msvcrt.dll+0x55989>)
+# 8 msvcrt.dll!setlocale                           +0x94     (0x764f60a5 <msvcrt.dll+0x560a5>)
+# 9 __mingw_dirname                                 [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#10 .text                                           [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#11 __mingw_glob                                    [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#12 _setargv                                        [D:/CS/OOP/Assignment03-04/controller/undoController.c:119]
+#13 .text              
+#14 mainCRTStartup     
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xfc     (0x77ce582d <ntdll.dll+0x6582d>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xcc     (0x77ce57fd <ntdll.dll+0x657fd>)
+Note: @0:00:05.043 in thread 8384
+
+Potential Error #2: HANDLE LEAK: KERNEL handle 0x0000012c and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x75bb0fd9 <KERNELBASE.dll+0xf0fd9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x326    (0x75b83627 <KERNELBASE.dll+0xc3627>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xc9     (0x75b833ca <KERNELBASE.dll+0xc33ca>)
+# 4 msvcrt.dll!strerror_s                          +0x266e   (0x764fe9ff <msvcrt.dll+0x5e9ff>)
+# 5 msvcrt.dll!create_locale                       +0x258    (0x764f5549 <msvcrt.dll+0x55549>)
+# 6 msvcrt.dll!get_current_locale                  +0x542    (0x764f5c53 <msvcrt.dll+0x55c53>)
+# 7 msvcrt.dll!get_current_locale                  +0x278    (0x764f5989 <msvcrt.dll+0x55989>)
+# 8 msvcrt.dll!setlocale                           +0x94     (0x764f60a5 <msvcrt.dll+0x560a5>)
+# 9 __mingw_dirname                                 [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#10 .text                                           [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#11 __mingw_glob                                    [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#12 _setargv                                        [D:/CS/OOP/Assignment03-04/controller/undoController.c:119]
+#13 .text              
+#14 mainCRTStartup     
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xfc     (0x77ce582d <ntdll.dll+0x6582d>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xcc     (0x77ce57fd <ntdll.dll+0x657fd>)
+Note: @0:00:05.043 in thread 8384
+
+Potential Error #3: HANDLE LEAK: KERNEL handle 0x00000134 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x75bb0fd9 <KERNELBASE.dll+0xf0fd9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x286    (0x75b83587 <KERNELBASE.dll+0xc3587>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xdb     (0x75b833dc <KERNELBASE.dll+0xc33dc>)
+# 4 msvcrt.dll!strerror_s                          +0x266e   (0x764fe9ff <msvcrt.dll+0x5e9ff>)
+# 5 msvcrt.dll!create_locale                       +0x258    (0x764f5549 <msvcrt.dll+0x55549>)
+# 6 msvcrt.dll!get_current_locale                  +0x542    (0x764f5c53 <msvcrt.dll+0x55c53>)
+# 7 msvcrt.dll!get_current_locale                  +0x278    (0x764f5989 <msvcrt.dll+0x55989>)
+# 8 msvcrt.dll!setlocale                           +0x94     (0x764f60a5 <msvcrt.dll+0x560a5>)
+# 9 __mingw_dirname                                 [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#10 .text                                           [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#11 __mingw_glob                                    [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#12 _setargv                                        [D:/CS/OOP/Assignment03-04/controller/undoController.c:119]
+#13 .text              
+#14 mainCRTStartup     
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xfc     (0x77ce582d <ntdll.dll+0x6582d>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xcc     (0x77ce57fd <ntdll.dll+0x657fd>)
+Note: @0:00:05.053 in thread 8384
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+      3 unique,     3 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.9256.000\potential_errors.txt

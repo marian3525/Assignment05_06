@@ -1,0 +1,134 @@
+# File for suppressing errors found in pid 12668: "Assignment03_04.exe"
+
+# Suppression for Error #1
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyRepo
+Assignment03_04.exe!quit
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #1:
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x1a7f>
+<Assignment03_04.exe+0x182b>
+<Assignment03_04.exe+0x2c1c>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #2
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyRepo
+Assignment03_04.exe!quit
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #2:
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x1a99>
+<Assignment03_04.exe+0x182b>
+<Assignment03_04.exe+0x2c1c>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #3
+INVALID HEAP ARGUMENT
+name=Error #3 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyUndoController
+Assignment03_04.exe!quit
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #3:
+INVALID HEAP ARGUMENT
+name=Error #3 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x3522>
+<Assignment03_04.exe+0x1830>
+<Assignment03_04.exe+0x2c1c>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #4
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyUndoController
+Assignment03_04.exe!quit
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #4:
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x3546>
+<Assignment03_04.exe+0x1830>
+<Assignment03_04.exe+0x2c1c>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #5
+INVALID HEAP ARGUMENT
+name=Error #5 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #5:
+INVALID HEAP ARGUMENT
+name=Error #5 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x2dae>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #6
+INVALID HEAP ARGUMENT
+name=Error #6 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #6:
+INVALID HEAP ARGUMENT
+name=Error #6 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x2de7>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #7
+LEAK
+name=Error #7 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+msvcrt.dll!_strdup
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #7:
+LEAK
+name=Error #7 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<msvcrt.dll+0x856b9>
+<Assignment03_04.exe+0x2644>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #8
+LEAK
+name=Error #8 (update to meaningful name)
+drmemorylib.dll!replace_malloc
+msvcrt.dll!_strdup
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #8:
+LEAK
+name=Error #8 (update to meaningful name)
+<drmemorylib.dll+0x20300>
+<msvcrt.dll+0x856b9>
+<Assignment03_04.exe+0x2657>
+<Assignment03_04.exe+0x1470>
+

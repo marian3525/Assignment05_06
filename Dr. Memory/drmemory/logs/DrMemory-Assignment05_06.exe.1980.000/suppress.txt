@@ -1,0 +1,190 @@
+# File for suppressing errors found in pid 1980: "Assignment05_06.exe"
+
+# Suppression for Error #1
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!Test::testDomain
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x30040>
+<libstdc++-6.dll+0x95787>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x2265>
+<Assignment05_06.exe+0x2916>
+<Assignment05_06.exe+0x428d>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #2
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_nothrow
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!Test::testDomain
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #2:
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+<drmemorylib.dll+0x210f0>
+<Assignment05_06.exe+0x2275>
+<Assignment05_06.exe+0x2916>
+<Assignment05_06.exe+0x428d>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #3
+UNADDRESSABLE ACCESS
+name=Error #3 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!Test::testDomain
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #3:
+UNADDRESSABLE ACCESS
+name=Error #3 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x30040>
+<libstdc++-6.dll+0x95787>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x2286>
+<Assignment05_06.exe+0x2916>
+<Assignment05_06.exe+0x428d>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #4
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_nothrow
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!Test::testDomain
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #4:
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+<drmemorylib.dll+0x210f0>
+<Assignment05_06.exe+0x2296>
+<Assignment05_06.exe+0x2916>
+<Assignment05_06.exe+0x428d>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #5
+UNADDRESSABLE ACCESS
+name=Error #5 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!Test::testDomain
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #5:
+UNADDRESSABLE ACCESS
+name=Error #5 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x30040>
+<libstdc++-6.dll+0x95787>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x22a3>
+<Assignment05_06.exe+0x2916>
+<Assignment05_06.exe+0x428d>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #6
+UNADDRESSABLE ACCESS
+name=Error #6 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!Test::testDomain
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #6:
+UNADDRESSABLE ACCESS
+name=Error #6 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x30040>
+<libstdc++-6.dll+0x95787>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x22b0>
+<Assignment05_06.exe+0x2916>
+<Assignment05_06.exe+0x428d>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #7
+UNADDRESSABLE ACCESS
+name=Error #7 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!Tutorial::~Tutorial
+Assignment05_06.exe!Test::testDomain
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #7:
+UNADDRESSABLE ACCESS
+name=Error #7 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x30040>
+<libstdc++-6.dll+0x95787>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x22ba>
+<Assignment05_06.exe+0x2916>
+<Assignment05_06.exe+0x428d>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #8
+INVALID HEAP ARGUMENT
+name=Error #8 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_nothrow
+Assignment05_06.exe!Test::testDomain
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #8:
+INVALID HEAP ARGUMENT
+name=Error #8 (update to meaningful name)
+<drmemorylib.dll+0x210f0>
+<Assignment05_06.exe+0x2926>
+<Assignment05_06.exe+0x428d>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+

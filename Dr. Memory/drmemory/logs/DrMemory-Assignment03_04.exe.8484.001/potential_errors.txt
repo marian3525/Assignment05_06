@@ -1,0 +1,78 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory errors that are likely to be false positives, for pid 8484: "Assignment03_04.exe"
+These errors matched the blacklist 'C:\WINDOWS*.d??' for 4 frames.
+Run with -lib_blacklist_frames 0 to treat these as regular errors.
+If these are all false positives and your focus is unaddressable errors, consider running with -light to skip all uninitialized reads and leaks for higher performance.
+
+Potential Error #1: HANDLE LEAK: KERNEL handle 0x00000118 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x765f29c9 <KERNELBASE.dll+0xf29c9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x326    (0x765cf087 <KERNELBASE.dll+0xcf087>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xc9     (0x765cee2a <KERNELBASE.dll+0xcee2a>)
+# 4 msvcrt.dll!__get_qualified_locale
+# 5 msvcrt.dll!_expandlocale
+# 6 msvcrt.dll!_setlocale_set_cat
+# 7 msvcrt.dll!_setlocale_nolock
+# 8 msvcrt.dll!setlocale 
+# 9 __mingw_dirname                                 [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#10 .text                                           [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#11 __mingw_glob                                    [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#12 _setargv                                        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:72]
+#13 .text              
+#14 mainCRTStartup     
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x76fd4a77 <ntdll.dll+0x64a77>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x76fd4a47 <ntdll.dll+0x64a47>)
+Note: @0:00:13.790 in thread 1444
+
+Potential Error #2: HANDLE LEAK: KERNEL handle 0x0000011c and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x765f29c9 <KERNELBASE.dll+0xf29c9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x2d6    (0x765cf037 <KERNELBASE.dll+0xcf037>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xd2     (0x765cee33 <KERNELBASE.dll+0xcee33>)
+# 4 msvcrt.dll!__get_qualified_locale
+# 5 msvcrt.dll!_expandlocale
+# 6 msvcrt.dll!_setlocale_set_cat
+# 7 msvcrt.dll!_setlocale_nolock
+# 8 msvcrt.dll!setlocale 
+# 9 __mingw_dirname                                 [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#10 .text                                           [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#11 __mingw_glob                                    [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#12 _setargv                                        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:72]
+#13 .text              
+#14 mainCRTStartup     
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x76fd4a77 <ntdll.dll+0x64a77>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x76fd4a47 <ntdll.dll+0x64a47>)
+Note: @0:00:13.790 in thread 1444
+
+Potential Error #3: HANDLE LEAK: KERNEL handle 0x00000120 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x765f29c9 <KERNELBASE.dll+0xf29c9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x286    (0x765cefe7 <KERNELBASE.dll+0xcefe7>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xdb     (0x765cee3c <KERNELBASE.dll+0xcee3c>)
+# 4 msvcrt.dll!__get_qualified_locale
+# 5 msvcrt.dll!_expandlocale
+# 6 msvcrt.dll!_setlocale_set_cat
+# 7 msvcrt.dll!_setlocale_nolock
+# 8 msvcrt.dll!setlocale 
+# 9 __mingw_dirname                                 [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#10 .text                                           [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#11 __mingw_glob                                    [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#12 _setargv                                        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:72]
+#13 .text              
+#14 mainCRTStartup     
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x76fd4a77 <ntdll.dll+0x64a77>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x76fd4a47 <ntdll.dll+0x64a47>)
+Note: @0:00:13.790 in thread 1444
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+      3 unique,     3 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.8484.001\potential_errors.txt

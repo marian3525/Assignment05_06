@@ -1,0 +1,72 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 3780: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNINITIALIZED READ: reading register ecx
+# 0 replace_strcmp               [d:\drmemory_package\drmemory\replace.c:494]
+# 1 getInput                     [D:/CS/OOP/Assignment03-04/ui/cli.c:15]
+# 2 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:103]
+# 3 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:47.868 in thread 2308
+Note: instruction: test   %ecx %ecx
+
+Error #2: UNINITIALIZED READ: reading register edx
+# 0 msvcrt.dll!strtok    
+# 1 getInput               [D:/CS/OOP/Assignment03-04/ui/cli.c:18]
+# 2 start                  [D:/CS/OOP/Assignment03-04/ui/cli.c:103]
+# 3 main                   [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:47.868 in thread 2308
+Note: instruction: test   0xffffffdc(%ebp,%edx) %al
+
+Error #3: UNINITIALIZED READ: reading register bl
+# 0 msvcrt.dll!strtok    
+# 1 getInput               [D:/CS/OOP/Assignment03-04/ui/cli.c:18]
+# 2 start                  [D:/CS/OOP/Assignment03-04/ui/cli.c:103]
+# 3 main                   [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:47.868 in thread 2308
+Note: instruction: test   %bl %bl
+
+Error #4: UNINITIALIZED READ: reading 0x03284630-0x03284631 1 byte(s)
+# 0 msvcrt.dll!strtok    
+# 1 getInput               [D:/CS/OOP/Assignment03-04/ui/cli.c:18]
+# 2 start                  [D:/CS/OOP/Assignment03-04/ui/cli.c:103]
+# 3 main                   [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:47.868 in thread 2308
+Note: instruction: cmp    (%esi) $0x00
+
+Error #5: UNADDRESSABLE ACCESS: reading 0x00000000-0x00000001 1 byte(s)
+# 0 replace_strcmp               [d:\drmemory_package\drmemory\replace.c:494]
+# 1 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:109]
+# 2 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:47.868 in thread 2308
+Note: instruction: movzx  (%eax) -> %ecx
+
+Error #6: LEAK 40 direct bytes 0x032846b8-0x032846e0 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 getParams                    [D:/CS/OOP/Assignment03-04/ui/cli.c:43]
+# 2 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:107]
+# 3 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      1 unique,     1 total unaddressable access(es)
+      4 unique,     4 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,     40 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.3780.000\potential_errors.txt)
+     25 unique,   124 total,  11476 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.3780.000\results.txt

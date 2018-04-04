@@ -1,0 +1,182 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 7524: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS of freed memory: reading 0x03780ed8-0x03780edc 4 byte(s)
+# 0 libstdc++-6.dll!?                +0x0      (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>)
+# 1 libstdc++-6.dll!?                +0x0      (0x6fe70040 <libstdc++-6.dll+0x30040>)
+# 2 libstdc++-6.dll!?                +0x0      (0x6fed5787 <libstdc++-6.dll+0x95787>)
+# 3 libstdc++-6.dll!?                +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 4 Tutorial::~Tutorial               [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:28]
+# 5 Test::testDomain                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+# 6 Test::test                        [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+# 7 test                              [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 8 main                              [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.532 in thread 6240
+Note: prev lower malloc:  0x03780e30-0x03780e70
+Note: 0x03780ed8-0x03780edc overlaps memory 0x03780ec0-0x03780f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27]
+Note: # 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+Note: # 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+Note: # 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #2: INVALID HEAP ARGUMENT to free 0x03780ed8
+# 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+# 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:28]
+# 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+# 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+# 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.563 in thread 6240
+Note: prev lower malloc:  0x03780e30-0x03780e70
+Note: 0x03780ed8-0x03780ed8 overlaps memory 0x03780ec0-0x03780f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27]
+Note: # 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+Note: # 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+Note: # 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #3: UNADDRESSABLE ACCESS of freed memory: reading 0x03780ef8-0x03780efc 4 byte(s)
+# 0 libstdc++-6.dll!?                +0x0      (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>)
+# 1 libstdc++-6.dll!?                +0x0      (0x6fe70040 <libstdc++-6.dll+0x30040>)
+# 2 libstdc++-6.dll!?                +0x0      (0x6fed5787 <libstdc++-6.dll+0x95787>)
+# 3 libstdc++-6.dll!?                +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 4 Tutorial::~Tutorial               [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:29]
+# 5 Test::testDomain                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+# 6 Test::test                        [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+# 7 test                              [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 8 main                              [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.563 in thread 6240
+Note: prev lower malloc:  0x03780e30-0x03780e70
+Note: 0x03780ef8-0x03780efc overlaps memory 0x03780ec0-0x03780f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27]
+Note: # 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+Note: # 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+Note: # 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #4: INVALID HEAP ARGUMENT to free 0x03780ef8
+# 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+# 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:29]
+# 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+# 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+# 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.563 in thread 6240
+Note: prev lower malloc:  0x03780e30-0x03780e70
+Note: 0x03780ef8-0x03780ef8 overlaps memory 0x03780ec0-0x03780f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27]
+Note: # 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+Note: # 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+Note: # 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #5: UNADDRESSABLE ACCESS of freed memory: reading 0x03780ef8-0x03780efc 4 byte(s)
+# 0 libstdc++-6.dll!?                +0x0      (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>)
+# 1 libstdc++-6.dll!?                +0x0      (0x6fe70040 <libstdc++-6.dll+0x30040>)
+# 2 libstdc++-6.dll!?                +0x0      (0x6fed5787 <libstdc++-6.dll+0x95787>)
+# 3 libstdc++-6.dll!?                +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 4 Tutorial::~Tutorial               [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26]
+# 5 Test::testDomain                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+# 6 Test::test                        [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+# 7 test                              [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 8 main                              [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.563 in thread 6240
+Note: prev lower malloc:  0x03780e30-0x03780e70
+Note: 0x03780ef8-0x03780efc overlaps memory 0x03780ec0-0x03780f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27]
+Note: # 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+Note: # 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+Note: # 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #6: UNADDRESSABLE ACCESS of freed memory: reading 0x03780ed8-0x03780edc 4 byte(s)
+# 0 libstdc++-6.dll!?                +0x0      (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>)
+# 1 libstdc++-6.dll!?                +0x0      (0x6fe70040 <libstdc++-6.dll+0x30040>)
+# 2 libstdc++-6.dll!?                +0x0      (0x6fed5787 <libstdc++-6.dll+0x95787>)
+# 3 libstdc++-6.dll!?                +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 4 Tutorial::~Tutorial               [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26]
+# 5 Test::testDomain                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+# 6 Test::test                        [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+# 7 test                              [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 8 main                              [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.563 in thread 6240
+Note: prev lower malloc:  0x03780e30-0x03780e70
+Note: 0x03780ed8-0x03780edc overlaps memory 0x03780ec0-0x03780f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27]
+Note: # 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+Note: # 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+Note: # 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #7: UNADDRESSABLE ACCESS of freed memory: reading 0x03780ec0-0x03780ec4 4 byte(s)
+# 0 libstdc++-6.dll!?                +0x0      (0x6fe70ca0 <libstdc++-6.dll+0x30ca0>)
+# 1 libstdc++-6.dll!?                +0x0      (0x6fe70040 <libstdc++-6.dll+0x30040>)
+# 2 libstdc++-6.dll!?                +0x0      (0x6fed5787 <libstdc++-6.dll+0x95787>)
+# 3 libstdc++-6.dll!?                +0x0      (0x6fed93e7 <libstdc++-6.dll+0x993e7>)
+# 4 Tutorial::~Tutorial               [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:26]
+# 5 Test::testDomain                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+# 6 Test::test                        [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+# 7 test                              [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 8 main                              [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.563 in thread 6240
+Note: prev lower malloc:  0x03780e30-0x03780e70
+Note: 0x03780ec0-0x03780ec4 overlaps memory 0x03780ec0-0x03780f10 that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27]
+Note: # 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+Note: # 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+Note: # 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #8: INVALID HEAP ARGUMENT to free 0x03780ec0
+# 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+# 1 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+# 2 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+# 3 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 4 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.563 in thread 6240
+Note: prev lower malloc:  0x03780e30-0x03780e70
+Note: memory was previously freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Tutorial::~Tutorial                           [D:/CS/OOP/Assignment05-06/domain/tutorial.cpp:27]
+Note: # 2 Test::testDomain                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:22]
+Note: # 3 Test::test                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:107]
+Note: # 4 test                                          [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      5 unique,     5 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      3 unique,     3 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.7524.000\potential_errors.txt)
+      5 unique,     5 total,    354 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.7524.000\results.txt

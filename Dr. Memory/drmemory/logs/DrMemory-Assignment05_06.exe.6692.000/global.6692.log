@@ -1,0 +1,148 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3657567:27:58.233 == 15:27:58.233 04/03/2018
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+new thread #0 id=8356
+
+module load event: "Assignment05_06.exe" 0x00400000-0x0046f000 modid: 1 D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe
+WARNING: assuming operator delete is non-placement in Assignment05_06.exe @0x00404e08
+WARNING: assuming operator delete[] is non-placement in Assignment05_06.exe @0x00404e10
+
+module load event: "dynamorio.dll" 0x5dbd0000-0x5dd2d000 modid: 2 D:\CS\OOP\Assignment05-06\Dr. Memory\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "libgcc_s_dw2-1.dll" 0x6eb40000-0x6ec1d000 modid: 3 D:\CS\IDEs\MinGW\bin\libgcc_s_dw2-1.dll
+
+module load event: "libstdc++-6.dll" 0x6fe40000-0x6ffb4000 modid: 4 D:\CS\IDEs\MinGW\bin\libstdc++-6.dll
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 5 D:\CS\OOP\Assignment05-06\Dr. Memory\bin\release\drmemorylib.dll
+
+module load event: "KERNELBASE.dll" 0x74530000-0x74707000 modid: 6 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "msvcrt.dll" 0x75d30000-0x75ded000 modid: 7 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "KERNEL32.dll" 0x76a80000-0x76b50000 modid: 8 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "ntdll.dll" 0x77430000-0x775bd000 modid: 9 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+
+Error #1: LEAK 40 direct bytes 0x036b19f8-0x036b1a20 + 800 indirect bytes
+# 0 replace_operator_new_array [d:\drmemory_package\common\alloc_replace.c:2928] (0x73820f50 <drmemorylib.dll+0x20f50>) modid:5
+# 1 Repository::getAll  [D:/CS/OOP/Assignment05-06/repository/repository.cpp:42] (0x00401cbe <Assignment05_06.exe+0x1cbe>) modid:1
+# 2 _ZN10Controller15getAllPrintableB5cxx11Ev [D:/CS/OOP/Assignment05-06/controller/controller.cpp:24] (0x00401f48 <Assignment05_06.exe+0x1f48>) modid:1
+# 3 testGetPrintable    [D:/CS/OOP/Assignment05-06/tests/test.cpp:104] (0x00404ba0 <Assignment05_06.exe+0x4ba0>) modid:1
+# 4 Test::testController [D:/CS/OOP/Assignment05-06/tests/test.cpp:119] (0x00404d1d <Assignment05_06.exe+0x4d1d>) modid:1
+# 5 Test::test          [D:/CS/OOP/Assignment05-06/tests/test.cpp:127] (0x00404d3f <Assignment05_06.exe+0x4d3f>) modid:1
+# 6 test                [D:/CS/OOP/Assignment05-06/main.cpp:14] (0x00401534 <Assignment05_06.exe+0x1534>) modid:1
+# 7 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+	error end
+WARNING: unable to load symbols for C:\WINDOWS\System32\KERNELBASE.dll
+
+NEW THREAD: main thread 8356
+
+
+Potential Error #1: HANDLE LEAK: KERNEL handle 0x000000e4 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x746229c9 <KERNELBASE.dll+0xf29c9>) modid:6
+# 2 KERNELBASE.dll!IsValidLocale  (0x745ff087 <KERNELBASE.dll+0xcf087>) modid:6
+# 3 KERNELBASE.dll!IsValidLocale  (0x745fee2a <KERNELBASE.dll+0xcee2a>) modid:6
+# 4 msvcrt.dll!__get_qualified_locale (0x75d8e9bb <msvcrt.dll+0x5e9bb>) modid:7
+# 5 msvcrt.dll!_expandlocale (0x75d854f9 <msvcrt.dll+0x554f9>) modid:7
+# 6 msvcrt.dll!_setlocale_set_cat (0x75d85c03 <msvcrt.dll+0x55c03>) modid:7
+# 7 msvcrt.dll!_setlocale_nolock (0x75d85939 <msvcrt.dll+0x55939>) modid:7
+# 8 msvcrt.dll!setlocale  (0x75d86055 <msvcrt.dll+0x56055>) modid:7
+# 9 __mingw_dirname     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x00406bb1 <Assignment05_06.exe+0x6bb1>) modid:1
+#10 .text               [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x004061e4 <Assignment05_06.exe+0x61e4>) modid:1
+#11 __mingw_glob        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x00406a62 <Assignment05_06.exe+0x6a62>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x004051a6 <Assignment05_06.exe+0x51a6>) modid:1
+#13 .text               [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062] (0x00401202 <Assignment05_06.exe+0x1202>) modid:1
+#14 mainCRTStartup      [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062] (0x004012f5 <Assignment05_06.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a77 <ntdll.dll+0x64a77>) modid:9
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a47 <ntdll.dll+0x64a47>) modid:9
+Note: @0:00:00.625 in thread 8356
+	error end
+
+Potential Error #2: HANDLE LEAK: KERNEL handle 0x00000124 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x746229c9 <KERNELBASE.dll+0xf29c9>) modid:6
+# 2 KERNELBASE.dll!IsValidLocale  (0x745fefe7 <KERNELBASE.dll+0xcefe7>) modid:6
+# 3 KERNELBASE.dll!IsValidLocale  (0x745fee3c <KERNELBASE.dll+0xcee3c>) modid:6
+# 4 msvcrt.dll!__get_qualified_locale (0x75d8e9bb <msvcrt.dll+0x5e9bb>) modid:7
+# 5 msvcrt.dll!_expandlocale (0x75d854f9 <msvcrt.dll+0x554f9>) modid:7
+# 6 msvcrt.dll!_setlocale_set_cat (0x75d85c03 <msvcrt.dll+0x55c03>) modid:7
+# 7 msvcrt.dll!_setlocale_nolock (0x75d85939 <msvcrt.dll+0x55939>) modid:7
+# 8 msvcrt.dll!setlocale  (0x75d86055 <msvcrt.dll+0x56055>) modid:7
+# 9 __mingw_dirname     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x00406bb1 <Assignment05_06.exe+0x6bb1>) modid:1
+#10 .text               [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x004061e4 <Assignment05_06.exe+0x61e4>) modid:1
+#11 __mingw_glob        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x00406a62 <Assignment05_06.exe+0x6a62>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x004051a6 <Assignment05_06.exe+0x51a6>) modid:1
+#13 .text               [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062] (0x00401202 <Assignment05_06.exe+0x1202>) modid:1
+#14 mainCRTStartup      [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062] (0x004012f5 <Assignment05_06.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a77 <ntdll.dll+0x64a77>) modid:9
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a47 <ntdll.dll+0x64a47>) modid:9
+Note: @0:00:00.625 in thread 8356
+	error end
+
+Potential Error #3: HANDLE LEAK: KERNEL handle 0x00000128 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey
+# 1 KERNELBASE.dll!IsValidCodePage (0x746229c9 <KERNELBASE.dll+0xf29c9>) modid:6
+# 2 KERNELBASE.dll!IsValidLocale  (0x745ff037 <KERNELBASE.dll+0xcf037>) modid:6
+# 3 KERNELBASE.dll!IsValidLocale  (0x745fee33 <KERNELBASE.dll+0xcee33>) modid:6
+# 4 msvcrt.dll!__get_qualified_locale (0x75d8e9bb <msvcrt.dll+0x5e9bb>) modid:7
+# 5 msvcrt.dll!_expandlocale (0x75d854f9 <msvcrt.dll+0x554f9>) modid:7
+# 6 msvcrt.dll!_setlocale_set_cat (0x75d85c03 <msvcrt.dll+0x55c03>) modid:7
+# 7 msvcrt.dll!_setlocale_nolock (0x75d85939 <msvcrt.dll+0x55939>) modid:7
+# 8 msvcrt.dll!setlocale  (0x75d86055 <msvcrt.dll+0x56055>) modid:7
+# 9 __mingw_dirname     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x00406bb1 <Assignment05_06.exe+0x6bb1>) modid:1
+#10 .text               [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x004061e4 <Assignment05_06.exe+0x61e4>) modid:1
+#11 __mingw_glob        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x00406a62 <Assignment05_06.exe+0x6a62>) modid:1
+#12 _setargv            [D:/CS/OOP/Assignment05-06/repository/repository.cpp:48] (0x004051a6 <Assignment05_06.exe+0x51a6>) modid:1
+#13 .text               [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062] (0x00401202 <Assignment05_06.exe+0x1202>) modid:1
+#14 mainCRTStartup      [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062] (0x004012f5 <Assignment05_06.exe+0x12f5>) modid:1
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a77 <ntdll.dll+0x64a77>) modid:9
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath (0x77494a47 <ntdll.dll+0x64a47>) modid:9
+Note: @0:00:00.625 in thread 8356
+	error end
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+	     1x: default i#1324 mingw runtime
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,    840 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.6692.000\potential_errors.txt)
+     99 ignored assumed-innocuous system leak(s)
+      5 unique,     5 total,    354 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.6692.000\results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+      3 unique,     3 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.6692.000\potential_errors.txt
+Exiting @0:00:00.641 in thread 8356
+LOG END

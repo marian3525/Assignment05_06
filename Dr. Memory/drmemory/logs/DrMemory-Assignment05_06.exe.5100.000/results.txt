@@ -1,0 +1,69 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 5100: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: LEAK 80 direct bytes 0x037c8428-0x037c8478 + 0 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:12]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:7]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:21]
+
+Error #2: LEAK 80 direct bytes 0x037c84d0-0x037c8520 + 31 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:14]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:7]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:21]
+
+Error #3: LEAK 80 direct bytes 0x037c85b8-0x037c8608 + 31 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:16]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:7]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:21]
+
+Error #4: LEAK 80 direct bytes 0x037c8668-0x037c86b8 + 0 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:18]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:7]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:21]
+
+Error #5: LEAK 80 direct bytes 0x037c86d8-0x037c8728 + 0 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:20]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:7]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:21]
+
+Error #6: LEAK 80 direct bytes 0x037c8748-0x037c8798 + 0 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:22]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:7]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:21]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      6 unique,     6 total,    542 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.5100.000\potential_errors.txt)
+      6 unique,     6 total,   4450 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.5100.000\results.txt

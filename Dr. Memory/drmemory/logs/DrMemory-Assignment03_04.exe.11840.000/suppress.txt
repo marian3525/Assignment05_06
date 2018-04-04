@@ -1,0 +1,66 @@
+# File for suppressing errors found in pid 11840: "Assignment03_04.exe"
+
+# Suppression for Error #1
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyRepo
+Assignment03_04.exe!quit
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #1:
+INVALID HEAP ARGUMENT
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x1a7f>
+<Assignment03_04.exe+0x182b>
+<Assignment03_04.exe+0x2c1c>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #2
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!destroyRepo
+Assignment03_04.exe!quit
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #2:
+INVALID HEAP ARGUMENT
+name=Error #2 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x1a99>
+<Assignment03_04.exe+0x182b>
+<Assignment03_04.exe+0x2c1c>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #3
+INVALID HEAP ARGUMENT
+name=Error #3 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #3:
+INVALID HEAP ARGUMENT
+name=Error #3 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x2dae>
+<Assignment03_04.exe+0x1470>
+
+# Suppression for Error #4
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+drmemorylib.dll!replace_free
+Assignment03_04.exe!start
+Assignment03_04.exe!main
+
+## Mod+offs-style suppression for Error #4:
+INVALID HEAP ARGUMENT
+name=Error #4 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<Assignment03_04.exe+0x2de7>
+<Assignment03_04.exe+0x1470>
+

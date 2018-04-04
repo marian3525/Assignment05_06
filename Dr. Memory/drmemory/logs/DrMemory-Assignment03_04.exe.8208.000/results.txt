@@ -1,0 +1,57 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 8208: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT to free 0x00407064
+# 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyRepo                [D:/CS/OOP/Assignment03-04/repository/repository.c:30]
+# 2 quit                       [D:/CS/OOP/Assignment03-04/controller/controller.c:136]
+# 3 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:276]
+# 4 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:17.560 in thread 8988
+
+Error #2: INVALID HEAP ARGUMENT to free 0x0040706b
+# 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 destroyRepo                [D:/CS/OOP/Assignment03-04/repository/repository.c:31]
+# 2 quit                       [D:/CS/OOP/Assignment03-04/controller/controller.c:136]
+# 3 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:276]
+# 4 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:17.563 in thread 8988
+
+Error #3: LEAK 3 direct bytes 0x012747d8-0x012747db + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:115]
+# 3 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+
+Error #4: LEAK 5 direct bytes 0x01274800-0x01274805 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:118]
+# 3 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:     10
+	Error #   2:     10
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      2 unique,    20 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      2 unique,     2 total,      8 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.8208.000\potential_errors.txt)
+      6 unique,     6 total,   4456 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.8208.000\results.txt

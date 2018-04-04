@@ -1,0 +1,108 @@
+# File for suppressing errors found in pid 6032: "Assignment05_06.exe"
+
+# Suppression for Error #1
+LEAK
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Test::testDomain
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+LEAK
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x2ff6>
+<Assignment05_06.exe+0x4c53>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #2
+LEAK
+name=Error #2 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #2:
+LEAK
+name=Error #2 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x4b2b>
+<Assignment05_06.exe+0x4c45>
+<Assignment05_06.exe+0x4c67>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #3
+LEAK
+name=Error #3 (update to meaningful name)
+drmemorylib.dll!replace_operator_new_array
+Assignment05_06.exe!_ZN10Controller15getAllPrintableB5cxx11Ev
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #3:
+LEAK
+name=Error #3 (update to meaningful name)
+<drmemorylib.dll+0x20f50>
+<Assignment05_06.exe+0x1f15>
+<Assignment05_06.exe+0x4b4a>
+<Assignment05_06.exe+0x4c45>
+<Assignment05_06.exe+0x4c67>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #4
+LEAK
+name=Error #4 (update to meaningful name)
+drmemorylib.dll!replace_operator_new_array
+Assignment05_06.exe!Repository::getAll
+Assignment05_06.exe!_ZN10Controller15getAllPrintableB5cxx11Ev
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #4:
+LEAK
+name=Error #4 (update to meaningful name)
+<drmemorylib.dll+0x20f50>
+<Assignment05_06.exe+0x1cbe>
+<Assignment05_06.exe+0x1f48>
+<Assignment05_06.exe+0x4b4a>
+<Assignment05_06.exe+0x4c45>
+<Assignment05_06.exe+0x4c67>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #5
+LEAK
+name=Error #5 (update to meaningful name)
+drmemorylib.dll!replace_operator_new_array
+Assignment05_06.exe!Repository::getAll
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #5:
+LEAK
+name=Error #5 (update to meaningful name)
+<drmemorylib.dll+0x20f50>
+<Assignment05_06.exe+0x1cbe>
+<Assignment05_06.exe+0x4b57>
+<Assignment05_06.exe+0x4c45>
+<Assignment05_06.exe+0x4c67>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+

@@ -1,0 +1,29 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3657441:42:31.865 == 09:42:31.865 03/29/2018
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+new thread #0 id=544
+
+module load event: "Assignment03_04.exe" 0x00400000-0x00418000 modid: 1 D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe
+
+module load event: "dynamorio.dll" 0x5eb00000-0x5ec5d000 modid: 2 D:\CS\OOP\Assignment03-04\Dr. Memory\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 3 D:\CS\OOP\Assignment03-04\Dr. Memory\bin\release\drmemorylib.dll
+
+module load event: "KERNEL32.dll" 0x73b50000-0x73c20000 modid: 4 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "msvcrt.dll" 0x763b0000-0x7646d000 modid: 5 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "KERNELBASE.dll" 0x76500000-0x766d7000 modid: 6 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "ntdll.dll" 0x76f70000-0x770fd000 modid: 7 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+new thread #1 id=8968
+new thread #2 id=9108

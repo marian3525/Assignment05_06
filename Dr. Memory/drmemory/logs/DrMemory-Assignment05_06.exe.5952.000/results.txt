@@ -1,0 +1,98 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 5952: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 DynamicVector::operator=                    [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:31]
+# 2 Repository::Repository                      [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+# 3 testRepo                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:56]
+# 4 Test::test                                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:85]
+# 5 test                                        [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 6 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.500 in thread 6872
+Note: memory was allocated here:
+Note: # 0 replace_malloc                             [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 DynamicVector::DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7]
+Note: # 2 Repository::Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:5]
+Note: # 3 testRepo                                   [D:/CS/OOP/Assignment05-06/tests/test.cpp:56]
+Note: # 4 Test::test                                 [D:/CS/OOP/Assignment05-06/tests/test.cpp:85]
+Note: # 5 test                                       [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 6 main                                       [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #2: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:20]
+# 2 Repository::Repository                      [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+# 3 testRepo                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:56]
+# 4 Test::test                                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:85]
+# 5 test                                        [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 6 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.515 in thread 6872
+Note: memory was allocated here:
+Note: # 0 replace_malloc                             [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 DynamicVector::DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7]
+Note: # 2 Repository::Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+Note: # 3 testRepo                                   [D:/CS/OOP/Assignment05-06/tests/test.cpp:56]
+Note: # 4 Test::test                                 [D:/CS/OOP/Assignment05-06/tests/test.cpp:85]
+Note: # 5 test                                       [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 6 main                                       [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #3: LEAK 12 direct bytes 0x03601000-0x0360100c + 370 indirect bytes
+# 0 replace_operator_new                  [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Test::testDynamicVector               [D:/CS/OOP/Assignment05-06/tests/test.cpp:36]
+# 2 Test::test                            [D:/CS/OOP/Assignment05-06/tests/test.cpp:84]
+# 3 test                                  [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 4 main                                  [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #4: LEAK 20 direct bytes 0x03601118-0x0360112c + 150 indirect bytes
+# 0 replace_operator_new                  [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Test::testDynamicVector               [D:/CS/OOP/Assignment05-06/tests/test.cpp:37]
+# 2 Test::test                            [D:/CS/OOP/Assignment05-06/tests/test.cpp:84]
+# 3 test                                  [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 4 main                                  [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #5: LEAK 20 direct bytes 0x03601398-0x036013ac + 150 indirect bytes
+# 0 replace_operator_new                  [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Test::testDynamicVector               [D:/CS/OOP/Assignment05-06/tests/test.cpp:43]
+# 2 Test::test                            [D:/CS/OOP/Assignment05-06/tests/test.cpp:84]
+# 3 test                                  [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 4 main                                  [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #6: LEAK 12 direct bytes 0x036014d8-0x036014e4 + 380 indirect bytes
+# 0 replace_operator_new               [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 testRepo                           [D:/CS/OOP/Assignment05-06/tests/test.cpp:56]
+# 2 Test::test                         [D:/CS/OOP/Assignment05-06/tests/test.cpp:85]
+# 3 test                               [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 4 main                               [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #7: LEAK 20 direct bytes 0x03601860-0x03601874 + 150 indirect bytes
+# 0 replace_operator_new               [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 testRepo                           [D:/CS/OOP/Assignment05-06/tests/test.cpp:59]
+# 2 Test::test                         [D:/CS/OOP/Assignment05-06/tests/test.cpp:85]
+# 3 test                               [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 4 main                               [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      2 unique,     2 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      5 unique,     5 total,   1284 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.5952.000\potential_errors.txt)
+      5 unique,     5 total,    354 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.5952.000\results.txt

@@ -1,0 +1,34 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3657594:48:29.928 == 18:48:29.928 04/04/2018
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+new thread #0 id=1136
+
+module load event: "Assignment05_06.exe" 0x00400000-0x00480000 modid: 1 D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe
+WARNING: assuming operator delete is non-placement in Assignment05_06.exe @0x004079e8
+WARNING: assuming operator delete[] is non-placement in Assignment05_06.exe @0x004079f0
+
+module load event: "dynamorio.dll" 0x5c6e0000-0x5c83d000 modid: 2 D:\CS\OOP\Assignment05-06\Dr. Memory\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "libgcc_s_dw2-1.dll" 0x6eb40000-0x6ec1d000 modid: 3 D:\CS\IDEs\MinGW\bin\libgcc_s_dw2-1.dll
+
+module load event: "libstdc++-6.dll" 0x6fe40000-0x6ffb4000 modid: 4 D:\CS\IDEs\MinGW\bin\libstdc++-6.dll
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 5 D:\CS\OOP\Assignment05-06\Dr. Memory\bin\release\drmemorylib.dll
+
+module load event: "KERNELBASE.dll" 0x74530000-0x74707000 modid: 6 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "msvcrt.dll" 0x75d30000-0x75ded000 modid: 7 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "KERNEL32.dll" 0x76a80000-0x76b50000 modid: 8 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "ntdll.dll" 0x77430000-0x775bd000 modid: 9 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+new thread #1 id=108

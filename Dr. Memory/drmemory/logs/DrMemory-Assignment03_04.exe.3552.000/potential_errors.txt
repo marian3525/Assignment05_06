@@ -1,0 +1,106 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory errors that are likely to be false positives, for pid 3552: "Assignment03_04.exe"
+These errors matched the blacklist 'C:\WINDOWS*.d??' for 4 frames.
+Run with -lib_blacklist_frames 0 to treat these as regular errors.
+If these are all false positives and your focus is unaddressable errors, consider running with -light to skip all uninitialized reads and leaks for higher performance.
+
+Potential Error #1: LEAK 64 direct bytes 0x043d1b20-0x043d1b60 + 0 indirect bytes
+# 0 replace_RtlAllocateHeap                                [d:\drmemory_package\common\alloc_replace.c:3770]
+# 1 AcLayers.dll!?                                        +0x0      (0x59d12b8f <AcLayers.dll+0x22b8f>)
+# 2 SHELL32.dll!Shell_NotifyIconW                         +0x9f2f   (0x73f827b0 <SHELL32.dll+0xc27b0>)
+# 3 SHELL32.dll!Shell_NotifyIconW                         +0x868a   (0x73f80f0b <SHELL32.dll+0xc0f0b>)
+# 4 SHELL32.dll!Shell_NotifyIconW                         +0x9b2e   (0x73f823af <SHELL32.dll+0xc23af>)
+# 5 SHELL32.dll!Shell_NotifyIconW                         +0x95a8   (0x73f81e29 <SHELL32.dll+0xc1e29>)
+# 6 SHELL32.dll!Shell_NotifyIconW                         +0x941c   (0x73f81c9d <SHELL32.dll+0xc1c9d>)
+# 7 SHELL32.dll!ExtractIconExW                            +0x580    (0x73f5a9f1 <SHELL32.dll+0x9a9f1>)
+# 8 SHELL32.dll!RegenerateUserEnvironment                 +0x18d1   (0x73fc8062 <SHELL32.dll+0x108062>)
+# 9 SHELL32.dll!RegenerateUserEnvironment                 +0x1c55   (0x73fc83e6 <SHELL32.dll+0x1083e6>)
+#10 ntdll.dll!WinSqmAddToStream                           +0x25     (0x773ee746 <ntdll.dll+0x6e746>)
+#11 ntdll.dll!RtlDeactivateActivationContextUnsafeFast    +0x16e    (0x773bcbef <ntdll.dll+0x3cbef>)
+
+Potential Error #2: LEAK 64 direct bytes 0x043d1b80-0x043d1bc0 + 0 indirect bytes
+# 0 replace_RtlAllocateHeap                                                    [d:\drmemory_package\common\alloc_replace.c:3770]
+# 1 AcLayers.dll!?                                                            +0x0      (0x59d12b8f <AcLayers.dll+0x22b8f>)
+# 2 Windows.Storage.dll!SHKnownFolderFromCSIDL                                +0x6d85   (0x75d44616 <Windows.Storage.dll+0x164616>)
+# 3 Windows.Storage.dll!SHKnownFolderFromCSIDL                                +0x6e48   (0x75d446d9 <Windows.Storage.dll+0x1646d9>)
+# 4 Windows.Storage.dll!SHKnownFolderFromCSIDL                                +0x8b8e   (0x75d4641f <Windows.Storage.dll+0x16641f>)
+# 5 Windows.Storage.dll!SHKnownFolderFromCSIDL                                +0x7baa   (0x75d4543b <Windows.Storage.dll+0x16543b>)
+# 6 Windows.Storage.dll!SHKnownFolderFromCSIDL                                +0x852f   (0x75d45dc0 <Windows.Storage.dll+0x165dc0>)
+# 7 Windows.Storage.dll!SHKnownFolderFromCSIDL                                +0x7ebc   (0x75d4574d <Windows.Storage.dll+0x16574d>)
+# 8 Windows.Storage.dll!SHKnownFolderFromCSIDL                                +0x7cfe   (0x75d4558f <Windows.Storage.dll+0x16558f>)
+# 9 Windows.Storage.dll!STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandleAndSecondaryStreamName+0x33c1   (0x75dc3df2 <Windows.Storage.dll+0x1e3df2>)
+#10 Windows.Storage.dll!STORAGE_CreateStorageItemFromShellItem_FullTrustCaller_ForPackage_WithProcessHandleAndSecondaryStreamName+0x3745   (0x75dc4176 <Windows.Storage.dll+0x1e4176>)
+#11 ntdll.dll!WinSqmAddToStream                                               +0x25     (0x773ee746 <ntdll.dll+0x6e746>)
+
+Potential Error #3: HANDLE LEAK: KERNEL handle 0x000002bc and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x772929c9 <KERNELBASE.dll+0xf29c9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x286    (0x7726efe7 <KERNELBASE.dll+0xcefe7>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xdb     (0x7726ee3c <KERNELBASE.dll+0xcee3c>)
+# 4 msvcrt.dll!__get_qualified_locale
+# 5 msvcrt.dll!_expandlocale
+# 6 msvcrt.dll!_setlocale_set_cat
+# 7 msvcrt.dll!_setlocale_nolock
+# 8 msvcrt.dll!setlocale 
+# 9 __mingw_dirname                                 [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#10 .text                                           [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#11 __mingw_glob                                    [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#12 _setargv                                        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:73]
+#13 .text              
+#14 mainCRTStartup     
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x773e4a77 <ntdll.dll+0x64a77>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x773e4a47 <ntdll.dll+0x64a47>)
+Note: @0:00:01.825 in thread 6240
+
+Potential Error #4: HANDLE LEAK: KERNEL handle 0x000002dc and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x772929c9 <KERNELBASE.dll+0xf29c9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x2d6    (0x7726f037 <KERNELBASE.dll+0xcf037>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xd2     (0x7726ee33 <KERNELBASE.dll+0xcee33>)
+# 4 msvcrt.dll!__get_qualified_locale
+# 5 msvcrt.dll!_expandlocale
+# 6 msvcrt.dll!_setlocale_set_cat
+# 7 msvcrt.dll!_setlocale_nolock
+# 8 msvcrt.dll!setlocale 
+# 9 __mingw_dirname                                 [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#10 .text                                           [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#11 __mingw_glob                                    [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#12 _setargv                                        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:73]
+#13 .text              
+#14 mainCRTStartup     
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x773e4a77 <ntdll.dll+0x64a77>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x773e4a47 <ntdll.dll+0x64a47>)
+Note: @0:00:01.827 in thread 6240
+
+Potential Error #5: HANDLE LEAK: KERNEL handle 0x000002e0 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 KERNELBASE.dll!IsValidCodePage                 +0x1c8    (0x772929c9 <KERNELBASE.dll+0xf29c9>)
+# 2 KERNELBASE.dll!IsValidLocale                   +0x326    (0x7726f087 <KERNELBASE.dll+0xcf087>)
+# 3 KERNELBASE.dll!IsValidLocale                   +0xc9     (0x7726ee2a <KERNELBASE.dll+0xcee2a>)
+# 4 msvcrt.dll!__get_qualified_locale
+# 5 msvcrt.dll!_expandlocale
+# 6 msvcrt.dll!_setlocale_set_cat
+# 7 msvcrt.dll!_setlocale_nolock
+# 8 msvcrt.dll!setlocale 
+# 9 __mingw_dirname                                 [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#10 .text                                           [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#11 __mingw_glob                                    [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+#12 _setargv                                        [D:/CS/OOP/Assignment03-04/Vector/DynamicVector.c:73]
+#13 .text              
+#14 mainCRTStartup     
+#15 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x773e4a77 <ntdll.dll+0x64a77>)
+#16 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x773e4a47 <ntdll.dll+0x64a47>)
+Note: @0:00:01.828 in thread 6240
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+      3 unique,     3 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      2 unique,     2 total,    128 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.3552.000\potential_errors.txt

@@ -1,0 +1,32 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 8116: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 DynamicVector::operator=                    [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:31]
+# 2 Repository::Repository                      [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+# 3 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:7]
+# 4 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.438 in thread 6224
+Note: memory was allocated here:
+Note: # 0 replace_malloc                             [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 DynamicVector::DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7]
+Note: # 2 Repository::Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:5]
+Note: # 3 run                                        [D:/CS/OOP/Assignment05-06/main.cpp:7]
+Note: # 4 main                                       [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #2: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:20]
+# 2 Repository::Repository                      [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+# 3 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:7]
+# 4 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.438 in thread 6224
+Note: memory was allocated here:
+Note: # 0 replace_malloc                             [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 DynamicVector::DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7]
+Note: # 2 Repository::Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+Note: # 3 run                                        [D:/CS/OOP/Assignment05-06/main.cpp:7]
+Note: # 4 main                                       [D:/CS/OOP/Assignment05-06/main.cpp:18]

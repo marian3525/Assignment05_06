@@ -1,0 +1,3 @@
+C:\WINDOWS\SYSTEM32\ntdll.dll
+C:\WINDOWS\System32\msvcrt.dll
+C:\WINDOWS\System32\KERNELBASE.dll

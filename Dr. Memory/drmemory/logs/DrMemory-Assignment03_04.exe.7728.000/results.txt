@@ -1,0 +1,304 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 7728: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4684-0x011f4685 1 byte(s)
+# 0 msvcrt.dll!_strdup   
+# 1 start                 [D:/CS/OOP/Assignment03-04/ui/cli.c:114]
+# 2 main                  [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.450 in thread 7152
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4684-0x011f4685 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%ecx) -> %al
+
+Error #2: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4684-0x011f4685 1 byte(s)
+# 0 msvcrt.dll!strcpy_s  
+# 1 msvcrt.dll!_strdup   
+# 2 start                  [D:/CS/OOP/Assignment03-04/ui/cli.c:114]
+# 3 main                   [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.486 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4684-0x011f4685 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%ecx) -> %al
+
+Error #3: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4687-0x011f4688 1 byte(s)
+# 0 msvcrt.dll!_strdup   
+# 1 start                 [D:/CS/OOP/Assignment03-04/ui/cli.c:117]
+# 2 main                  [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.488 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4687-0x011f4688 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%ecx) -> %al
+
+Error #4: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4687-0x011f4688 1 byte(s)
+# 0 msvcrt.dll!strcpy_s  
+# 1 msvcrt.dll!_strdup   
+# 2 start                  [D:/CS/OOP/Assignment03-04/ui/cli.c:117]
+# 3 main                   [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.490 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4687-0x011f4688 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%ecx) -> %al
+
+Error #5: UNADDRESSABLE ACCESS of freed memory: reading 0x011f468c-0x011f468d 1 byte(s)
+# 0 msvcrt.dll!_strtoui64_l
+# 1 msvcrt.dll!strtol    
+# 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:120]
+# 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.493 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f468c-0x011f468d overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%edi) -> %bl
+
+Error #6: UNADDRESSABLE ACCESS of freed memory: reading 0x011f468d-0x011f468e 1 byte(s)
+# 0 msvcrt.dll!_strtoui64_l
+# 1 msvcrt.dll!strtol    
+# 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:120]
+# 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.494 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f468d-0x011f468e overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%edi) -> %cl
+
+Error #7: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4684-0x011f4685 1 byte(s)
+# 0 replace_strcpy                    [d:\drmemory_package\drmemory\replace.c:596]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:29]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:142]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.505 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4684-0x011f4685 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: movsx  (%edx) -> %eax
+
+Error #8: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4684-0x011f4685 1 byte(s)
+# 0 replace_strcpy                    [d:\drmemory_package\drmemory\replace.c:597]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:29]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:142]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.506 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4684-0x011f4685 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%edx) -> %al
+
+Error #9: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4687-0x011f4688 1 byte(s)
+# 0 replace_strcpy                    [d:\drmemory_package\drmemory\replace.c:596]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:31]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:142]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.513 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4687-0x011f4688 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: movsx  (%edx) -> %eax
+
+Error #10: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4687-0x011f4688 1 byte(s)
+# 0 replace_strcpy                    [d:\drmemory_package\drmemory\replace.c:597]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:31]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:142]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.515 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4687-0x011f4688 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%edx) -> %al
+
+Error #11: UNADDRESSABLE ACCESS of freed memory: reading 0x011f468c-0x011f468d 1 byte(s)
+# 0 replace_strcpy                    [d:\drmemory_package\drmemory\replace.c:596]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:33]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:142]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.536 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f468c-0x011f468d overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: movsx  (%edx) -> %eax
+
+Error #12: UNADDRESSABLE ACCESS of freed memory: reading 0x011f468c-0x011f468d 1 byte(s)
+# 0 replace_strcpy                    [d:\drmemory_package\drmemory\replace.c:597]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:33]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:142]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.538 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f468c-0x011f468d overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%edx) -> %al
+
+Error #13: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4684-0x011f4685 1 byte(s)
+# 0 replace_strcpy                    [d:\drmemory_package\drmemory\replace.c:596]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:38]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:142]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.540 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4684-0x011f4685 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: movsx  (%edx) -> %eax
+
+Error #14: UNADDRESSABLE ACCESS of freed memory: reading 0x011f4684-0x011f4685 1 byte(s)
+# 0 replace_strcpy                    [d:\drmemory_package\drmemory\replace.c:597]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:38]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:142]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.541 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4684-0x011f4685 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: mov    (%edx) -> %al
+
+Error #15: INVALID HEAP ARGUMENT to free 0x011f4684
+# 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:318]
+# 2 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:06.547 in thread 7152
+Note: next higher malloc: 0x011f46b0-0x011f46b3
+Note: prev lower malloc:  0x011f4638-0x011f4660
+Note: 0x011f4684-0x011f4684 overlaps memory 0x011f4680-0x011f468e that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 getParams                  [D:/CS/OOP/Assignment03-04/ui/cli.c:59]
+Note: # 2 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+Note: # 3 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+
+Error #16: UNINITIALIZED READ: reading register ecx
+# 0 replace_strcmp               [d:\drmemory_package\drmemory\replace.c:494]
+# 1 getInput                     [D:/CS/OOP/Assignment03-04/ui/cli.c:15]
+# 2 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:102]
+# 3 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:40.590 in thread 7152
+Note: instruction: test   %ecx %ecx
+
+Error #17: UNINITIALIZED READ: reading register edx
+# 0 msvcrt.dll!strtok    
+# 1 getInput               [D:/CS/OOP/Assignment03-04/ui/cli.c:18]
+# 2 start                  [D:/CS/OOP/Assignment03-04/ui/cli.c:102]
+# 3 main                   [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:40.590 in thread 7152
+Note: instruction: test   0xffffffdc(%ebp,%edx) %al
+
+Error #18: UNINITIALIZED READ: reading register bl
+# 0 msvcrt.dll!strtok    
+# 1 getInput               [D:/CS/OOP/Assignment03-04/ui/cli.c:18]
+# 2 start                  [D:/CS/OOP/Assignment03-04/ui/cli.c:102]
+# 3 main                   [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:40.590 in thread 7152
+Note: instruction: test   %bl %bl
+
+Error #19: UNINITIALIZED READ: reading 0x011f47e0-0x011f47e1 1 byte(s)
+# 0 msvcrt.dll!strtok    
+# 1 getInput               [D:/CS/OOP/Assignment03-04/ui/cli.c:18]
+# 2 start                  [D:/CS/OOP/Assignment03-04/ui/cli.c:102]
+# 3 main                   [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:40.591 in thread 7152
+Note: instruction: cmp    (%esi) $0x00
+
+Error #20: UNADDRESSABLE ACCESS: reading 0x00000000-0x00000001 1 byte(s)
+# 0 replace_strcmp               [d:\drmemory_package\drmemory\replace.c:494]
+# 1 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:108]
+# 2 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:40.591 in thread 7152
+Note: instruction: movzx  (%eax) -> %ecx
+
+Error #21: LEAK 40 direct bytes 0x011f4868-0x011f4890 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 getParams                    [D:/CS/OOP/Assignment03-04/ui/cli.c:43]
+# 2 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:106]
+# 3 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      3
+	Error #   2:      3
+	Error #   3:      5
+	Error #   4:      5
+	Error #   7:      3
+	Error #   8:      2
+	Error #   9:      5
+	Error #  10:      4
+	Error #  11:      2
+	Error #  13:      3
+	Error #  14:      2
+	Error #  15:      3
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+     15 unique,    41 total unaddressable access(es)
+      4 unique,     4 total uninitialized access(es)
+      1 unique,     3 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,     40 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.7728.000\potential_errors.txt)
+     27 unique,   126 total,  11446 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.7728.000\results.txt

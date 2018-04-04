@@ -1,0 +1,64 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 4616: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe -show_reachable"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 _fu0___ZSt4cout                             [D:/CS/OOP/Assignment05-06/ui/cli.cpp:187]
+# 2 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:10]
+# 3 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:19]
+Note: @0:00:02.498 in thread 6912
+Note: memory was allocated here:
+Note: # 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 getParams                    [D:/CS/OOP/Assignment05-06/ui/cli.cpp:43]
+Note: # 2 CLI::start                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:120]
+Note: # 3 run                          [D:/CS/OOP/Assignment05-06/main.cpp:10]
+Note: # 4 main                         [D:/CS/OOP/Assignment05-06/main.cpp:19]
+
+Error #2: LEAK 2 direct bytes 0x034a1a38-0x034a1a3a + 0 indirect bytes
+# 0 replace_malloc                                  [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 .text                                           [D:/CS/OOP/Assignment05-06/repository/repository.cpp:57]
+# 3 __mingw_glob                                    [D:/CS/OOP/Assignment05-06/repository/repository.cpp:57]
+# 4 _setargv                                        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:57]
+# 5 .text                                           [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+# 6 mainCRTStartup                                  [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+# 7 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x77494a77 <ntdll.dll+0x64a77>)
+# 8 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x77494a47 <ntdll.dll+0x64a47>)
+
+Error #3: LEAK 4 direct bytes 0x034b9380-0x034b9384 + 598 indirect bytes
+# 0 replace_operator_new               [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 run                                [D:/CS/OOP/Assignment05-06/main.cpp:9]
+# 2 main                               [D:/CS/OOP/Assignment05-06/main.cpp:19]
+
+Error #4: LEAK 5 direct bytes 0x034ba450-0x034ba455 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 getCommand                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:28]
+# 3 CLI::start                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:119]
+# 4 run                          [D:/CS/OOP/Assignment05-06/main.cpp:10]
+# 5 main                         [D:/CS/OOP/Assignment05-06/main.cpp:19]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      1 unique,     1 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      3 unique,     3 total,    609 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.4616.000\potential_errors.txt)
+      8 unique,     8 total,   4472 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.4616.000\results.txt

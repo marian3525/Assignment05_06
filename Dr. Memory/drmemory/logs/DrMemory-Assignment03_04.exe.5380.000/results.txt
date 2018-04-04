@@ -1,0 +1,66 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 5380: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS: reading 0x00000000-0x00000001 1 byte(s)
+# 0 replace_strcpy                    [d:\drmemory_package\drmemory\replace.c:596]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:23]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:146]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:10.113 in thread 4172
+Note: instruction: movsx  (%edx) -> %eax
+
+Error #2: LEAK 19 direct bytes 0x032e4608-0x032e461b + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 getCommand                   [D:/CS/OOP/Assignment03-04/ui/cli.c:28]
+# 3 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:104]
+# 4 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+
+Error #3: LEAK 40 direct bytes 0x032e4640-0x032e4668 + 2 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 getParams                    [D:/CS/OOP/Assignment03-04/ui/cli.c:43]
+# 2 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:105]
+# 3 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+
+Error #4: LEAK 8 direct bytes 0x032e4738-0x032e4740 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:113]
+# 3 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+
+Error #5: LEAK 5 direct bytes 0x032e4760-0x032e4765 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 start                        [D:/CS/OOP/Assignment03-04/ui/cli.c:118]
+# 3 main                         [D:/CS/OOP/Assignment03-04/main.c:4]
+
+Error #6: LEAK 50 direct bytes 0x032e4788-0x032e47ba + 0 indirect bytes
+# 0 replace_malloc                    [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 addOperationToStack               [D:/CS/OOP/Assignment03-04/controller/undoController.c:20]
+# 2 start                             [D:/CS/OOP/Assignment03-04/ui/cli.c:146]
+# 3 main                              [D:/CS/OOP/Assignment03-04/main.c:4]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      1 unique,     1 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      5 unique,     5 total,    124 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.5380.000\potential_errors.txt)
+     22 unique,   121 total,  11276 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment03-04\Dr. Memory\drmemory\logs\DrMemory-Assignment03_04.exe.5380.000\results.txt

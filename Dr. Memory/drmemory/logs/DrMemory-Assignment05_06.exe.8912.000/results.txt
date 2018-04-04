@@ -1,0 +1,175 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 8912: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe -show_reachable"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 _fu0___ZSt4cout                             [D:/CS/OOP/Assignment05-06/ui/cli.cpp:183]
+# 2 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:10]
+# 3 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.458 in thread 8716
+Note: memory was allocated here:
+Note: # 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 getParams                    [D:/CS/OOP/Assignment05-06/ui/cli.cpp:43]
+Note: # 2 CLI::start                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:116]
+Note: # 3 run                          [D:/CS/OOP/Assignment05-06/main.cpp:10]
+Note: # 4 main                         [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #2: UNADDRESSABLE ACCESS of freed memory: reading 0x03718ec0-0x03718ec4 4 byte(s)
+# 0 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:22]
+# 1 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 2 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:55]
+# 3 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:187]
+# 4 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+# 5 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.473 in thread 8716
+Note: next higher malloc: 0x03718fc8-0x03718fcc
+Note: prev lower malloc:  0x03718dc8-0x03718ea0
+Note: 0x03718ec0-0x03718ec4 overlaps memory 0x03718ec0-0x03718ecc that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 2 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:55]
+Note: # 3 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:187]
+Note: # 4 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #3: UNADDRESSABLE ACCESS of freed memory: reading 0x03718ec0-0x03718ec4 4 byte(s)
+# 0 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:22]
+# 1 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 2 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:55]
+# 3 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:187]
+# 4 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+# 5 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.473 in thread 8716
+Note: next higher malloc: 0x03718fc8-0x03718fcc
+Note: prev lower malloc:  0x03718dc8-0x03718ea0
+Note: 0x03718ec0-0x03718ec4 overlaps memory 0x03718ec0-0x03718ecc that was freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 2 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:55]
+Note: # 3 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:187]
+Note: # 4 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: instruction: mov    (%eax) -> %eax
+
+Error #4: INVALID HEAP ARGUMENT to free 0x03718f80
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:22]
+# 2 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:59]
+# 3 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:55]
+# 4 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:187]
+# 5 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+# 6 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.473 in thread 8716
+Note: next higher malloc: 0x03718fc8-0x03718fcc
+Note: prev lower malloc:  0x03718dc8-0x03718ea0
+Note: memory was previously freed here:
+Note: # 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+Note: # 1 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:22]
+Note: # 2 Repository::~Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 3 Controller::~Controller                     [D:/CS/OOP/Assignment05-06/controller/controller.cpp:55]
+Note: # 4 CLI::~CLI                                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:187]
+Note: # 5 run                                         [D:/CS/OOP/Assignment05-06/main.cpp:11]
+
+Error #5: INVALID HEAP ARGUMENT to free 0x03718ec0
+# 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+# 1 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:55]
+# 2 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:187]
+# 3 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+# 4 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:20]
+Note: @0:00:02.473 in thread 8716
+Note: next higher malloc: 0x03718fc8-0x03718fcc
+Note: prev lower malloc:  0x03718dc8-0x03718ea0
+Note: memory was previously freed here:
+Note: # 0 replace_operator_delete_nothrow               [d:\drmemory_package\common\alloc_replace.c:2974]
+Note: # 1 Repository::~Repository                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:60]
+Note: # 2 Controller::~Controller                       [D:/CS/OOP/Assignment05-06/controller/controller.cpp:55]
+Note: # 3 CLI::~CLI                                     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:187]
+Note: # 4 run                                           [D:/CS/OOP/Assignment05-06/main.cpp:11]
+Note: # 5 main                                          [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #6: LEAK 2 direct bytes 0x03701a38-0x03701a3a + 0 indirect bytes
+# 0 replace_malloc                                  [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 .text                                           [D:/CS/OOP/Assignment05-06/repository/repository.cpp:61]
+# 3 __mingw_glob                                    [D:/CS/OOP/Assignment05-06/repository/repository.cpp:61]
+# 4 _setargv                                        [D:/CS/OOP/Assignment05-06/repository/repository.cpp:61]
+# 5 .text                                           [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+# 6 mainCRTStartup                                  [d:/cs/ides/mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h:5062]
+# 7 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x77494a77 <ntdll.dll+0x64a77>)
+# 8 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x77494a47 <ntdll.dll+0x64a47>)
+
+Error #7: LEAK 80 direct bytes 0x03718ff0-0x03719040 + 0 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:11]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:6]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #8: LEAK 80 direct bytes 0x03719098-0x037190e8 + 31 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:14]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:6]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #9: LEAK 80 direct bytes 0x03719180-0x037191d0 + 31 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:16]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:6]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #10: LEAK 80 direct bytes 0x03719230-0x03719280 + 0 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:18]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:6]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #11: LEAK 80 direct bytes 0x037192a0-0x037192f0 + 0 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:20]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:6]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #12: LEAK 80 direct bytes 0x03719310-0x03719360 + 0 indirect bytes
+# 0 replace_operator_new                   [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Controller::populateRepo               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:22]
+# 2 Controller::Controller                 [D:/CS/OOP/Assignment05-06/controller/controller.cpp:6]
+# 3 run                                    [D:/CS/OOP/Assignment05-06/main.cpp:8]
+# 4 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+Error #13: LEAK 5 direct bytes 0x0371a450-0x0371a455 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 getCommand                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:28]
+# 3 CLI::start                   [D:/CS/OOP/Assignment05-06/ui/cli.cpp:115]
+# 4 run                          [D:/CS/OOP/Assignment05-06/main.cpp:10]
+# 5 main                         [D:/CS/OOP/Assignment05-06/main.cpp:20]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      2 unique,     2 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      3 unique,     3 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      8 unique,     8 total,    549 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.8912.000\potential_errors.txt)
+      8 unique,     8 total,   4472 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.8912.000\results.txt

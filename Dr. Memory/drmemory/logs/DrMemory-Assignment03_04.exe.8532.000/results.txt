@@ -1,0 +1,31 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 8532: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS of freed memory: reading 0x01284770-0x01284771 1 byte(s)
+# 0 msvcrt.dll!_output_l 
+# 1 msvcrt.dll!printf    
+# 2 start                   [D:/CS/OOP/Assignment03-04/ui/cli.c:271]
+# 3 main                    [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:08.909 in thread 12628
+Note: next higher malloc: 0x012847e8-0x012847ed
+Note: 0x01284770-0x01284771 overlaps memory 0x01284770-0x01284778 that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:319]
+Note: # 2 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: cmp    (%eax) $0x00
+
+Error #2: UNADDRESSABLE ACCESS of freed memory: reading 0x01284770-0x01284771 1 byte(s)
+# 0 msvcrt.dll!_output_p_l
+# 1 msvcrt.dll!_output_l 
+# 2 msvcrt.dll!printf    
+# 3 start                     [D:/CS/OOP/Assignment03-04/ui/cli.c:271]
+# 4 main                      [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:08.935 in thread 12628
+Note: next higher malloc: 0x012847e8-0x012847ed
+Note: 0x01284770-0x01284771 overlaps memory 0x01284770-0x01284778 that was freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:319]
+Note: # 2 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: instruction: movzx  (%eax) -> %eax

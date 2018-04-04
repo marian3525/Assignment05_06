@@ -1,0 +1,65 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3657565:00:41.475 == 13:00:41.475 04/03/2018
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+new thread #0 id=5264
+
+module load event: "Assignment05_06.exe" 0x00400000-0x0046f000 modid: 1 D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe
+WARNING: assuming operator delete is non-placement in Assignment05_06.exe @0x00404a70
+
+module load event: "dynamorio.dll" 0x5dbd0000-0x5dd2d000 modid: 2 D:\CS\OOP\Assignment05-06\Dr. Memory\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "libgcc_s_dw2-1.dll" 0x6eb40000-0x6ec1d000 modid: 3 D:\CS\IDEs\MinGW\bin\libgcc_s_dw2-1.dll
+
+module load event: "libstdc++-6.dll" 0x6fe40000-0x6ffb4000 modid: 4 D:\CS\IDEs\MinGW\bin\libstdc++-6.dll
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 5 D:\CS\OOP\Assignment05-06\Dr. Memory\bin\release\drmemorylib.dll
+
+module load event: "KERNELBASE.dll" 0x74530000-0x74707000 modid: 6 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "msvcrt.dll" 0x75d30000-0x75ded000 modid: 7 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "KERNEL32.dll" 0x76a80000-0x76b50000 modid: 8 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "ntdll.dll" 0x77430000-0x775bd000 modid: 9 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unable to load symbols for C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+new thread #1 id=7288
+new thread #2 id=10368
+new thread #3 id=10460
+
+NEW THREAD: main thread 5264
+
+
+Error #1: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x037a238a-0x037a238b 1 byte(s)
+# 0 msvcrt.dll!vscan_fn   (0x75da4dbb <msvcrt.dll+0x74dbb>) modid:7
+# 1 msvcrt.dll!sscanf     (0x75da4d9b <msvcrt.dll+0x74d9b>) modid:7
+# 2 CLI::getMinutes     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:77] (0x0040226a <Assignment05_06.exe+0x226a>) modid:1
+# 3 CLI::start          [D:/CS/OOP/Assignment05-06/ui/cli.cpp:131] (0x004024db <Assignment05_06.exe+0x24db>) modid:1
+# 4 run                 [D:/CS/OOP/Assignment05-06/main.cpp:10] (0x004014cc <Assignment05_06.exe+0x14cc>) modid:1
+# 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:01:49.760 in thread 5264
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x037a2388-0x037a238a
+Note: instruction: mov    (%ecx) -> %al
+	error end
+
+Error #2: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x037a23b2-0x037a23b3 1 byte(s)
+# 0 msvcrt.dll!vscan_fn   (0x75da4dbb <msvcrt.dll+0x74dbb>) modid:7
+# 1 msvcrt.dll!sscanf     (0x75da4d9b <msvcrt.dll+0x74d9b>) modid:7
+# 2 CLI::getSeconds     [D:/CS/OOP/Assignment05-06/ui/cli.cpp:95] (0x00402315 <Assignment05_06.exe+0x2315>) modid:1
+# 3 CLI::start          [D:/CS/OOP/Assignment05-06/ui/cli.cpp:131] (0x0040251d <Assignment05_06.exe+0x251d>) modid:1
+# 4 run                 [D:/CS/OOP/Assignment05-06/main.cpp:10] (0x004014cc <Assignment05_06.exe+0x14cc>) modid:1
+# 5 main                [D:/CS/OOP/Assignment05-06/main.cpp:18] (0x00401547 <Assignment05_06.exe+0x1547>) modid:1
+Note: @0:01:49.760 in thread 5264
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x037a23b0-0x037a23b2
+Note: instruction: mov    (%ecx) -> %al
+	error end
+new thread #4 id=2800

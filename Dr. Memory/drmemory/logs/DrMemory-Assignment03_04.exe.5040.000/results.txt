@@ -1,0 +1,16 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 5040: "Assignment03_04.exe"
+Application cmdline: "D:\CS\OOP\Assignment03-04\cmake-build-debug-mingw\Assignment03_04.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment03-04\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT to free 0x034146c0
+# 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+# 1 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:297]
+# 2 main                       [D:/CS/OOP/Assignment03-04/main.c:4]
+Note: @0:00:05.362 in thread 3472
+Note: next higher malloc: 0x03414710-0x03414712
+Note: prev lower malloc:  0x03414640-0x03414668
+Note: memory was previously freed here:
+Note: # 0 replace_free               [d:\drmemory_package\common\alloc_replace.c:2706]
+Note: # 1 start                      [D:/CS/OOP/Assignment03-04/ui/cli.c:153]
+Note: # 2 main                       [D:/CS/OOP/Assignment03-04/main.c:4]

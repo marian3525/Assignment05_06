@@ -1,0 +1,110 @@
+# File for suppressing errors found in pid 5100: "Assignment05_06.exe"
+
+# Suppression for Error #1
+LEAK
+name=Error #1 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Controller::populateRepo
+Assignment05_06.exe!Controller::Controller
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+LEAK
+name=Error #1 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x1f88>
+<Assignment05_06.exe+0x1ea0>
+<Assignment05_06.exe+0x149b>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #2
+LEAK
+name=Error #2 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Controller::populateRepo
+Assignment05_06.exe!Controller::Controller
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #2:
+LEAK
+name=Error #2 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x20cc>
+<Assignment05_06.exe+0x1ea0>
+<Assignment05_06.exe+0x149b>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #3
+LEAK
+name=Error #3 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Controller::populateRepo
+Assignment05_06.exe!Controller::Controller
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #3:
+LEAK
+name=Error #3 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x2210>
+<Assignment05_06.exe+0x1ea0>
+<Assignment05_06.exe+0x149b>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #4
+LEAK
+name=Error #4 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Controller::populateRepo
+Assignment05_06.exe!Controller::Controller
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #4:
+LEAK
+name=Error #4 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x2354>
+<Assignment05_06.exe+0x1ea0>
+<Assignment05_06.exe+0x149b>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #5
+LEAK
+name=Error #5 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Controller::populateRepo
+Assignment05_06.exe!Controller::Controller
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #5:
+LEAK
+name=Error #5 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x2492>
+<Assignment05_06.exe+0x1ea0>
+<Assignment05_06.exe+0x149b>
+<Assignment05_06.exe+0x1584>
+
+# Suppression for Error #6
+LEAK
+name=Error #6 (update to meaningful name)
+drmemorylib.dll!replace_operator_new
+Assignment05_06.exe!Controller::populateRepo
+Assignment05_06.exe!Controller::Controller
+Assignment05_06.exe!run
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #6:
+LEAK
+name=Error #6 (update to meaningful name)
+<drmemorylib.dll+0x20db0>
+<Assignment05_06.exe+0x25af>
+<Assignment05_06.exe+0x1ea0>
+<Assignment05_06.exe+0x149b>
+<Assignment05_06.exe+0x1584>
+

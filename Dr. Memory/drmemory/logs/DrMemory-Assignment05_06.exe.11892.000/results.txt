@@ -1,0 +1,108 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 11892: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe -show_reachable"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:20]
+# 2 Test::testDynamicVector                     [D:/CS/OOP/Assignment05-06/tests/test.cpp:54]
+# 3 Test::test                                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:94]
+# 4 test                                        [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 5 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.391 in thread 2856
+Note: memory was allocated here:
+Note: # 0 replace_malloc                             [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 DynamicVector::DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7]
+Note: # 2 Test::testDynamicVector                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:36]
+Note: # 3 Test::test                                 [D:/CS/OOP/Assignment05-06/tests/test.cpp:94]
+Note: # 4 test                                       [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 5 main                                       [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #2: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 DynamicVector::operator=                    [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:31]
+# 2 Repository::Repository                      [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+# 3 testRepo                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:61]
+# 4 Test::test                                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:95]
+# 5 test                                        [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 6 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.406 in thread 2856
+Note: memory was allocated here:
+Note: # 0 replace_malloc                             [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 DynamicVector::DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7]
+Note: # 2 Repository::Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:5]
+Note: # 3 testRepo                                   [D:/CS/OOP/Assignment05-06/tests/test.cpp:61]
+Note: # 4 Test::test                                 [D:/CS/OOP/Assignment05-06/tests/test.cpp:95]
+Note: # 5 test                                       [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 6 main                                       [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #3: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:20]
+# 2 Repository::Repository                      [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+# 3 testRepo                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:61]
+# 4 Test::test                                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:95]
+# 5 test                                        [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 6 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.406 in thread 2856
+Note: memory was allocated here:
+Note: # 0 replace_malloc                             [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 DynamicVector::DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:7]
+Note: # 2 Repository::Repository                     [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+Note: # 3 testRepo                                   [D:/CS/OOP/Assignment05-06/tests/test.cpp:61]
+Note: # 4 Test::test                                 [D:/CS/OOP/Assignment05-06/tests/test.cpp:95]
+Note: # 5 test                                       [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 6 main                                       [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #4: INVALID HEAP ARGUMENT: allocated with malloc, freed with operator delete[]
+# 0 replace_operator_delete_array               [d:\drmemory_package\common\alloc_replace.c:2998]
+# 1 DynamicVector::~DynamicVector               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:20]
+# 2 Repository::~Repository                     [d:/cs/oop/assignment05-06/repository/repository.h:12]
+# 3 testRepo                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:85]
+# 4 Test::test                                  [D:/CS/OOP/Assignment05-06/tests/test.cpp:95]
+# 5 test                                        [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 6 main                                        [D:/CS/OOP/Assignment05-06/main.cpp:18]
+Note: @0:00:00.406 in thread 2856
+Note: memory was allocated here:
+Note: # 0 replace_malloc                         [d:\drmemory_package\common\alloc_replace.c:2576]
+Note: # 1 DynamicVector::operator=               [D:/CS/OOP/Assignment05-06/repository/DynamicVector.cpp:32]
+Note: # 2 Repository::Repository                 [D:/CS/OOP/Assignment05-06/repository/repository.cpp:6]
+Note: # 3 testRepo                               [D:/CS/OOP/Assignment05-06/tests/test.cpp:61]
+Note: # 4 Test::test                             [D:/CS/OOP/Assignment05-06/tests/test.cpp:95]
+Note: # 5 test                                   [D:/CS/OOP/Assignment05-06/main.cpp:14]
+Note: # 6 main                                   [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #5: LEAK 2 direct bytes 0x034f1a38-0x034f1a3a + 0 indirect bytes
+# 0 replace_malloc                                  [d:\drmemory_package\common\alloc_replace.c:2576]
+# 1 msvcrt.dll!_strdup   
+# 2 .text                                           [D:/CS/OOP/Assignment05-06/tests/test.cpp:96]
+# 3 __mingw_glob                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:96]
+# 4 _setargv                                        [D:/CS/OOP/Assignment05-06/tests/test.cpp:96]
+# 5 .text              
+# 6 mainCRTStartup     
+# 7 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x136    (0x77694a77 <ntdll.dll+0x64a77>)
+# 8 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0x106    (0x77694a47 <ntdll.dll+0x64a47>)
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      4 unique,     4 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,      2 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.11892.000\potential_errors.txt)
+      7 unique,     7 total,    376 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.11892.000\results.txt

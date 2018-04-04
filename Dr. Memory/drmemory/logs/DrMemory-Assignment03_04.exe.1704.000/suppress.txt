@@ -1,0 +1,2 @@
+# File for suppressing errors found in pid 1704: "Assignment03_04.exe"
+

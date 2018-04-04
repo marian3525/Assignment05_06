@@ -1,0 +1,230 @@
+# File for suppressing errors found in pid 7288: "Assignment05_06.exe"
+
+# Suppression for Error #1
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+Assignment05_06.exe!DynamicVector::getSize
+Assignment05_06.exe!Repository::getSize
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #1:
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+<Assignment05_06.exe+0x1814>
+<Assignment05_06.exe+0x1c75>
+<Assignment05_06.exe+0x4c70>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #2
+UNADDRESSABLE ACCESS
+name=Error #2 (update to meaningful name)
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #2:
+UNADDRESSABLE ACCESS
+name=Error #2 (update to meaningful name)
+<Assignment05_06.exe+0x4c8a>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #3
+UNADDRESSABLE ACCESS
+name=Error #3 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #3:
+UNADDRESSABLE ACCESS
+name=Error #3 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x30040>
+<libstdc++-6.dll+0x95787>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x4cac>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #4
+UNADDRESSABLE ACCESS
+name=Error #4 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #4:
+UNADDRESSABLE ACCESS
+name=Error #4 (update to meaningful name)
+<libstdc++-6.dll+0x95791>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x4cac>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #5
+UNADDRESSABLE ACCESS
+name=Error #5 (update to meaningful name)
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #5:
+UNADDRESSABLE ACCESS
+name=Error #5 (update to meaningful name)
+<libstdc++-6.dll+0x30ca0>
+<libstdc++-6.dll+0x95737>
+<libstdc++-6.dll+0x957a1>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x4cac>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #6
+INVALID HEAP ARGUMENT
+name=Error #6 (update to meaningful name)
+drmemorylib.dll!replace_free
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+libstdc++-6.dll!*
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #6:
+INVALID HEAP ARGUMENT
+name=Error #6 (update to meaningful name)
+<drmemorylib.dll+0x20900>
+<libstdc++-6.dll+0x19f84>
+<libstdc++-6.dll+0x8884f>
+<libstdc++-6.dll+0x95753>
+<libstdc++-6.dll+0x957a1>
+<libstdc++-6.dll+0x993e7>
+<Assignment05_06.exe+0x4cac>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #7
+UNADDRESSABLE ACCESS
+name=Error #7 (update to meaningful name)
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #7:
+UNADDRESSABLE ACCESS
+name=Error #7 (update to meaningful name)
+<Assignment05_06.exe+0x4cb4>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #8
+INVALID HEAP ARGUMENT
+name=Error #8 (update to meaningful name)
+drmemorylib.dll!replace_operator_delete_array
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #8:
+INVALID HEAP ARGUMENT
+name=Error #8 (update to meaningful name)
+<drmemorylib.dll+0x211e0>
+<Assignment05_06.exe+0x4cd4>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #9
+LEAK
+name=Error #9 (update to meaningful name)
+drmemorylib.dll!replace_operator_new_array
+Assignment05_06.exe!Repository::getAll
+Assignment05_06.exe!_ZN10Controller15getAllPrintableB5cxx11Ev
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #9:
+LEAK
+name=Error #9 (update to meaningful name)
+<drmemorylib.dll+0x20f50>
+<Assignment05_06.exe+0x1cbe>
+<Assignment05_06.exe+0x1f48>
+<Assignment05_06.exe+0x4ba0>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+
+# Suppression for Error #10
+LEAK
+name=Error #10 (update to meaningful name)
+drmemorylib.dll!replace_operator_new_array
+Assignment05_06.exe!Repository::getAll
+Assignment05_06.exe!testGetPrintable
+Assignment05_06.exe!Test::testController
+Assignment05_06.exe!Test::test
+Assignment05_06.exe!test
+Assignment05_06.exe!main
+
+## Mod+offs-style suppression for Error #10:
+LEAK
+name=Error #10 (update to meaningful name)
+<drmemorylib.dll+0x20f50>
+<Assignment05_06.exe+0x1cbe>
+<Assignment05_06.exe+0x4bad>
+<Assignment05_06.exe+0x4d2f>
+<Assignment05_06.exe+0x4d51>
+<Assignment05_06.exe+0x1534>
+<Assignment05_06.exe+0x1547>
+

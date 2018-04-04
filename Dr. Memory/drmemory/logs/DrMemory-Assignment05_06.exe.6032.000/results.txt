@@ -1,0 +1,70 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 6032: "Assignment05_06.exe"
+Application cmdline: "D:\CS\OOP\Assignment05-06\cmake-build-mingw\Assignment05_06.exe"
+Recorded 115 suppression(s) from default D:\CS\OOP\Assignment05-06\Dr. Memory\bin\suppress-default.txt
+
+Error #1: LEAK 80 direct bytes 0x03740ec0-0x03740f10 + 0 indirect bytes
+# 0 replace_operator_new               [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 Test::testDomain                   [D:/CS/OOP/Assignment05-06/tests/test.cpp:15]
+# 2 Test::test                         [D:/CS/OOP/Assignment05-06/tests/test.cpp:120]
+# 3 test                               [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 4 main                               [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #2: LEAK 4 direct bytes 0x03741458-0x0374145c + 852 indirect bytes
+# 0 replace_operator_new               [d:\drmemory_package\common\alloc_replace.c:2899]
+# 1 testGetPrintable                   [D:/CS/OOP/Assignment05-06/tests/test.cpp:102]
+# 2 Test::testController               [D:/CS/OOP/Assignment05-06/tests/test.cpp:116]
+# 3 Test::test                         [D:/CS/OOP/Assignment05-06/tests/test.cpp:124]
+# 4 test                               [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 5 main                               [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #3: LEAK 244 direct bytes 0x037418e0-0x037419d4 + 1210 indirect bytes
+# 0 replace_operator_new_array                              [d:\drmemory_package\common\alloc_replace.c:2928]
+# 1 _ZN10Controller15getAllPrintableB5cxx11Ev               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:23]
+# 2 testGetPrintable                                        [D:/CS/OOP/Assignment05-06/tests/test.cpp:104]
+# 3 Test::testController                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:116]
+# 4 Test::test                                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:124]
+# 5 test                                                    [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 6 main                                                    [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #4: LEAK 40 direct bytes 0x037419f8-0x03741a20 + 0 indirect bytes
+# 0 replace_operator_new_array                              [d:\drmemory_package\common\alloc_replace.c:2928]
+# 1 Repository::getAll                                      [D:/CS/OOP/Assignment05-06/repository/repository.cpp:42]
+# 2 _ZN10Controller15getAllPrintableB5cxx11Ev               [D:/CS/OOP/Assignment05-06/controller/controller.cpp:24]
+# 3 testGetPrintable                                        [D:/CS/OOP/Assignment05-06/tests/test.cpp:104]
+# 4 Test::testController                                    [D:/CS/OOP/Assignment05-06/tests/test.cpp:116]
+# 5 Test::test                                              [D:/CS/OOP/Assignment05-06/tests/test.cpp:124]
+# 6 test                                                    [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 7 main                                                    [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+Error #5: LEAK 40 direct bytes 0x037426c0-0x037426e8 + 0 indirect bytes
+# 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+# 1 Repository::getAll                       [D:/CS/OOP/Assignment05-06/repository/repository.cpp:42]
+# 2 testGetPrintable                         [D:/CS/OOP/Assignment05-06/tests/test.cpp:106]
+# 3 Test::testController                     [D:/CS/OOP/Assignment05-06/tests/test.cpp:116]
+# 4 Test::test                               [D:/CS/OOP/Assignment05-06/tests/test.cpp:124]
+# 5 test                                     [D:/CS/OOP/Assignment05-06/main.cpp:14]
+# 6 main                                     [D:/CS/OOP/Assignment05-06/main.cpp:18]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      5 unique,     5 total,   2470 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      3 potential error(s) (suspected false positives)
+         (details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.6032.000\potential_errors.txt)
+      5 unique,     5 total,    354 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: D:\CS\OOP\Assignment05-06\Dr. Memory\drmemory\logs\DrMemory-Assignment05_06.exe.6032.000\results.txt
