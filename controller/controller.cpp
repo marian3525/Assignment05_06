@@ -3,7 +3,7 @@
 
 Controller::Controller(Repository *repo) {
     this->repo = repo;
-    this->watchList = new Repository();
+    this->watchList = new Repository(false);
     this->populateRepo();
 }
 
@@ -156,7 +156,15 @@ Tutorial** Controller::getWatchList(int &n) {
 }
 
 void Controller::deleteFromWatchlist(string name) {
-    this->watchList->remove(name);
+    for(int i=0; i<this->watchList->getSize(); i++) {
+        if (name == (*watchList)[i].getTitle()) {
+            for (int j = i; j < this->watchList->getSize(); j++) {
+                this->watchList[j] = this->watchList[j + 1];
+            }
+            this->watchList->decSize();
+            return;
+        }
+    }
 }
 
 void Controller::likeTutorial(string title) {

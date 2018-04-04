@@ -153,7 +153,6 @@ void CLI::start() {
     char **params;
     bool stopped = false;
     int paramNumber = 0;
-    char **auxPtr;
     bool adminMode = false;
 
     while(not stopped) {

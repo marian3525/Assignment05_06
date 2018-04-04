@@ -35,6 +35,10 @@ int Repository::getSize() {
     return this->elems->getSize();
 }
 
+void Repository::decSize() {
+    this->elems->decSize();
+}
+
 TElem& Repository::operator[](int pos) {
     return this->elems->operator[](pos);
 }
@@ -69,4 +73,8 @@ Tutorial *Repository::getByTitle(string title) {
             }
         }
     }
+}
+
+Repository::Repository(bool toDestroy) {
+    this->elems = new TemplateDynamicVector<Tutorial>(10, toDestroy);
 }

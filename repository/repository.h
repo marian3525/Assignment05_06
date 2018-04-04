@@ -16,6 +16,7 @@ private:
 public:
 
     Repository();
+    Repository(bool toDestroy);
     ~Repository();
     void add(Tutorial* tutorial);
     void remove(string nameToRemove);
@@ -26,6 +27,7 @@ public:
     Tutorial* getByTitle(string title);
     Tutorial** getAll();
     int getSize();
+    void decSize();
     Tutorial& operator[](int pos);
 
 };

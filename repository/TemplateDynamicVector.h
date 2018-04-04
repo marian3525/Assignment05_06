@@ -5,15 +5,19 @@
 #ifndef ASSIGNMENT05_06_TEMPLATEDYNAMICVECTOR_H
 #define ASSIGNMENT05_06_TEMPLATEDYNAMICVECTOR_H
 
+#include <cstdio>
+
 template <typename T>
 class TemplateDynamicVector {
 private:
     int size;
     int capacity;
     T** elems;
+    bool toDestroy;
     void resize(double factor);
 public:
     TemplateDynamicVector(int capacity);
+    TemplateDynamicVector(int capacity, bool toDestroy);
     ~TemplateDynamicVector();
     T& operator[](int pos);
 
@@ -24,12 +28,14 @@ public:
 
     void remove(T* e);
     int getSize() const;
+    void decSize();
 
     bool exists(T* elem);
 };
 
 template<typename T>
 TemplateDynamicVector<T>::TemplateDynamicVector(int capacity) {
+    this->toDestroy = true;
     this->size = 0;
     this->capacity = capacity;
     this->elems = new T*[this->capacity];
@@ -38,13 +44,13 @@ TemplateDynamicVector<T>::TemplateDynamicVector(int capacity) {
 template<typename T>
 TemplateDynamicVector<T>::~TemplateDynamicVector() {
     for(int i=0; i<this->size; i++) {
-        if(elems[i] != nullptr) {
+        if(elems[i] != NULL and toDestroy) { //not seen here
             delete elems[i];
-            elems[i] = nullptr;
+            elems[i] = NULL;  //set to null here
         }
     }
     delete[] elems;
-    elems = nullptr;
+    elems = NULL;
 }
 
 template<typename T>
@@ -106,6 +112,19 @@ void TemplateDynamicVector<T>::operator-(T *elemToRemove) {
     if(this->exists(elemToRemove)) {
         this->remove(elemToRemove);
     }
+}
+
+template<typename T>
+void TemplateDynamicVector<T>::decSize() {
+    this->size--;
+}
+
+template<typename T>
+TemplateDynamicVector<T>::TemplateDynamicVector(int capacity, bool toDestroy) {
+    this->toDestroy = toDestroy;
+    this->size = 0;
+    this->capacity = capacity;
+    this->elems = new T*[this->capacity];
 }
 
 
