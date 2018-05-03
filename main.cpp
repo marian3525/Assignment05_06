@@ -1,17 +1,17 @@
-
-
+#include <iostream>
+#include <fstream>
 #include "tests/test.h"
 #include "ui/cli.h"
 
-void run() {
-    Repository* repo = new Repository();
-    Controller* controller = new Controller(repo);
-    CLI* cli = new CLI(controller);
-    cli->start();
+using namespace std;
 
-    delete cli;
-    delete controller;
-    delete repo;
+void run() {
+    Controller controller{};
+    CLI cli{controller};
+    cli.start();
+
+    delete &cli;
+    //delete &controller;
 }
 
 void test() {
@@ -19,7 +19,14 @@ void test() {
 }
 
 int main() {
-    test();
-    //run();
+    //test();
+    run();
+    /*
+    Tutorial t{"nume", "presenter", 1000, 23, "linky"};
+    ofstream ofstream1("data.stuff");
+    ofstream1<<t;
+    //ofstream1<<123;
+    ofstream1.close();
+     */
     return 3;
-}
+};

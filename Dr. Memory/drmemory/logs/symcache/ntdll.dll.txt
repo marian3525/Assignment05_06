@@ -1,48 +1,48 @@
 Dr. Memory symbol cache version 14
-      1864,1615712,4587761710559526912,4587761710559526912,1634304,975296865,1626112
+      1836,1615712,4587762079926714368,4587762079926714368,1680915,1908311889,1626112
 0
-memcmp,0x745e0
-strcspn,0x75910
+memcmp,0x74720
+strcspn,0x75a50
 mallopt,0x0
 malloc,0x0
-memmove,0x74980
-strcpy,0x756b0
-strspn,0x75db0
-wcsstr,0x766d0
+memmove,0x74ac0
+strcpy,0x757f0
+strspn,0x75ef0
+wcsstr,0x76770
 stpcpy,0x0
 mallinfo,0x0
 wmemset,0x0
-memchr,0x74520
+memchr,0x74660
 cfree,0x0
-wcscpy,0x763a0
-strstr,0x75e00
-memset,0x74cc0
+wcscpy,0x76440
+strstr,0x75f40
+memset,0x74e00
 calloc,0x0
-strrchr,0x75d80
-strncmp,0x75b30
-strncpy,0x75bf0
-strncat,0x759f0
-strcat,0x756c0
-wcslen,0x764b0
+strrchr,0x75ec0
+strncmp,0x75c70
+strncpy,0x75d30
+strncat,0x75b30
+strcat,0x75800
+wcslen,0x76550
 malloc_set_state,0x0
 malloc_get_state,0x0
 Concurrency::details::Security::EncodePointer,0x0
-wcsncmp,0x76520
-wcsrchr,0x76630
+wcsncmp,0x765c0
+wcsrchr,0x766d0
 wmemcpy,0x0
 wmemchr,0x0
 wmemcmp,0x0
 operator delete[] nothrow,0x0
 operator delete[],0x0
-strlen,0x75960
-wcscmp,0x76400
-strchr,0x757c0
-wcsnlen,0x765b0
-memcpy,0x74640
+strlen,0x75aa0
+wcscmp,0x764a0
+strchr,0x75900
+wcsnlen,0x76650
+memcpy,0x74780
 realloc,0x0
-strcmp,0x75880
-strnlen,0x75d20
-wcschr,0x763d0
+strcmp,0x759c0
+strnlen,0x75e60
+wcschr,0x76470
 _msize,0x0
 RtlUnlockHeap,0x3d660
 operator new,0x0
@@ -50,44 +50,43 @@ RtlCreateHeap,0x2d7b0
 RtlValidateHeap,0x22a70
 RtlDestroyHeap,0x2c890
 RtlAllocateHeap,0x413b0
-RtlQueryHeapInformation,0xce5e0
-RtlMultipleAllocateHeap,0xce560
-RtlSetHeapInformation,0x69f30
-RtlCompactHeap,0xcdf30
-RtlMultipleFreeHeap,0xce5a0
+RtlQueryHeapInformation,0xce560
+RtlCompactHeap,0xcdeb0
+RtlSetHeapInformation,0x69fd0
+RtlMultipleAllocateHeap,0xce4e0
+RtlMultipleFreeHeap,0xce520
 RtlFreeHeap,0x3f240
 RtlpHeapFailureInfo,0x0
 LdrShutdownProcess,0x37830
 operator delete,0x0
 RtlReAllocateHeap,0x3d9f0
 std::_DebugHeapDelete<>,0x0
-RtlCreateActivationContext,0x59650
-RtlGetUserInfoHeap,0x5fbc0
+RtlCreateActivationContext,0x596e0
 free_impl,0x0
-RtlSetUserFlagsHeap,0xce900
+RtlGetUserInfoHeap,0x5fc40
 RtlWalkHeap,0x21e60
-_malloc_dbg,0x0
+RtlSetUserFlagsHeap,0xce880
 operator delete nothrow,0x0
+_malloc_dbg,0x0
+RtlExitUserProcess,0x679e0
 RtlLockHeap,0x3d520
-RtlExitUserProcess,0x67940
 _calloc_impl,0x0
-RtlSetUserValueHeap,0x5fea0
-RtlGetProcessHeaps,0xce0c0
-RtlEnumProcessHeaps,0xce080
+RtlGetProcessHeaps,0xce040
+RtlSetUserValueHeap,0x5ff20
+RtlEnumProcessHeaps,0xce000
 RtlSizeHeap,0x3ef40
 calloc_impl,0x0
-free,0x0
 operator new nothrow,0x0
-__DrMemory_post_call,0x679fc
+free,0x0
 malloc_usable_size,0x0
 malloc_impl,0x0
-malloc_trim,0x0
 independent_calloc,0x0
-strncasecmp,0x0
-independent_comalloc,0x0
+malloc_trim,0x0
 sbrk,0x0
-operator new[],0x0
+independent_comalloc,0x0
+strncasecmp,0x0
 operator new[] nothrow,0x0
+operator new[],0x0
 malloc_stats,0x0
 realloc_impl,0x0
 strcasecmp,0x0

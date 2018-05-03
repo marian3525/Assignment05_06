@@ -2,81 +2,107 @@
 #include "DynamicVector.h"
 #include "repository.h"
 #include "TemplateDynamicVector.h"
+#include "../Exceptions/RepositoryException.h"
+#include <algorithm>
+#include <vector>
+#include <fstream>
 
-Repository::Repository() {
-    this->elems = new TemplateDynamicVector<Tutorial>(10);
-}
-
-void Repository::add(Tutorial* elem) {
-    this->elems->add(elem);
+void Repository::add(Tutorial elem) {
+    /**
+     * Add the elem to the repo if it doesn't exist already
+     */
+    if (existsByTitle(elem.getTitle())) {
+        throw RepositoryException{"Item already added\n"};
+    } else {
+        elems.push_back(elem);
+    }
 }
 
 void Repository::remove(string nameToDelete) {
-    for(int i=0; i<this->elems->getSize(); i++) {
-        if((*elems)[i].getTitle()==nameToDelete) {
-            this->elems->remove(&(*elems)[i]);
-            break;
-        }
+    /**
+     * Remove the tutorial with the given name if it exists
+     */
+    auto it = find_if(elems.begin(), elems.end(), [nameToDelete](Tutorial &t) { return t.getTitle() == nameToDelete; });
+    if (it != elems.end()) {
+        elems.erase(it);
+    } else {
+        throw RepositoryException{"Tutorial does not exist!\n"};
     }
 }
 
 
 void Repository::update(string nameToUpdate, string presenter, int duration, int likes, string link) {
-    for(int i=0; i<this->elems->getSize(); i++) {
-        if((*elems)[i].getTitle()==nameToUpdate) {
-            (*elems)[i].setPresenter(presenter);
-            (*elems)[i].setDuration(duration);
-            (*elems)[i].setLikes(likes);
-            (*elems)[i].setLink(link);
-            break;
-        }
+    /**
+     * Update the tutorial with title <nameToUpdate> using the new attributes
+     */
+    auto it = find_if(elems.begin(), elems.end(), [nameToUpdate](Tutorial &t) { return t.getTitle() == nameToUpdate; });
+    auto index = it - elems.begin();
+
+    if (it != elems.end()) {
+        elems[index].setPresenter(presenter);
+        elems[index].setDuration(duration);
+        elems[index].setLikes(likes);
+        elems[index].setLink(link);
+    } else {
+        throw RepositoryException{"Cannot update, tutorial doesn't exist\n"};
     }
 }
 
-int Repository::getSize() {
-    return this->elems->getSize();
+unsigned long Repository::getSize() {
+    return elems.size();
 }
 
-void Repository::decSize() {
-    this->elems->decSize();
+Tutorial& Repository::operator[](int pos) {
+    return elems[pos];
 }
 
-TElem& Repository::operator[](int pos) {
-    return this->elems->operator[](pos);
-}
-
-Tutorial** Repository::getAll() {
-    Tutorial** all = new Tutorial*[this->getSize()];
-
-    for(int i=0; i<this->getSize(); i++) {
-        all[i] = &(*elems)[i];
-    }
-    return all;
+vector<Tutorial> Repository::getAll() {
+    /**
+     * Return a list of pointers to all the Tutorials currently in the repo
+     */
+    vector<Tutorial> aux;
+    for_each(elems.begin(), elems.end(), [&aux](const Tutorial& t) {aux.push_back(t);});
+    return aux;
 }
 
 bool Repository::existsByTitle(string title) {
-    for(int i=0; i<this->getSize(); i++) {
-        if((*elems)[i].getTitle() == title) {
-            return true;
-        }
-    }
-    return false;
+    /**
+     * Check if the tutorial with the given title is in the repo
+     * @returns true: if tutorial is in the repo, false otherwise
+     */
+    auto it = find_if(elems.begin(), elems.end(), [title](Tutorial& t){return t.getTitle() == title;});
+    return it != elems.end();
 }
 
 Repository::~Repository() {
-    delete elems;
+    //if(toDestroy)
+        //for_each(elems.begin(), elems.end(), [](Tutorial& t){delete &t;});
 }
 
-Tutorial *Repository::getByTitle(string title) {
-    if(this->existsByTitle(title)) {
-        for(int i=0; i<this->getSize(); i++) {
-            if((*elems)[i].getTitle() == title) {
-                return &(*elems)[i];
-            }
-        }
+Tutorial& Repository::getByTitle(string title) {
+    /**
+     * Return the tutorial with the given title if it exists
+     * null otherwise
+     */
+    auto it = find_if(elems.begin(), elems.end(), [title](Tutorial& t){return t.getTitle() == title;});
+    if(it!=elems.end()) {
+        auto index = it - elems.begin();
+        return elems[index];
     }
 }
 
 Repository::Repository(bool toDestroy) {
-    this->elems = new TemplateDynamicVector<Tutorial>(10, toDestroy);
+    /**
+     * Constructor to be used for the watchList, with the parameter set to false
+     * When destroying this instance do not delete the individual elems. in the DynVector
+     */
+    this->toDestroy = toDestroy;
+}
+
+void Repository::sync() {
+    vector<Tutorial> all = this->getAll();
+    ofstream ofstream1("data.csv");
+    for_each(all.begin(), all.end(), [&ofstream1](Tutorial& t){ofstream1<<t;});
+    ofstream1<<";";
+    ofstream1.close();
 }

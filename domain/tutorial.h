@@ -15,6 +15,8 @@ private:
     int duration; //in seconds
     int likes;
     std::string link;  //link to the resource
+    string durationToString(int duration);
+    string likesToString(int likes);
 public:
     void setPresenter(string presenter);
 
@@ -25,7 +27,9 @@ public:
 
     void setLink(string link);
 
-    string toString();
+    const string toString() const ;
+
+    string getFormattedDuration();
     //default constructor
     Tutorial(string title, string presenter, int duration, int likes, string link);
 
@@ -36,12 +40,15 @@ public:
     ~Tutorial();
 
     bool operator==(const Tutorial& tutorial);
-    void operator=(const Tutorial& tutorial);
+    Tutorial& operator=(const Tutorial& tutorial);
     string getTitle()const;
     string getPresenter()const;
     int getDuration()const;
     int getLikes()const;
     string getLink()const;
+
+    friend istream& operator>>(istream& stream, Tutorial& tutorial);
+    friend ostream& operator<<(ostream& stream, const Tutorial& tutorial);
 
 };
 

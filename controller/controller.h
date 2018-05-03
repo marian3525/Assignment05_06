@@ -6,25 +6,30 @@
 #define ASSIGNMENT05_06_CONTROLLER_H
 
 
+#include <fstream>
 #include "../repository/repository.h"
 
 class Controller {
 public:
-    Controller(Repository* repo);
+    Controller();
     ~Controller();
-    int addTutorial(string title, string presenter, int duration, int likes, string link);
-    int removeTutorial(string title);
-    int updateTutorial(string title, string presenter, int duration, int likes, string link);
-    string* getAllPrintable(int& n);
-    Tutorial** filterByPresenter(string presenter, int& numberOfResults);
-    int addToWatchList(string name);
-    Tutorial** getWatchList(int &n);
+    void addTutorial(string title, string presenter, int duration, int likes, string link);
+    void removeTutorial(string title);
+    void updateTutorial(string title, string presenter, int duration, int likes, string link);
+    vector<string> getAllPrintable();
+    vector<Tutorial> filterByPresenter(string presenter);
+    void addToWatchList(string name);
+    vector<Tutorial> getWatchList();
     void likeTutorial(string title);
     void deleteFromWatchlist(string name);
+    string dumpHTMLString();
+    string dumpCSVString();
 private:
-    Repository* repo;
-    Repository* watchList;
+    Repository repo = Repository{true};
+    Repository watchList = Repository{true};
     void populateRepo();
+    void populateRepoFromFile();
+    void sync();
 };
 
 

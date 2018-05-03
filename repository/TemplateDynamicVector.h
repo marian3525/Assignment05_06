@@ -35,6 +35,10 @@ public:
 
 template<typename T>
 TemplateDynamicVector<T>::TemplateDynamicVector(int capacity) {
+    /**
+     * Create a vector with the given capacity
+     * @param capacity: the initial capacity of the vector
+     */
     this->toDestroy = true;
     this->size = 0;
     this->capacity = capacity;
@@ -43,10 +47,13 @@ TemplateDynamicVector<T>::TemplateDynamicVector(int capacity) {
 
 template<typename T>
 TemplateDynamicVector<T>::~TemplateDynamicVector() {
+    /**
+     * Clean up the used pointers
+     */
     for(int i=0; i<this->size; i++) {
-        if(elems[i] != NULL and toDestroy) { //not seen here
+        if(elems[i] != NULL and toDestroy) {
             delete elems[i];
-            elems[i] = NULL;  //set to null here
+            elems[i] = NULL;
         }
     }
     delete[] elems;
@@ -55,11 +62,17 @@ TemplateDynamicVector<T>::~TemplateDynamicVector() {
 
 template<typename T>
 T &TemplateDynamicVector<T>::operator[](int pos) {
+    /**
+     *
+     */
     return *this->elems[pos];
 }
 
 template<typename T>
 void TemplateDynamicVector<T>::add(T *e) {
+    /**
+     * Add the element e to the vector if it doesn't exist already
+     */
     for(int i=0; i<size; i++) {
         if(elems[i]->getTitle() == e->getTitle())
             return;
@@ -73,6 +86,9 @@ void TemplateDynamicVector<T>::add(T *e) {
 
 template<typename T>
 void TemplateDynamicVector<T>::remove(T *e) {
+    /**
+     * Remove the elem. e from the vector if it exists
+     */
     for(int i=0; i<this->size; i++) {
         if(this->elems[i] == e) {
             for(int j=i; j<this->size-1; j++) {
@@ -90,6 +106,9 @@ void TemplateDynamicVector<T>::remove(T *e) {
 
 template<typename T>
 int TemplateDynamicVector<T>::getSize() const {
+    /**
+     *
+     */
     return this->size;
 }
 
@@ -105,6 +124,9 @@ bool TemplateDynamicVector<T>::exists(T *elem) {
 
 template<typename T>
 void TemplateDynamicVector<T>::resize(double factor) {
+    /**
+     * Resize the vector by the given factor
+     */
     this->capacity*= factor;
 
     T** els = new T*[this->capacity];
@@ -129,6 +151,11 @@ void TemplateDynamicVector<T>::decSize() {
 
 template<typename T>
 TemplateDynamicVector<T>::TemplateDynamicVector(int capacity, bool toDestroy) {
+    /**
+     * Constructor used for instantiating the watchList repo.
+     * Setting the toDestroy param. to false will tell the vector not to destroy the individual pointers stored
+     *
+     */
     this->toDestroy = toDestroy;
     this->size = 0;
     this->capacity = capacity;

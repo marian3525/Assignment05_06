@@ -5,36 +5,40 @@
 #include <cstring>
 #include <string>
 #include "Validator.h"
+#include "../Exceptions/ValidatorException.h"
+
 using namespace std;
 
-int Validator::validateAdd(string title, string presenter, int duration, int likes, string link) {
+void Validator::validateAdd(string title, string presenter, int duration, int likes, string link) {
+    string errors="";
+
     if(title.size()==0) {
-        return 1;
+        errors.append("Title is empty!\n");
     }
     if(presenter.size() == 0) {
-        return 2;
+        errors.append("Presenter name empty!\n");
     }
     if(duration <= 0) {
-        return 3;
+        errors.append("Duration must be greater than 0!\n");
     }
     if(likes < 0) {
-        return 4;
+        errors.append("Likes must be better than 0!\n");
     }
     if(link.size() == 0) {
-        return 5;
+        errors.append("The link cannot be empty!\n");
     }
-    return 0;
+    if(errors.size()>0) {
+        throw ValidatorException{errors};
+    }
 }
 
-int Validator::validateRemove(string title) {
-    if(title.size() != 0) {
-        return 0;
+void Validator::validateRemove(string title) {
+    if(title.size() == 0) {
+        throw ValidatorException("Cannot remove, invalid title");
     }
-    return 1;
 }
 
-int Validator::validateAddToWatchlist(string title) {
+void Validator::validateAddToWatchlist(string title) {
     if(title.size()==0)
-        return 1;
-    return 0;
+        throw ValidatorException("Cannot add to watchlist, title is empty");
 }

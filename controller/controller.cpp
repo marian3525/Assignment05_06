@@ -1,178 +1,321 @@
+#include <algorithm>
 #include "controller.h"
 #include "../Validator/Validator.h"
+#include "../Exceptions/ControllerException.h"
+#include "../Exceptions/ValidatorException.h"
+#include <fstream>
+#include <iostream>
+#include <cstring>
+#include <Windows.h>
 
-Controller::Controller(Repository *repo) {
-    this->repo = repo;
-    this->watchList = new Repository(false);
-    this->populateRepo();
+Controller::Controller() {
+    this->repo = Repository{true};
+    this->watchList = Repository{true};
+    this->populateRepoFromFile();
+    this->repo.sync();
+}
+
+void Controller::populateRepoFromFile() {
+    ifstream f("data.csv");
+
+    string title;
+    string presenter;
+    int duration=0;
+    int likes=0;
+    string link;
+
+    int field=0;
+
+    char line[100];
+
+    while(!f.eof()) {
+        field = 0;
+        f.getline(line, 1000, '\n');
+        //(line[strlen(line)-1] == '\r')?line[strlen(line)-1] = 0:0;
+        if(strchr(line, ';') != nullptr) {
+            break;
+        }
+        char* ptr = strtok(line, ",");
+
+        while(ptr != nullptr) {
+            switch(field) {
+                case(0): {
+                    field = 1;
+                    title = string(ptr);
+                    break;
+                }
+                case(1): {
+                    field = 2;
+                    presenter = string(ptr);
+                    break;
+                }
+                case(2): {
+                    field = 3;
+                    auto p = (char**)malloc(sizeof(char*));   //...fmm
+                    string dur_string(ptr);
+                    duration = int(strtol(dur_string.c_str(), p, 10));
+                    break;
+                }
+                case(3): {
+                    auto p = (char**)malloc(sizeof(char*));   //...fmm
+                    field = 4;
+                    string like_string(ptr);
+                    likes = int(strtol(like_string.c_str(), p, 10));
+                    break;
+                }
+                case(4): {
+                    link = string(ptr);
+                    field = 5;
+                    break;
+                }
+                case(5): {
+                    break;
+                }
+            }
+            ptr = strtok(nullptr, ",");
+        }
+        //if(!f.eof())
+        {
+            addTutorial(title, presenter, duration, likes, link);
+            //cout<<title<<" "<<presenter<<" "<<duration<<" "<<likes<<" "<<link<<endl;
+        }
+    }
+    f.close();
 }
 
 void Controller::populateRepo() {
-    Tutorial* tutorial;
-    tutorial = new Tutorial(string("OOP"), string("Iuliana Bocicor"), 7000, 110, string("link1"));
-    this->repo->add(tutorial);
-    tutorial = new Tutorial(string("DSA"), string("Marian Zsuzsanna"), 7005, 129, string("link2"));
-    this->repo->add(tutorial);
-    tutorial = new Tutorial(string("GA"), string("Lupsa Radu-Lucian"), 6822, 98, string("link3"));
-    this->repo->add(tutorial);
-    tutorial = new Tutorial(string("OS"), string("Rares"), 6411, 77, string("link4"));
-    this->repo->add(tutorial);
-    tutorial = new Tutorial(string("SysDyn"), string("Buica A."), 7212, 132, string("link5"));
-    this->repo->add(tutorial);
-    tutorial = new Tutorial(string("Geometry"), string("Name"), 5983, 70, string("link6"));
-    this->repo->add(tutorial);
+    /**
+     * Populate the main repo with some test tutorials
+     */
+    addTutorial(string("OOP"), string("Iuliana Bocicor"), 7000, 110, string("link1"));
 
+    addTutorial(string("DSA"), string("Marian Zsuzsanna"), 7005, 129, string("link2"));
+
+    addTutorial(string("GA"), string("Lupsa Radu-Lucian"), 6822, 98, string("link3"));
+
+    addTutorial(string("OS"), string("Rares"), 6411, 77, string("link4"));
+
+    addTutorial(string("SysDyn"), string("Buica Adriana"), 7212, 132, string("link5"));
+
+    addTutorial(string("Geometry"), string("Name"), 5983, 70, string("link6"));
+
+    addTutorial(string("FP"), string("Molnar Arthur"), 7022, 133, string("link7"));
+
+    addTutorial(string("ASC"), string("Vancea Alexandru"), 6841, 121, string("link8"));
+
+    addTutorial(string("Algebra"), string("Crivei Septimiu"), 6745, 111, string("link9"));
+
+    addTutorial(string("Calculus"), string("Popovici Nicolae"), 6683, 71, string("link10"));
+
+    addTutorial(string("OS1"), string("Rares"), 6411, 77, string("link4"));
 }
 
-string* Controller::getAllPrintable(int& n) {
+vector<string> Controller::getAllPrintable() {
     /**
      * Return a list of strings containing the printable version of each existing tutorial
      * @param n: number of elements found
      */
-    string* output = new string[this->repo->getSize()];
+    vector<string> output;
 
-    Tutorial** all =  repo->getAll();
-    n = repo->getSize();
+    vector<Tutorial> all =  repo.getAll();
 
-    for(int i=0; i<n; i++) {
-        output[i] = string();
-        output[i] = all[i]->toString();
-    }
-    delete[] all;
+    for_each(all.begin(), all.end(), [&output](const Tutorial& t){output.push_back(t.toString());});
+    //delete[] all;
     return output;
 }
 
-int Controller::addTutorial(string title, string presenter, int duration, int likes, string link) {
+void Controller::addTutorial(string title, string presenter, int duration, int likes, string link) {
     /**
      * @param title: title of the tutorial
      * @param presenter: the name of the presenter
      * @param duration; duration in seconds
      * @param likes: the numberof likes for the tutorial
      * @link: the link to the tutorial
-     * @return 1 if validation failed and the elem. was not added, 0 otherwise
+     * @throws: ValidatorException if the validation doesn't pass
      */
-    if(Validator::validateAdd(title, presenter, duration, likes, link)!=0) {
-        return 1;
+    Validator::validateAdd(title, presenter, duration, likes, link);
+    Tutorial tutorial{title, presenter, duration, likes, link};
+
+    if(repo.existsByTitle(title)) {
+        throw ControllerException{"Element already exists!"};
     }
     else {
-        //passed validator, values must be valid
-        Tutorial* tutorial = new Tutorial(title, presenter, duration, likes, link);
-        this->repo->add(tutorial);
+        this->repo.add(tutorial);
     }
-    return 0;
 }
-
-
 
 Controller::~Controller() {
-    delete watchList;
+    //delete &repo;
+    //delete &watchList;
 }
 
-int Controller::removeTutorial(string title) {
+void Controller::removeTutorial(string title) {
     /**
      * @param title: The title of the tutorial to be removed
-     * @return 1 if validation failed and the elem. was not removed, 0 otherwise
+     * @throws; ValidatorException if the validation doesn;t pass
+     * @throws: ControllerException if the elem doesn't exist
+     * @throws: ValidatorExeption
      */
-    if(Validator::validateRemove(title) != 0) {
-        return 1;
+    Validator::validateRemove(title);
+    if(watchList.existsByTitle(title)) {
+        this->watchList.remove(title);
+        this->repo.remove(title);
     }
     else {
-        this->repo->remove(title);
-        return 0;
+        if(repo.existsByTitle(title)) {
+            this->repo.remove(title);
+        }
+        else {
+            throw ControllerException{"Element doesn't exist"};
+        }
     }
 }
 
-int Controller::updateTutorial(string title, string presenter, int duration, int likes, string link) {
+void Controller::updateTutorial(string title, string presenter, int duration, int likes, string link) {
     /**
      *  @param: the title of the tutorial to be updated
      *  @param: presenter: new name of the presenter
      *  @param: duration: new duration
      *  @param: likes: new number of likes
      *  @param: link: new link to the tutorial
+     *  @throws: ValidatorException, ControllerException
      */
-     if(Validator::validateAdd(title, presenter, duration, likes, link) != 0) {
-         return 1;
+     Validator::validateAdd(title, presenter, duration, likes, link);
+
+     if(this->repo.existsByTitle(title)) {
+         this->repo.update(title, presenter, duration, likes, link);
      }
      else {
-         if(this->repo->existsByTitle(title) == true) {
-             this->repo->update(title, presenter, duration, likes, link);
-         }
-         else {
-             return 2;
-         }
-         return 0;
+         throw ControllerException{"Elemeeent doesn't exist"};
      }
 }
 
-Tutorial** Controller::filterByPresenter(string presenter, int& numberOfResults) {
+vector<Tutorial> Controller::filterByPresenter(string presenter) {
     /**
      * @param: presenter: the name of the presenter to filter by
-     * @param: numberOfResults: a counter to return the number of elements found
+     * Return all if the name string is empty
      */
-    Tutorial** results = new Tutorial*[repo->getSize()];
-    Tutorial** all = this->repo->getAll();
-    numberOfResults = 0;
+    vector<Tutorial> results;
+    //results.reserve(10);
+    vector<Tutorial> all = this->repo.getAll();
 
     if(presenter == string("")) {
-        numberOfResults = repo->getSize();
         return all;
     }
+    //copy_if(all.begin(), all.end(), results.begin(), [&presenter](const Tutorial& t){return t.getPresenter() == presenter;});
 
-    for(int i=0; i<repo->getSize(); i++) {
-        if(all[i]->getPresenter() == presenter) {
-            results[numberOfResults++] = all[i];
+    for(auto t:all) {
+        if(t.getPresenter()==presenter) {
+            results.push_back(t);
         }
     }
-    delete[] all;
+
     return results;
 }
 
-int Controller::addToWatchList(string name) {
+void Controller::addToWatchList(string name) {
     /**
+     * Will add the tutorial with the given name iff. it doesn't exist already
      * @param name: name of the tutorial to  be added
+     * @throws: ControllerException
      */
-     if(Validator::validateAddToWatchlist(name)==0) {
-         //check if it already was added
-         if(!this->watchList->existsByTitle(name)) {
-             this->watchList->add(repo->getByTitle(name));
-             return 0;
-         }
-         else {
-             return 1;
-         }
-
+     if(watchList.existsByTitle(name) == false) {
+         watchList.add(repo.getByTitle(name));
+     }
+     else {
+         //already included
+         throw ControllerException{"Item already included"};
      }
 }
 
-Tutorial** Controller::getWatchList(int &n) {
-    n = this->watchList->getSize();
-    Tutorial** result = new Tutorial*[n];
-
-    for(int i=0; i<n; i++) {
-        result[i] = &(*this->watchList)[i];
-    }
+vector<Tutorial> Controller::getWatchList() {
+    /**
+     * @parm n: variable to return the number of tutorials in the watchList
+     * Return a list of pointer to tutorials currently in the watch list
+     */
+    vector<Tutorial> result;
+    vector<Tutorial> workingList = watchList.getAll();
+    //copy(workingList.begin(), workingList.end(), result.begin());
+    for(const auto& t:workingList)
+        result.push_back(t);
     return result;
 }
 
 void Controller::deleteFromWatchlist(string name) {
-    for(int i=0; i<this->watchList->getSize(); i++) {
-        if (name == (*watchList)[i].getTitle()) {
-            for (int j = i; j < watchList->getSize(); j++) {
-                watchList->remove(name);
-            }
-            return;
-        }
-    }
+    /**
+     * Removes the specified tutorial if it exists in the repo
+     * @param name: name of the tutorial to be removed
+     * @throws: RepositoryException if the tutorial wioth the given name doesn't exist
+     */
+     watchList.remove(name);
 }
 
 void Controller::likeTutorial(string title) {
-    for(int i=0; i<this->repo->getSize(); i++) {
-        if((*repo)[i].getTitle() == title) {
-            (*repo)[i].incLikes();
-        }
-    }
+    /**
+     * Increment the likes of the tutorial with the given name
+     * @param title: the titile of the tutorial to like
+     */
+    repo.getByTitle(title).incLikes();
 }
 
+void Controller::sync() {
+    repo.sync();
+}
 
+string Controller::dumpHTMLString() {
+    vector<Tutorial> all = watchList.getAll();
+    string output="";
+    ofstream f("data.html");
 
+    output+="<!DOCTYPE html>\n";
+    output+="<html>\n";
+    output+="\t<head>\n";
+    output+="\t\t<title>Watchlist</title>\n";
+    output+="\t</head>\n";
+    output+="\t<body>\n";
+    output+="\t\t<table border=\"1\">\n";
+
+    output+="\t\t<tr>\n";
+    output+="\t\t\t<td>Title</td>\n";
+    output+="\t\t\t<td>Presenter</td>\n";
+    output+="\t\t\t<td>Duration</td>\n";
+    output+="\t\t\t<td>Likes</td>\n";
+    output+="\t\t\t<td>YT Link</td>\n";
+    output+="\t\t</tr>";
+
+    for(auto t:all) {
+
+        string duration=t.getFormattedDuration();
+        string likes=to_string(t.getLikes());
+
+        output+="\t<tr>\n";
+
+        output+="\t\t\t<td>"+t.getTitle()+"</td>\n";
+        output+="\t\t\t<td>"+t.getPresenter()+"</td>\n";
+        output+="\t\t\t<td>"+t.getFormattedDuration()+"</td>\n";
+        output+="\t\t\t<td>"+to_string(t.getLikes())+"</td>\n";
+        output+="\t\t\t<td><a href="+t.getLink()+"\">Link</a></td>\n";
+
+        output+="</tr>\n";
+    }
+    output+="\t\t</table>\n";
+    output+="\t</body>\n";
+    output+="</html>\n";
+
+    f<<output;
+    HWND hwnd = GetDesktopWindow();
+    ShellExecute(hwnd, "open", "file:///D:/CS/OOP/Assignment05-06/cmake-build-debug-cygwin/data.html", NULL, NULL, NULL);
+    return output;
+}
+
+string Controller::dumpCSVString() {
+    vector<Tutorial> all = watchList.getAll();
+    ofstream ofstream1("watchlist.csv");
+    for(const auto& t:all) {
+        ofstream1<<t;
+    }
+    //for_each(all.begin(), all.end(), [&ofstream1](Tutorial& t){ofstream1<<t;});
+    ofstream1.close();
+    return string("");
+}
 

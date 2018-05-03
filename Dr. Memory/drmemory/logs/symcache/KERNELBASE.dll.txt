@@ -1,5 +1,5 @@
 Dr. Memory symbol cache version 14
-      1145,1930736,4587761972552531968,4587761972552531968,1963950,3551170908,1929216
+      1115,1929712,4587762238840504320,4587762238840504320,1973678,3995693396,1929216
 0
 memcmp,0x0
 strcspn,0x0
@@ -54,7 +54,6 @@ _calloc_impl,0x0
 calloc_impl,0x0
 operator new nothrow,0x0
 free,0x0
-__DrMemory_post_call,0x108a32
 malloc_usable_size,0x0
 malloc_impl,0x0
 malloc_trim,0x0

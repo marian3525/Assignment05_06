@@ -2,8 +2,13 @@
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
+#include <algorithm>
 #include "../controller/controller.h"
 #include "cli.h"
+#include "../Exceptions/ControllerException.h"
+#include "../Exceptions/ValidatorException.h"
+#include "../Exceptions/RepositoryException.h"
+#include <Windows.h>
 
 char *getInput() {
     /**
@@ -13,7 +18,8 @@ char *getInput() {
     char *input = (char*) malloc(100 * sizeof(char));
     fgets(input, 100, stdin);
     if (strcmp(input, "\n") == 0) {
-        input = "";
+        free(input);
+        return "";
     }
     return strtok(input, "\n");
 }
@@ -61,10 +67,6 @@ char **getParams(char *input, int *paramNumber) {
     return result;
 }
 
-CLI::CLI(Controller* controller) {
-    this->controller = controller;
-}
-
 int CLI::getMinutes(string s) {
     /**
      * s: string in the format xmys, where x and y are integers
@@ -100,34 +102,37 @@ int CLI::getSeconds(string s) {
     return minutes;
 }
 
-void CLI::showResults(Tutorial **results, int n) {
+void CLI::showResults(vector<Tutorial> results, string name) {
     /**
      * Show each tutorial in the result list and offer the option to like or go to the next
      * Continue until the user enters "done". If the end of the list is reached, "next" will provide the first tutorial
      * in the list
      * @param results: list of tutorials
+     * @param name: The name the results were filtered by
      * @param n: number of tutorials in the list
      * @return None
      */
      int index = 0;
      string response;
-     if(n>0) {
+     if(!results.empty()) {
          do {
-             cout<<results[index]->toString();
+             cout<<results[index].toString();
              cout<<"Did you enjoy this tutorial? (yes/no or done to exit the submenu)"<<endl;
              cin>>response;
 
              if(response == "yes") {
-                this->controller->likeTutorial(results[index]->getTitle());
+                this->controller.likeTutorial(results[index].getTitle());
+                results = controller.filterByPresenter(name);    //reload the tutorials with the updated likes
                  cout<<"Liked. Add to watchlist?"<<endl;
                  cin>>response;
                  if(response == "yes" or response=="add")
                      //add the tutorial to the watch list if not added already
 
-                     if(this->controller->addToWatchList(results[index]->getTitle())==0) {
-                         cout<<"Tutorial added to your watchlist"<<endl;
+                     try {
+                        this->controller.addToWatchList(results[index].getTitle());
+                        cout<<"Tutorial added to your watchlist"<<endl;
                      }
-                     else {
+                     catch(ControllerException& ce) {
                          cout<<"The current tutorial was already added to your watchlist"<<endl;
                      }
              }
@@ -140,16 +145,16 @@ void CLI::showResults(Tutorial **results, int n) {
              if(response == "done") {
                  break;
              }
-             if(index == n) {
+             if(index == results.size()) {
                  cout<<"Starting from the beginning of the list:"<<endl;
                  index = 0;
              }
-         }while(true);
+         }
+         while(true);
      }
      else {
          cout<<"No tutorials"<<endl;
      }
-     delete[] results;
      cin.get();  //???
 }
 
@@ -160,17 +165,27 @@ void CLI::start() {
     bool stopped = false;
     int paramNumber = 0;
     bool adminMode = false;
+    string mode="";
+
+    do {
+        cout << "html or csv mode for the watchlist?" << endl;
+        cin >> mode;
+    }
+    while(mode != "html" and mode != "csv");
 
     while(not stopped) {
         if(adminMode) {
-            printf("(admin)");
+            cout<<"(admin)";
         }
         else {
-            printf("(user)");
+            cout<<"(user)";
         }
         printf(">>>");
 
         input = getInput();
+        if(strcmp(input, "") == 0) {
+            continue;
+        }
         command = getCommand(input);
         params = getParams(input, &paramNumber);
 
@@ -191,17 +206,33 @@ void CLI::start() {
                 //add <title> <presenter> <duration: xmys> <likes> <link>
                 string title, presenter, link;
                 int duration, likes;
+                
                 title = string(params[0]);
                 presenter = params[1];
                 duration = getMinutes(params[2])*60 + getSeconds(params[2]);
+
                 sscanf(params[3], "%d", &likes);
+
                 link = params[4];
-                this->controller->addTutorial(title, presenter, duration, likes, link);
+                try {
+                    this->controller.addTutorial(title, presenter, duration, likes, link);
+                }
+                catch(const ValidatorException& ve) {
+                    cout<<ve.getMessage();
+                }
             }
             if(strcmp(command, "remove") ==0) {  //no leaks
                 //remove <tutorial_title>
                 string title = params[0];
-                this->controller->removeTutorial(title);
+                try {
+                    this->controller.removeTutorial(title);
+                }
+                catch(const ControllerException& ce) {
+                    cout<<ce.getMessage();
+                }
+                catch(const ValidatorException& ve) {
+                    cout<<ve.getMessage();
+                }
             }
             if(strcmp(command, "update") == 0) { //no leaks
                 string title, presenter, link;
@@ -211,20 +242,34 @@ void CLI::start() {
                 duration = getMinutes(params[2])*60 + getSeconds(params[2]);
                 sscanf(params[3], "%d", &likes);
                 link = params[4];
-                this->controller->updateTutorial(title, presenter, duration, likes, link);
+                try {
+                    this->controller.updateTutorial(title, presenter, duration, likes, link);
+                }
+                catch(const ControllerException& ce) {
+                    cout<<ce.getMessage();
+                }
+                catch(const ValidatorException& ve) {
+                    cout<<ve.getMessage();
+                }
             }
             if(strcmp(command, "print") == 0) { //no leaks
-                string* output;
-                int n;
-                output = this->controller->getAllPrintable(n);
-                for(int i=0; i<n; i++) {
-                    cout<<output[i]<<endl;
-                }
-                delete[] output;
+                vector<string> output = this->controller.getAllPrintable();
+                for(const string &current:output)
+                    cout<<current, cout<<endl;
             }
         }
         else {
             //user features
+
+            if(strcmp(command, "watch") == 0) {
+                if(mode=="html") {
+                    controller.dumpHTMLString();
+                }
+                if(mode=="csv") {
+                    controller.dumpCSVString();
+                }
+            }
+
             if(strcmp(command, "filter") == 0) {
                 //filter "presenterName"
                 string name;
@@ -234,34 +279,36 @@ void CLI::start() {
                     if(paramNumber == 1) {
                         name = string(params[0]);
                     }
-                    int n;
-                    Tutorial** results = this->controller->filterByPresenter(name, n);
 
-                    showResults(results, n);
+                    vector<Tutorial> results = this->controller.filterByPresenter(name);
+
+                    showResults(results, name);
                 }
                 else {
-                    int n;
-                    Tutorial** results = this->controller->filterByPresenter(string(""), n);
+                    vector<Tutorial> results = this->controller.filterByPresenter(string(""));
 
-                    showResults(results, n);
+                    showResults(results, "");
                 }
             }
             if(strcmp(command, "remove") == 0) {
-                this->controller->deleteFromWatchlist(params[0]);
+                try {
+                    this->controller.deleteFromWatchlist(params[0]);
+                }
+                catch(const RepositoryException& re) {
+                    cout<<re.getMessage();
+                }
             }
             if(strcmp(command, "print")==0) { //no leaks
                 cout<<"Watch list:"<<endl;
-                int n = 0;
-                Tutorial** tutorials = this->controller->getWatchList(n);
-                if(n==0) {
+                vector<Tutorial> tutorials = this->controller.getWatchList();
+                if(tutorials.empty()) {
                     cout<<"Your watch list is empty!"<<endl;
-                    delete[] tutorials;
                 }
                 else {
-                    for (int i = 0; i < n; i++) {
-                        cout << tutorials[i]->toString() << endl;
+
+                    for (const auto &tutorial:tutorials) {
+                        cout << tutorial.toString() << endl;
                     }
-                    delete[] tutorials;
                 }
             }
         }
@@ -274,4 +321,5 @@ void CLI::start() {
 }
 
 CLI::~CLI() {
+    delete &controller;
 }

@@ -1,8 +1,12 @@
 #include <cstring>
 #include <cstdio>
+#include <ostream>
 #include "tutorial.h"
 
 Tutorial::Tutorial(string title, string presenter, int duration, int likes, string link) {
+    /**
+     * Create a tutorial with the given attributes
+     */
     this->title= title;
     this->presenter= presenter;
     this->duration = duration;
@@ -11,11 +15,9 @@ Tutorial::Tutorial(string title, string presenter, int duration, int likes, stri
 }
 
 Tutorial::Tutorial(const Tutorial &t) {
-    //allocating space for the char strings
-    this->title = new char[50];
-    this->presenter = new char[50];
-    this->link = new char[50];
-
+    /**
+     * copy constructor
+     */
     this->title=t.title;
     this->presenter=t.presenter;
     this->duration = t.duration;
@@ -28,12 +30,9 @@ Tutorial::~Tutorial() {
 }
 
 bool Tutorial::operator==(const Tutorial &tutorial) {
-    if(this->title==tutorial.title and this->presenter==tutorial.presenter
-            and this->link==tutorial.link and this->likes == tutorial.likes
-            and this->duration == tutorial.duration) {
-        return true;
-    }
-    return false;
+    return this->title == tutorial.title and this->presenter == tutorial.presenter
+           and this->link==tutorial.link and this->likes == tutorial.likes
+           and this->duration==tutorial.duration;
 }
 
 string Tutorial::getLink()const {
@@ -72,7 +71,10 @@ void Tutorial::setLink(string link) {
     this->link=link;
 }
 
-string Tutorial::toString() {
+const string Tutorial::toString() const {
+    /**
+     * Return a string containing the attributes of this instance formatted and ready to print
+     */
     string output = "Tutorial name: ";
     output+=this->title;
     output+="\n";
@@ -98,15 +100,59 @@ string Tutorial::toString() {
 }
 
 void Tutorial::incLikes() {
+    /**
+     *
+     */
     this->likes++;
 
 }
 
-void Tutorial::operator=(const Tutorial &tutorial) {
-
+Tutorial& Tutorial::operator=(const Tutorial &tutorial) {
+    /**
+     * Assignment operator
+     */
     title = tutorial.getTitle();
     presenter = tutorial.getPresenter();
     duration = tutorial.getDuration();
     likes = tutorial.getLikes();
     link = tutorial.getLink();
+}
+
+istream& operator>>(istream& stream, Tutorial& tutorial) {
+    string dur;
+    string like;
+
+    stream>>tutorial.title;
+    stream>>tutorial.presenter;
+    stream>>dur;
+    stream>>like;
+    stream>>tutorial.link;
+
+    sscanf(dur.c_str(), "%d", &(tutorial.duration)); // NOLINT
+    sscanf(like.c_str(), "%d", &(tutorial.likes));  //NOLINT
+
+
+}
+
+ostream& operator<<(ostream& stream, const Tutorial& tutorial) {
+    string dur = to_string(tutorial.duration);
+    string like = to_string (tutorial.likes);
+
+    stream<<tutorial.title;
+    stream<<string(",");
+    stream<<tutorial.presenter;
+    stream<<string(",");
+    stream<<dur;
+    stream<<string(",");
+    stream<<like;
+    stream<<string(",");
+    stream<<tutorial.link;
+    stream<<"\n";
+}
+
+string Tutorial::getFormattedDuration() {
+    string output = "";
+    output+=to_string(this->duration/60) + "m";
+    output+=to_string(this->duration%60) + "s";
+    return output;
 }

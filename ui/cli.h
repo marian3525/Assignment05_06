@@ -10,15 +10,15 @@
 
 class CLI {
 public:
-    CLI(Controller* controller);
+    CLI(Controller& controller): controller{controller}{};
     ~CLI();
     void start();
 private:
-    Controller *controller;
+    Controller controller;
     int getMinutes(string input);
     int getSeconds(string input);
 
-    void showResults(Tutorial** results, int n);
+    void showResults(vector<Tutorial> results, string name);
 };
 
 

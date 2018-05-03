@@ -8,10 +8,10 @@ using namespace std;
 
 class Validator {
 public:
-    static int validateAdd(string title, string presenter, int duration, int likes, string link);
-    static int validateRemove(string title);
+    static void validateAdd(string title, string presenter, int duration, int likes, string link);
+    static void validateRemove(string title);
     static int validateUpdate(string title, string presenter, int duration, int likes, string link);
-    static int validateAddToWatchlist(string title);
+    static void validateAddToWatchlist(string title);
 };
 
 
