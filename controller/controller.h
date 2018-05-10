@@ -8,6 +8,7 @@
 
 #include <fstream>
 #include "../repository/repository.h"
+#include "../Writers/Writer.h"
 
 class Controller {
 public:
@@ -24,12 +25,15 @@ public:
     void deleteFromWatchlist(string name);
     string dumpHTMLString();
     string dumpCSVString();
+    void sync();
+    void setMode(Writer* writer);
+    void write();
 private:
     Repository repo = Repository{true};
     Repository watchList = Repository{true};
     void populateRepo();
     void populateRepoFromFile();
-    void sync();
+    Writer* writer;
 };
 
 

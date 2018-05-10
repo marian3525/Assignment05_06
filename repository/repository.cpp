@@ -102,7 +102,9 @@ Repository::Repository(bool toDestroy) {
 void Repository::sync() {
     vector<Tutorial> all = this->getAll();
     ofstream ofstream1("data.csv");
+
     for_each(all.begin(), all.end(), [&ofstream1](Tutorial& t){ofstream1<<t;});
+
     ofstream1<<";";
     ofstream1.close();
 }

@@ -98,15 +98,9 @@ void  Test::testRepo() {
 }
 
 void testAdd() {
-    Repository repository{true};
     Controller controller{};
 
-    assert(repository.getSize() == 10);
     controller.addTutorial("title1","presenter1", 20, 13, "link1");
-
-    assert(repository.getSize()==11);
-
-    assert(repository[10].getTitle() == string("title1"));
 
     try {
         controller.addTutorial("","presenter1", 20, 13, "link1");
@@ -115,27 +109,22 @@ void testAdd() {
         assert(ve.getMessage() == "Title is empty!\n");
     }
 
-    delete &controller;
-    delete &repository;
 }
 
 void testRemove() {
     Repository repository{true};
     Controller controller{};
 
-    assert(repository.getSize() == 10);
+    assert(repository.getSize() == 0);
     controller.addTutorial("title1","presenter1", 20, 13, "link1");
-    assert(repository.getSize()==11);
     controller.removeTutorial("title1");
-    assert(repository.getSize() == 10);
 
     try {
         controller.removeTutorial("");
     }
-    catch(ControllerException& ce) {
-        assert(ce.getMessage() == "Element doesn't exist");
+    catch(const ValidatorException& ce) {
+        assert(ce.getMessage() == "Cannot remove, invalid title");
     }
-    assert(repository.getSize() == 10);
 }
 
 void testGetPrintable() {
@@ -306,8 +295,8 @@ void Test::testController() {
 }
 
 void Test::test() {
-    //testDomain();
-    //testValidator();
+    testDomain();
+    testValidator();
     testRepo();
-    //testController();
+    testController();
 }

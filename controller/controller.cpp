@@ -3,6 +3,8 @@
 #include "../Validator/Validator.h"
 #include "../Exceptions/ControllerException.h"
 #include "../Exceptions/ValidatorException.h"
+#include "../Writers/CSVWriter.h"
+#include "../Writers/HTMLWriter.h"
 #include <fstream>
 #include <iostream>
 #include <cstring>
@@ -219,7 +221,7 @@ void Controller::addToWatchList(string name) {
      * @param name: name of the tutorial to  be added
      * @throws: ControllerException
      */
-     if(watchList.existsByTitle(name) == false) {
+     if(!watchList.existsByTitle(name)) {
          watchList.add(repo.getByTitle(name));
      }
      else {
@@ -304,7 +306,7 @@ string Controller::dumpHTMLString() {
 
     f<<output;
     HWND hwnd = GetDesktopWindow();
-    ShellExecute(hwnd, "open", "file:///D:/CS/OOP/Assignment05-06/cmake-build-debug-cygwin/data.html", NULL, NULL, NULL);
+    ShellExecute(hwnd, "open", "file:///D:/CS/OOP/Assignment05-06/cmake-build-debug-cygwin/data.html", NULL, NULL,SW_MAXIMIZE);
     return output;
 }
 
@@ -316,6 +318,13 @@ string Controller::dumpCSVString() {
     }
     //for_each(all.begin(), all.end(), [&ofstream1](Tutorial& t){ofstream1<<t;});
     ofstream1.close();
+
+    HWND hwnd = GetDesktopWindow();
+    ShellExecute(hwnd, NULL, "notepad.exe", "D:/CS/OOP/Assignment05-06/cmake-build-debug-cygwin/watchlist.csv", NULL, SW_MAXIMIZE);
+
     return string("");
 }
 
+void Controller::write() {
+    writer->write(watchList);
+}

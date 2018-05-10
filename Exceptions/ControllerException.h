@@ -7,7 +7,7 @@ using namespace std;
 #define ASSIGNMENT05_06_CONTROLLEREXCEPTION_H
 
 
-class ControllerException {
+class ControllerException:exception {
 private:
     string message;
 public:

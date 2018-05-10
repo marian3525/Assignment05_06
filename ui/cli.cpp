@@ -8,6 +8,9 @@
 #include "../Exceptions/ControllerException.h"
 #include "../Exceptions/ValidatorException.h"
 #include "../Exceptions/RepositoryException.h"
+#include "../Writers/Writer.h"
+#include "../Writers/HTMLWriter.h"
+#include "../Writers/CSVWriter.h"
 #include <Windows.h>
 
 char *getInput() {
@@ -166,12 +169,22 @@ void CLI::start() {
     int paramNumber = 0;
     bool adminMode = false;
     string mode="";
-
+    Writer* writer = nullptr;
     do {
-        cout << "html or csv mode for the watchlist?" << endl;
+        cout << "HTML or CSV mode for the watchlist?" << endl;
         cin >> mode;
     }
     while(mode != "html" and mode != "csv");
+
+    if(mode=="html"){
+
+        writer = (Writer*) new HTMLWriter();
+    }
+    if(mode=="csv") {
+        writer = (Writer*) new CSVWriter();
+    }
+
+    controller.setMode(writer);
 
     while(not stopped) {
         if(adminMode) {
@@ -216,6 +229,7 @@ void CLI::start() {
                 link = params[4];
                 try {
                     this->controller.addTutorial(title, presenter, duration, likes, link);
+                    controller.sync();
                 }
                 catch(const ValidatorException& ve) {
                     cout<<ve.getMessage();
@@ -226,6 +240,7 @@ void CLI::start() {
                 string title = params[0];
                 try {
                     this->controller.removeTutorial(title);
+                    controller.sync();
                 }
                 catch(const ControllerException& ce) {
                     cout<<ce.getMessage();
@@ -244,6 +259,7 @@ void CLI::start() {
                 link = params[4];
                 try {
                     this->controller.updateTutorial(title, presenter, duration, likes, link);
+                    controller.sync();
                 }
                 catch(const ControllerException& ce) {
                     cout<<ce.getMessage();
@@ -263,10 +279,10 @@ void CLI::start() {
 
             if(strcmp(command, "watch") == 0) {
                 if(mode=="html") {
-                    controller.dumpHTMLString();
+                    controller.write();
                 }
                 if(mode=="csv") {
-                    controller.dumpCSVString();
+                    controller.write();
                 }
             }
 
